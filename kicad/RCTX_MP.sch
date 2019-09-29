@@ -1,0 +1,873 @@
+EESchema Schematic File Version 4
+LIBS:RCTX-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 7 7
+Title "Analogs inputs - unbuffered rotary sensors"
+Date "30 jun 2013"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 10400 2200 1    60   ~ 0
+H_RIGHT_JOYSTICK
+Text Notes 10500 2200 1    60   ~ 0
+V_RIGHT_JOYSTICK
+Text Notes 10600 2200 1    60   ~ 0
+H_LEFT_JOYSTICK
+Text Notes 10700 2200 1    60   ~ 0
+V_LEFT_JOYSTICK
+Text Notes 5350 950  1    60   ~ 0
+GND
+Text Notes 5450 950  1    60   ~ 0
+VBAT+
+Text Notes 5250 950  1    60   ~ 0
++5V
+Text Notes 5150 950  1    60   ~ 0
++3.3V
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 5D940D9F
+P 1500 1100
+AR Path="/5036250D/5D940D9F" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5D940D9F" Ref="J24"  Part="1" 
+F 0 "J24" V 1500 900 50  0000 R CNN
+F 1 "ROTARY_4" V 1600 1300 50  0000 R CNN
+F 2 "" H 1500 1100 50  0001 C CNN
+F 3 "~" H 1500 1100 50  0001 C CNN
+	1    1500 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 5EDA3588
+P 2500 1100
+AR Path="/5036250D/5EDA3588" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5EDA3588" Ref="J26"  Part="1" 
+F 0 "J26" V 2500 900 50  0000 R CNN
+F 1 "ROTARY_3" V 2600 1300 50  0000 R CNN
+F 2 "" H 2500 1100 50  0001 C CNN
+F 3 "~" H 2500 1100 50  0001 C CNN
+	1    2500 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 5EDA4A13
+P 3500 1100
+AR Path="/5036250D/5EDA4A13" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5EDA4A13" Ref="J28"  Part="1" 
+F 0 "J28" V 3500 900 50  0000 R CNN
+F 1 "ROTARY_2" V 3600 1300 50  0000 R CNN
+F 2 "" H 3500 1100 50  0001 C CNN
+F 3 "~" H 3500 1100 50  0001 C CNN
+	1    3500 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 5EDA562E
+P 4500 1100
+AR Path="/5036250D/5EDA562E" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5EDA562E" Ref="J30"  Part="1" 
+F 0 "J30" V 4500 900 50  0000 R CNN
+F 1 "ROTARY_1" V 4600 1300 50  0000 R CNN
+F 2 "" H 4500 1100 50  0001 C CNN
+F 3 "~" H 4500 1100 50  0001 C CNN
+	1    4500 1100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4600 1300 4600 1400
+Wire Wire Line
+	4600 1400 3600 1400
+Wire Wire Line
+	1600 1400 1600 1300
+Wire Wire Line
+	2600 1300 2600 1400
+Wire Wire Line
+	3600 1300 3600 1400
+Wire Wire Line
+	4400 1300 4400 1500
+Wire Wire Line
+	1400 1500 1400 1300
+Wire Wire Line
+	2400 1300 2400 1500
+Wire Wire Line
+	3400 1300 3400 1500
+Connection ~ 2400 1500
+Connection ~ 3400 1500
+Wire Wire Line
+	3600 1400 2600 1400
+Connection ~ 3600 1400
+Wire Wire Line
+	2600 1400 1600 1400
+Connection ~ 2600 1400
+Wire Wire Line
+	5300 1500 4400 1500
+Connection ~ 4400 1500
+Connection ~ 1400 1500
+Text Notes 1650 900  1    50   ~ 0
++V
+Text Notes 1550 900  1    50   ~ 0
+Signal
+Text Notes 1450 900  1    50   ~ 0
+GND
+Text Notes 2650 900  1    50   ~ 0
++V
+Text Notes 2550 900  1    50   ~ 0
+Signal
+Text Notes 2450 900  1    50   ~ 0
+GND
+Text Notes 3650 900  1    50   ~ 0
++V
+Text Notes 3550 900  1    50   ~ 0
+Signal
+Text Notes 3450 900  1    50   ~ 0
+GND
+Text Notes 4650 900  1    50   ~ 0
++V
+Text Notes 4550 900  1    50   ~ 0
+Signal
+Text Notes 4450 900  1    50   ~ 0
+GND
+$Comp
+L linear:LM324 U?
+U 1 1 5EE1BED9
+P 5900 2300
+AR Path="/5036250D/5EE1BED9" Ref="U?"  Part="1" 
+AR Path="/4C8BDE0A/5EE1BED9" Ref="U9"  Part="1" 
+F 0 "U9" V 6000 2400 50  0000 L CNN
+F 1 "LM324" V 6100 2350 50  0000 L CNN
+F 2 "" H 5850 2400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 5950 2500 50  0001 C CNN
+	1    5900 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L linear:LM324 U?
+U 2 1 5D940DA4
+P 6900 2300
+AR Path="/5036250D/5D940DA4" Ref="U?"  Part="2" 
+AR Path="/4C8BDE0A/5D940DA4" Ref="U9"  Part="2" 
+F 0 "U9" V 7000 2400 50  0000 L CNN
+F 1 "LM324" V 7100 2350 50  0000 L CNN
+F 2 "" H 6850 2400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6950 2500 50  0001 C CNN
+	2    6900 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L linear:LM324 U?
+U 3 1 5D940DA5
+P 7900 2300
+AR Path="/5036250D/5D940DA5" Ref="U?"  Part="3" 
+AR Path="/4C8BDE0A/5D940DA5" Ref="U9"  Part="3" 
+F 0 "U9" V 8000 2400 50  0000 L CNN
+F 1 "LM324" V 8100 2350 50  0000 L CNN
+F 2 "" H 7850 2400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7950 2500 50  0001 C CNN
+	3    7900 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L linear:LM324 U?
+U 4 1 5EE1BEEB
+P 8900 2300
+AR Path="/5036250D/5EE1BEEB" Ref="U?"  Part="4" 
+AR Path="/4C8BDE0A/5EE1BEEB" Ref="U9"  Part="4" 
+F 0 "U9" V 9000 2400 50  0000 L CNN
+F 1 "LM324" V 9100 2350 50  0000 L CNN
+F 2 "" H 8850 2400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 8950 2500 50  0001 C CNN
+	4    8900 2300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8800 2000 8800 1900
+Wire Wire Line
+	8900 2700 8900 2600
+Wire Wire Line
+	7800 2000 7800 1900
+Wire Wire Line
+	6800 2000 6800 1900
+Wire Wire Line
+	5800 2000 5800 1900
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 5EE1BEF9
+P 6000 1100
+AR Path="/5036250D/5EE1BEF9" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5EE1BEF9" Ref="J33"  Part="1" 
+F 0 "J33" V 6000 900 50  0000 R CNN
+F 1 "H_RIGHT_JOYSTIC" V 6100 1450 50  0000 R CNN
+F 2 "" H 6000 1100 50  0001 C CNN
+F 3 "~" H 6000 1100 50  0001 C CNN
+	1    6000 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 5D940DA8
+P 7000 1100
+AR Path="/5036250D/5D940DA8" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5D940DA8" Ref="J35"  Part="1" 
+F 0 "J35" V 7000 900 50  0000 R CNN
+F 1 "V_RIGHT_JOYSTIC" V 7100 1450 50  0000 R CNN
+F 2 "" H 7000 1100 50  0001 C CNN
+F 3 "~" H 7000 1100 50  0001 C CNN
+	1    7000 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 5D940DA9
+P 8000 1100
+AR Path="/5036250D/5D940DA9" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5D940DA9" Ref="J37"  Part="1" 
+F 0 "J37" V 8000 900 50  0000 R CNN
+F 1 "H_LEFT_JOYSTIC" V 8100 1400 50  0000 R CNN
+F 2 "" H 8000 1100 50  0001 C CNN
+F 3 "~" H 8000 1100 50  0001 C CNN
+	1    8000 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 5EE1BF0B
+P 9000 1100
+AR Path="/5036250D/5EE1BF0B" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5EE1BF0B" Ref="J39"  Part="1" 
+F 0 "J39" V 9000 900 50  0000 R CNN
+F 1 "V_LEFT_JOYSTIC" V 9100 1400 50  0000 R CNN
+F 2 "" H 9000 1100 50  0001 C CNN
+F 3 "~" H 9000 1100 50  0001 C CNN
+	1    9000 1100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6000 1300 6000 2000
+Wire Wire Line
+	9000 2000 9000 1300
+Wire Wire Line
+	9100 1300 9100 1400
+Wire Wire Line
+	9100 1400 8100 1400
+Wire Wire Line
+	6100 1400 6100 1300
+Wire Wire Line
+	7100 1300 7100 1400
+Wire Wire Line
+	8100 1300 8100 1400
+Wire Wire Line
+	8900 1300 8900 1500
+Wire Wire Line
+	5900 1500 5900 1300
+Wire Wire Line
+	6900 1300 6900 1500
+Wire Wire Line
+	7900 1300 7900 1500
+Connection ~ 6900 1500
+Wire Wire Line
+	8000 1300 8000 2000
+Wire Wire Line
+	7000 1300 7000 2000
+Connection ~ 7900 1500
+Wire Wire Line
+	8100 1400 7100 1400
+Connection ~ 8100 1400
+Wire Wire Line
+	7100 1400 6100 1400
+Connection ~ 7100 1400
+Wire Wire Line
+	9300 2200 9200 2200
+$Comp
+L device:C C?
+U 1 1 5EE1BF25
+P 9550 1750
+AR Path="/5036250D/5EE1BF25" Ref="C?"  Part="1" 
+AR Path="/4C8BDE0A/5EE1BF25" Ref="C16"  Part="1" 
+F 0 "C16" V 9600 1600 50  0000 C CNN
+F 1 "C" V 9700 1600 50  0000 C CNN
+F 2 "" H 9588 1600 50  0001 C CNN
+F 3 "" H 9550 1750 50  0001 C CNN
+	1    9550 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L device:CP C?
+U 1 1 5EE1BF2B
+P 9550 2200
+AR Path="/5036250D/5EE1BF2B" Ref="C?"  Part="1" 
+AR Path="/4C8BDE0A/5EE1BF2B" Ref="C17"  Part="1" 
+F 0 "C17" V 9500 2350 50  0000 C CNN
+F 1 "CP" V 9400 2350 50  0000 C CNN
+F 2 "" H 9588 2050 50  0001 C CNN
+F 3 "" H 9550 2200 50  0001 C CNN
+	1    9550 2200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9400 1750 9300 1750
+Wire Wire Line
+	9300 1750 9300 2200
+Wire Wire Line
+	9400 2200 9300 2200
+Connection ~ 9300 2200
+Wire Wire Line
+	9700 2200 9800 2200
+Wire Wire Line
+	9800 2200 9800 1750
+Wire Wire Line
+	9800 1750 9700 1750
+Wire Wire Line
+	9800 1750 9800 1500
+Wire Wire Line
+	9800 1500 8900 1500
+Connection ~ 9800 1750
+Connection ~ 8900 1500
+Wire Wire Line
+	5800 1900 5400 1900
+Wire Wire Line
+	6800 1900 6400 1900
+Wire Wire Line
+	7800 1900 7400 1900
+Wire Wire Line
+	8400 2700 8900 2700
+Wire Wire Line
+	8800 1900 8400 1900
+Wire Wire Line
+	8400 1900 8400 2700
+Wire Wire Line
+	8900 1500 8500 1500
+Wire Wire Line
+	7900 1500 8500 1500
+Connection ~ 8500 1500
+Wire Wire Line
+	8600 2200 8500 2200
+Wire Wire Line
+	8500 2200 8500 1500
+Wire Wire Line
+	8300 2200 8200 2200
+Wire Wire Line
+	7600 2200 7500 2200
+Wire Wire Line
+	7300 2200 7200 2200
+Wire Wire Line
+	6600 2200 6500 2200
+Wire Wire Line
+	6500 1500 5900 1500
+Wire Wire Line
+	6900 1500 6500 1500
+Connection ~ 6500 1500
+Wire Wire Line
+	6500 2200 6500 1500
+Wire Wire Line
+	7900 1500 7500 1500
+Wire Wire Line
+	7500 1500 6900 1500
+Connection ~ 7500 1500
+Wire Wire Line
+	7500 2200 7500 1500
+Connection ~ 9300 1750
+Wire Wire Line
+	9300 1600 9300 1750
+Wire Wire Line
+	8300 1600 9300 1600
+Wire Wire Line
+	8300 1600 8300 2200
+Connection ~ 8300 1600
+Wire Wire Line
+	7300 1600 8300 1600
+Wire Wire Line
+	7300 1600 7300 2200
+Connection ~ 7300 1600
+Wire Wire Line
+	6300 1600 7300 1600
+Wire Wire Line
+	6300 2200 6300 1600
+Wire Wire Line
+	6200 2200 6300 2200
+Connection ~ 5900 1500
+Wire Wire Line
+	5500 1500 5900 1500
+Wire Wire Line
+	5500 2200 5500 1500
+Wire Wire Line
+	5600 2200 5500 2200
+Text Notes 6150 900  1    50   ~ 0
++V
+Text Notes 6050 900  1    50   ~ 0
+Cursor
+Text Notes 5950 900  1    50   ~ 0
+GND
+Text Notes 7150 900  1    50   ~ 0
++V
+Text Notes 7050 900  1    50   ~ 0
+Cursor
+Text Notes 6950 900  1    50   ~ 0
+GND
+Text Notes 8150 900  1    50   ~ 0
++V
+Text Notes 8050 900  1    50   ~ 0
+Cursor
+Text Notes 7950 900  1    50   ~ 0
+GND
+Text Notes 9150 900  1    50   ~ 0
++V
+Text Notes 9050 900  1    50   ~ 0
+Cursor
+Text Notes 8950 900  1    50   ~ 0
+GND
+Wire Wire Line
+	5300 1500 5500 1500
+Connection ~ 5300 1500
+Connection ~ 5500 1500
+Connection ~ 6300 1600
+Wire Wire Line
+	600  1400 1600 1400
+Connection ~ 1600 1400
+Wire Wire Line
+	600  5600 600  1400
+Connection ~ 1400 5600
+Wire Wire Line
+	1400 5600 600  5600
+Connection ~ 5900 5600
+Connection ~ 4400 5600
+Wire Wire Line
+	4400 5600 5900 5600
+Text Notes 6150 6100 3    50   ~ 0
+GND
+Text Notes 6050 6100 3    50   ~ 0
+Signal
+Text Notes 5950 6100 3    50   ~ 0
++V
+Text Notes 7150 6100 3    50   ~ 0
+GND
+Text Notes 7050 6100 3    50   ~ 0
+Signal
+Text Notes 6950 6100 3    50   ~ 0
++V
+Text Notes 8150 6100 3    50   ~ 0
+GND
+Text Notes 8050 6100 3    50   ~ 0
+Signal
+Text Notes 7950 6100 3    50   ~ 0
++V
+Text Notes 9150 6100 3    50   ~ 0
+GND
+Text Notes 9050 6100 3    50   ~ 0
+Signal
+Text Notes 8950 6100 3    50   ~ 0
++V
+Connection ~ 6100 5500
+Connection ~ 7900 5600
+Wire Wire Line
+	7900 5600 8900 5600
+Connection ~ 6900 5600
+Wire Wire Line
+	6900 5600 7900 5600
+Connection ~ 7100 5500
+Connection ~ 8100 5500
+Wire Wire Line
+	7100 5700 7100 5500
+Wire Wire Line
+	8100 5700 8100 5500
+Wire Wire Line
+	9100 5500 9100 5700
+Wire Wire Line
+	6100 5700 6100 5500
+Wire Wire Line
+	6900 5700 6900 5600
+Wire Wire Line
+	7900 5700 7900 5600
+Wire Wire Line
+	8900 5600 8900 5700
+Wire Wire Line
+	5900 5600 6900 5600
+Wire Wire Line
+	5900 5700 5900 5600
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 5D940DB4
+P 6000 5900
+AR Path="/5036250D/5D940DB4" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5D940DB4" Ref="J34"  Part="1" 
+F 0 "J34" V 6000 6200 50  0000 R CNN
+F 1 "ROTARY_9" V 6100 6100 50  0000 R CNN
+F 2 "" H 6000 5900 50  0001 C CNN
+F 3 "~" H 6000 5900 50  0001 C CNN
+	1    6000 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 5D940DB3
+P 7000 5900
+AR Path="/5036250D/5D940DB3" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5D940DB3" Ref="J36"  Part="1" 
+F 0 "J36" V 7000 6200 50  0000 R CNN
+F 1 "ROTARY_10" V 7100 6100 50  0000 R CNN
+F 2 "" H 7000 5900 50  0001 C CNN
+F 3 "~" H 7000 5900 50  0001 C CNN
+	1    7000 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 5D940DB2
+P 8000 5900
+AR Path="/5036250D/5D940DB2" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5D940DB2" Ref="J38"  Part="1" 
+F 0 "J38" V 8000 6200 50  0000 R CNN
+F 1 "ROTARY_11" V 8100 6100 50  0000 R CNN
+F 2 "" H 8000 5900 50  0001 C CNN
+F 3 "~" H 8000 5900 50  0001 C CNN
+	1    8000 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 5D940DB1
+P 9000 5900
+AR Path="/5036250D/5D940DB1" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5D940DB1" Ref="J40"  Part="1" 
+F 0 "J40" V 9000 6200 50  0000 R CNN
+F 1 "ROTARY_12" V 9100 6100 50  0000 R CNN
+F 2 "" H 9000 5900 50  0001 C CNN
+F 3 "~" H 9000 5900 50  0001 C CNN
+	1    9000 5900
+	0    1    1    0   
+$EndComp
+Text Notes 1650 6100 3    50   ~ 0
+GND
+Text Notes 1550 6100 3    50   ~ 0
+Signal
+Text Notes 1450 6100 3    50   ~ 0
++V
+Text Notes 2650 6100 3    50   ~ 0
+GND
+Text Notes 2550 6100 3    50   ~ 0
+Signal
+Text Notes 2450 6100 3    50   ~ 0
++V
+Text Notes 3650 6100 3    50   ~ 0
+GND
+Text Notes 3550 6100 3    50   ~ 0
+Signal
+Text Notes 3450 6100 3    50   ~ 0
++V
+Text Notes 4650 6100 3    50   ~ 0
+GND
+Text Notes 4550 6100 3    50   ~ 0
+Signal
+Text Notes 4450 6100 3    50   ~ 0
++V
+Connection ~ 4600 5500
+Connection ~ 1600 5500
+Wire Wire Line
+	700  5500 1600 5500
+Connection ~ 3400 5600
+Wire Wire Line
+	3400 5600 4400 5600
+Connection ~ 2400 5600
+Wire Wire Line
+	2400 5600 3400 5600
+Connection ~ 2600 5500
+Connection ~ 3600 5500
+Wire Wire Line
+	2600 5700 2600 5500
+Wire Wire Line
+	3600 5700 3600 5500
+Wire Wire Line
+	4600 5500 4600 5700
+Wire Wire Line
+	1600 5700 1600 5500
+Wire Wire Line
+	2400 5700 2400 5600
+Wire Wire Line
+	3400 5700 3400 5600
+Wire Wire Line
+	4400 5600 4400 5700
+Wire Wire Line
+	1400 5600 2400 5600
+Wire Wire Line
+	1400 5700 1400 5600
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 5D940DB0
+P 1500 5900
+AR Path="/5036250D/5D940DB0" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5D940DB0" Ref="J25"  Part="1" 
+F 0 "J25" V 1500 6200 50  0000 R CNN
+F 1 "ROTARY_5" V 1600 6100 50  0000 R CNN
+F 2 "" H 1500 5900 50  0001 C CNN
+F 3 "~" H 1500 5900 50  0001 C CNN
+	1    1500 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 5EE47D7F
+P 2500 5900
+AR Path="/5036250D/5EE47D7F" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5EE47D7F" Ref="J27"  Part="1" 
+F 0 "J27" V 2500 6200 50  0000 R CNN
+F 1 "ROTARY_6" V 2600 6100 50  0000 R CNN
+F 2 "" H 2500 5900 50  0001 C CNN
+F 3 "~" H 2500 5900 50  0001 C CNN
+	1    2500 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 5EE47D79
+P 3500 5900
+AR Path="/5036250D/5EE47D79" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5EE47D79" Ref="J29"  Part="1" 
+F 0 "J29" V 3500 6200 50  0000 R CNN
+F 1 "ROTARY_7" V 3600 6100 50  0000 R CNN
+F 2 "" H 3500 5900 50  0001 C CNN
+F 3 "~" H 3500 5900 50  0001 C CNN
+	1    3500 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 5D940DAD
+P 4500 5900
+AR Path="/5036250D/5D940DAD" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5D940DAD" Ref="J31"  Part="1" 
+F 0 "J31" V 4500 6200 50  0000 R CNN
+F 1 "ROTARY_8" V 4600 6100 50  0000 R CNN
+F 2 "" H 4500 5900 50  0001 C CNN
+F 3 "~" H 4500 5900 50  0001 C CNN
+	1    4500 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L conn:Conn_01x08 J?
+U 1 1 5D940DB8
+P 10650 2400
+AR Path="/5036250D/5D940DB8" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5D940DB8" Ref="J41"  Part="1" 
+F 0 "J41" V 10650 2800 50  0000 L CNN
+F 1 "MULTI_PROP_1" V 10750 2100 50  0000 L CNN
+F 2 "" H 10650 2400 50  0001 C CNN
+F 3 "~" H 10650 2400 50  0001 C CNN
+	1    10650 2400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L conn:Conn_01x08 J?
+U 1 1 5D940DB9
+P 10750 4600
+AR Path="/5036250D/5D940DB9" Ref="J?"  Part="1" 
+AR Path="/4C8BDE0A/5D940DB9" Ref="J42"  Part="1" 
+F 0 "J42" V 10750 4000 50  0000 L CNN
+F 1 "MULTI_PROP_2" V 10850 4350 50  0000 L CNN
+F 2 "" H 10750 4600 50  0001 C CNN
+F 3 "~" H 10750 4600 50  0001 C CNN
+	1    10750 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10350 2600 10350 2700
+Wire Wire Line
+	10350 2700 8900 2700
+Connection ~ 8900 2700
+Wire Wire Line
+	10450 2600 10450 2800
+Wire Wire Line
+	10450 2800 7900 2800
+Wire Wire Line
+	10550 2600 10550 2900
+Wire Wire Line
+	10550 2900 6900 2900
+Wire Wire Line
+	10650 2600 10650 3000
+Wire Wire Line
+	10650 3000 5900 3000
+Wire Wire Line
+	10750 2600 10750 3100
+Wire Wire Line
+	10750 3100 4500 3100
+Wire Wire Line
+	10850 2600 10850 3200
+Wire Wire Line
+	10850 3200 3500 3200
+Wire Wire Line
+	10950 2600 10950 3300
+Wire Wire Line
+	10950 3300 2500 3300
+Wire Wire Line
+	11050 2600 11050 3400
+Wire Wire Line
+	11050 3400 1500 3400
+Wire Wire Line
+	10350 4300 10350 4400
+Wire Wire Line
+	10450 4200 10450 4400
+Wire Wire Line
+	10550 4400 10550 4100
+Wire Wire Line
+	10650 4400 10650 4000
+Wire Wire Line
+	6000 4000 10650 4000
+Wire Wire Line
+	10750 4400 10750 3900
+Wire Wire Line
+	10750 3900 4500 3900
+Wire Wire Line
+	10850 4400 10850 3800
+Wire Wire Line
+	10850 3800 3500 3800
+Wire Wire Line
+	10950 4400 10950 3700
+Wire Wire Line
+	10950 3700 2500 3700
+Wire Wire Line
+	11050 4400 11050 3600
+Wire Wire Line
+	11050 3600 1500 3600
+Wire Wire Line
+	8000 4200 10450 4200
+Wire Wire Line
+	7000 4100 10550 4100
+Wire Wire Line
+	5900 3000 5900 2700
+Wire Wire Line
+	5900 2700 5900 2600
+Connection ~ 5900 2700
+Wire Wire Line
+	5400 1900 5400 2700
+Wire Wire Line
+	5400 2700 5900 2700
+Wire Wire Line
+	6900 2900 6900 2700
+Wire Wire Line
+	6900 2700 6900 2600
+Connection ~ 6900 2700
+Wire Wire Line
+	6400 1900 6400 2700
+Wire Wire Line
+	6400 2700 6900 2700
+Wire Wire Line
+	7900 2800 7900 2700
+Wire Wire Line
+	7900 2700 7900 2600
+Connection ~ 7900 2700
+Wire Wire Line
+	7400 1900 7400 2700
+Wire Wire Line
+	7400 2700 7900 2700
+Wire Wire Line
+	5100 1400 5100 1300
+Wire Wire Line
+	5100 1400 6100 1400
+Connection ~ 6100 1400
+Wire Wire Line
+	5200 1300 5200 1600
+Wire Wire Line
+	5200 1600 6300 1600
+Wire Wire Line
+	5300 1300 5300 1500
+NoConn ~ 5400 1300
+Text Notes 10800 2200 1    50   ~ 0
+TRIM_1
+Text Notes 10900 2200 1    50   ~ 0
+TRIM_2
+Text Notes 11000 2200 1    50   ~ 0
+TRIM_3
+Text Notes 11100 2200 1    50   ~ 0
+TRIM_4
+Text Notes 10400 5100 1    50   ~ 0
+TRIM_5
+Text Notes 10500 5100 1    50   ~ 0
+TRIM_6
+Text Notes 10600 5100 1    50   ~ 0
+TRIM_7
+Text Notes 10700 5100 1    50   ~ 0
+TRIM_8
+Text Notes 10800 5100 1    50   ~ 0
+TRIM_9
+Text Notes 10900 5100 1    50   ~ 0
+TRIM_10
+Text Notes 11000 5100 1    50   ~ 0
+TRIM_11
+Text Notes 11100 5100 1    50   ~ 0
+TRIM_12
+Wire Wire Line
+	3400 1500 4400 1500
+Wire Wire Line
+	2400 1500 3400 1500
+Wire Wire Line
+	1400 1500 2400 1500
+Wire Wire Line
+	700  1500 1400 1500
+Wire Wire Line
+	700  1500 700  5500
+Wire Wire Line
+	1600 5500 2600 5500
+Wire Wire Line
+	2600 5500 3600 5500
+Wire Wire Line
+	3600 5500 4600 5500
+Wire Wire Line
+	4600 5500 6100 5500
+Wire Wire Line
+	6100 5500 7100 5500
+Wire Wire Line
+	7100 5500 8100 5500
+Wire Wire Line
+	8100 5500 9100 5500
+Wire Wire Line
+	9000 4300 10350 4300
+Wire Wire Line
+	9000 4300 9000 5700
+Wire Wire Line
+	8000 4200 8000 5700
+Wire Wire Line
+	7000 4100 7000 5700
+Wire Wire Line
+	6000 4000 6000 5700
+Wire Wire Line
+	4500 3900 4500 5700
+Wire Wire Line
+	3500 3800 3500 5700
+Wire Wire Line
+	2500 3700 2500 5700
+Wire Wire Line
+	1500 3600 1500 5700
+Wire Wire Line
+	1500 1300 1500 3400
+Wire Wire Line
+	2500 1300 2500 3300
+Wire Wire Line
+	3500 1300 3500 3200
+Wire Wire Line
+	4500 1300 4500 3100
+$Comp
+L conn:Conn_01x05 J32
+U 1 1 5DE238D0
+P 5200 1100
+F 0 "J32" V 5164 812 50  0000 R CNN
+F 1 "PWR_BUS" V 5300 1300 50  0000 R CNN
+F 2 "" H 5200 1100 50  0001 C CNN
+F 3 "~" H 5200 1100 50  0001 C CNN
+	1    5200 1100
+	0    -1   -1   0   
+$EndComp
+Text Notes 5050 950  1    60   ~ 0
++1.65V
+Wire Wire Line
+	4600 1400 5000 1400
+Wire Wire Line
+	5000 1400 5000 1300
+Connection ~ 4600 1400
+$EndSCHEMATC
