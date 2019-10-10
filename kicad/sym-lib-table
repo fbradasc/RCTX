@@ -2,4 +2,5 @@
   (lib (name UBW32_v24)(type Legacy)(uri ${KIPRJMOD}/UBW32_v24.lib)(options "")(descr ""))
   (lib (name MAX6969)(type Legacy)(uri ${KIPRJMOD}/MAX6969.lib)(options "")(descr ""))
   (lib (name MB504L)(type Legacy)(uri ${KIPRJMOD}/MB504L.lib)(options "")(descr ""))
+  (lib (name RCTX-rescue)(type Legacy)(uri ${KIPRJMOD}/RCTX-rescue.lib)(options "")(descr ""))
 )

@@ -31,45 +31,45 @@ Text Notes 5200 950  1    60   ~ 0
 Text Notes 5100 950  1    60   ~ 0
 +3.3V
 $Comp
-L linear:LM324 U3
+L RCTX-rescue:LM324-linear U3
 U 1 1 5ED8B041
 P 1350 2300
 F 0 "U3" V 1450 2400 50  0000 L CNN
 F 1 "LM324" V 1550 2350 50  0000 L CNN
-F 2 "" H 1300 2400 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 1300 2400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 1400 2500 50  0001 C CNN
 	1    1350 2300
 	0    1    1    0   
 $EndComp
 $Comp
-L linear:LM324 U3
+L RCTX-rescue:LM324-linear U3
 U 3 1 5ED8BCD2
 P 2350 2300
 F 0 "U3" V 2450 2400 50  0000 L CNN
 F 1 "LM324" V 2550 2350 50  0000 L CNN
-F 2 "" H 2300 2400 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 2300 2400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 2400 2500 50  0001 C CNN
 	3    2350 2300
 	0    1    1    0   
 $EndComp
 $Comp
-L linear:LM324 U4
+L RCTX-rescue:LM324-linear U4
 U 1 1 5ED8BF31
 P 3350 2300
 F 0 "U4" V 3450 2400 50  0000 L CNN
 F 1 "LM324" V 3550 2350 50  0000 L CNN
-F 2 "" H 3300 2400 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 3300 2400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3400 2500 50  0001 C CNN
 	1    3350 2300
 	0    1    1    0   
 $EndComp
 $Comp
-L linear:LM324 U4
+L RCTX-rescue:LM324-linear U4
 U 3 1 5ED8D296
 P 4350 2300
 F 0 "U4" V 4450 2400 50  0000 L CNN
 F 1 "LM324" V 4550 2350 50  0000 L CNN
-F 2 "" H 4300 2400 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 4300 2400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 4400 2500 50  0001 C CNN
 	3    4350 2300
 	0    1    1    0   
@@ -85,45 +85,45 @@ Wire Wire Line
 Wire Wire Line
 	1350 2700 1350 2600
 $Comp
-L conn:Conn_01x03 J1
+L RCTX-rescue:Conn_01x03-conn J1
 U 1 1 5EDA1A35
 P 1450 1100
 F 0 "J1" V 1450 900 50  0000 R CNN
 F 1 "ROTARY_4" V 1550 1300 50  0000 R CNN
-F 2 "" H 1450 1100 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 1450 1100 50  0001 C CNN
 F 3 "~" H 1450 1100 50  0001 C CNN
 	1    1450 1100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J3
+L RCTX-rescue:Conn_01x03-conn J3
 U 1 1 5D940DA0
 P 2450 1100
 F 0 "J3" V 2450 900 50  0000 R CNN
 F 1 "ROTARY_3" V 2550 1300 50  0000 R CNN
-F 2 "" H 2450 1100 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 2450 1100 50  0001 C CNN
 F 3 "~" H 2450 1100 50  0001 C CNN
 	1    2450 1100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J5
+L RCTX-rescue:Conn_01x03-conn J5
 U 1 1 5D940DA1
 P 3450 1100
 F 0 "J5" V 3450 900 50  0000 R CNN
 F 1 "ROTARY_2" V 3550 1300 50  0000 R CNN
-F 2 "" H 3450 1100 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 3450 1100 50  0001 C CNN
 F 3 "~" H 3450 1100 50  0001 C CNN
 	1    3450 1100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J7
+L RCTX-rescue:Conn_01x03-conn J7
 U 1 1 5D940DA2
 P 4450 1100
 F 0 "J7" V 4450 900 50  0000 R CNN
 F 1 "ROTARY_1" V 4550 1300 50  0000 R CNN
-F 2 "" H 4450 1100 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 4450 1100 50  0001 C CNN
 F 3 "~" H 4450 1100 50  0001 C CNN
 	1    4450 1100
 	0    -1   -1   0   
@@ -165,23 +165,23 @@ Connection ~ 2550 1400
 Wire Wire Line
 	4750 2200 4650 2200
 $Comp
-L device:C C8
+L RCTX-rescue:C-device C8
 U 1 1 5EDD66AE
 P 5000 1750
 F 0 "C8" V 4950 1900 50  0000 C CNN
 F 1 "1uF" V 5150 1750 50  0000 C CNN
-F 2 "" H 5038 1600 50  0001 C CNN
+F 2 "Capacitors_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5038 1600 50  0001 C CNN
 F 3 "" H 5000 1750 50  0001 C CNN
 	1    5000 1750
 	0    1    1    0   
 $EndComp
 $Comp
-L device:CP C9
+L RCTX-rescue:CP-device C9
 U 1 1 5EDD6EE0
 P 5000 2200
 F 0 "C9" V 5100 2050 50  0000 C CNN
 F 1 "100uF" V 4850 2200 50  0000 C CNN
-F 2 "" H 5038 2050 50  0001 C CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 5038 2050 50  0001 C CNN
 F 3 "" H 5000 2200 50  0001 C CNN
 	1    5000 2200
 	0    -1   -1   0   
@@ -299,45 +299,45 @@ Signal
 Text Notes 4400 900  1    50   ~ 0
 GND
 $Comp
-L linear:LM324 U5
+L RCTX-rescue:LM324-linear U6
 U 1 1 5D940DA3
 P 5850 2300
-F 0 "U5" V 5950 2400 50  0000 L CNN
+F 0 "U6" V 5950 2400 50  0000 L CNN
 F 1 "LM324" V 6050 2350 50  0000 L CNN
-F 2 "" H 5800 2400 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 5800 2400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 5900 2500 50  0001 C CNN
 	1    5850 2300
 	0    1    1    0   
 $EndComp
 $Comp
-L linear:LM324 U5
+L RCTX-rescue:LM324-linear U6
 U 3 1 5EE1BEDF
 P 6850 2300
-F 0 "U5" V 6950 2400 50  0000 L CNN
+F 0 "U6" V 6950 2400 50  0000 L CNN
 F 1 "LM324" V 7050 2350 50  0000 L CNN
-F 2 "" H 6800 2400 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 6800 2400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6900 2500 50  0001 C CNN
 	3    6850 2300
 	0    1    1    0   
 $EndComp
 $Comp
-L linear:LM324 U6
+L RCTX-rescue:LM324-linear U7
 U 1 1 5EE1BEE5
 P 7850 2300
-F 0 "U6" V 7950 2400 50  0000 L CNN
+F 0 "U7" V 7950 2400 50  0000 L CNN
 F 1 "LM324" V 8050 2350 50  0000 L CNN
-F 2 "" H 7800 2400 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 7800 2400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7900 2500 50  0001 C CNN
 	1    7850 2300
 	0    1    1    0   
 $EndComp
 $Comp
-L linear:LM324 U6
+L RCTX-rescue:LM324-linear U7
 U 3 1 5D940DA6
 P 8850 2300
-F 0 "U6" V 8950 2400 50  0000 L CNN
+F 0 "U7" V 8950 2400 50  0000 L CNN
 F 1 "LM324" V 9050 2350 50  0000 L CNN
-F 2 "" H 8800 2400 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 8800 2400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 8900 2500 50  0001 C CNN
 	3    8850 2300
 	0    1    1    0   
@@ -353,45 +353,45 @@ Wire Wire Line
 Wire Wire Line
 	5750 2000 5750 1900
 $Comp
-L conn:Conn_01x03 J10
+L RCTX-rescue:Conn_01x03-conn J10
 U 1 1 5D940DA7
 P 5950 1100
 F 0 "J10" V 5950 900 50  0000 R CNN
 F 1 "H_RIGHT_JOYSTIC" V 6050 1450 50  0000 R CNN
-F 2 "" H 5950 1100 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 5950 1100 50  0001 C CNN
 F 3 "~" H 5950 1100 50  0001 C CNN
 	1    5950 1100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J12
+L RCTX-rescue:Conn_01x03-conn J12
 U 1 1 5EE1BEFF
 P 6950 1100
 F 0 "J12" V 6950 900 50  0000 R CNN
 F 1 "V_RIGHT_JOYSTIC" V 7050 1450 50  0000 R CNN
-F 2 "" H 6950 1100 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 6950 1100 50  0001 C CNN
 F 3 "~" H 6950 1100 50  0001 C CNN
 	1    6950 1100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J14
+L RCTX-rescue:Conn_01x03-conn J14
 U 1 1 5EE1BF05
 P 7950 1100
 F 0 "J14" V 7950 900 50  0000 R CNN
 F 1 "H_LEFT_JOYSTIC" V 8050 1400 50  0000 R CNN
-F 2 "" H 7950 1100 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 7950 1100 50  0001 C CNN
 F 3 "~" H 7950 1100 50  0001 C CNN
 	1    7950 1100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J16
+L RCTX-rescue:Conn_01x03-conn J16
 U 1 1 5D940DAA
 P 8950 1100
 F 0 "J16" V 8950 900 50  0000 R CNN
 F 1 "V_LEFT_JOYSTIC" V 9050 1400 50  0000 R CNN
-F 2 "" H 8950 1100 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 8950 1100 50  0001 C CNN
 F 3 "~" H 8950 1100 50  0001 C CNN
 	1    8950 1100
 	0    -1   -1   0   
@@ -433,23 +433,23 @@ Connection ~ 7050 1400
 Wire Wire Line
 	9250 2200 9150 2200
 $Comp
-L device:C C12
+L RCTX-rescue:C-device C13
 U 1 1 5D940DAB
 P 9500 1750
-F 0 "C12" V 9450 1900 50  0000 C CNN
+F 0 "C13" V 9450 1900 50  0000 C CNN
 F 1 "1uF" V 9650 1750 50  0000 C CNN
-F 2 "" H 9538 1600 50  0001 C CNN
+F 2 "Capacitors_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9538 1600 50  0001 C CNN
 F 3 "" H 9500 1750 50  0001 C CNN
 	1    9500 1750
 	0    1    1    0   
 $EndComp
 $Comp
-L device:CP C13
+L RCTX-rescue:CP-device C14
 U 1 1 5D940DAC
 P 9500 2200
-F 0 "C13" V 9600 2050 50  0000 C CNN
+F 0 "C14" V 9600 2050 50  0000 C CNN
 F 1 "100uF" V 9350 2200 50  0000 C CNN
-F 2 "" H 9538 2050 50  0001 C CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 9538 2050 50  0001 C CNN
 F 3 "" H 9500 2200 50  0001 C CNN
 	1    9500 2200
 	0    -1   -1   0   
@@ -728,23 +728,23 @@ Wire Wire Line
 Wire Wire Line
 	5550 5250 5650 5250
 $Comp
-L device:CP C10
+L RCTX-rescue:CP-device C10
 U 1 1 5EE5E351
 P 5400 4800
 F 0 "C10" V 5450 4650 50  0000 C CNN
 F 1 "100uF" V 5250 4800 50  0000 C CNN
-F 2 "" H 5438 4650 50  0001 C CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 5438 4650 50  0001 C CNN
 F 3 "" H 5400 4800 50  0001 C CNN
 	1    5400 4800
 	0    1    1    0   
 $EndComp
 $Comp
-L device:C C11
+L RCTX-rescue:C-device C11
 U 1 1 5EE5E34B
 P 5400 5250
 F 0 "C11" V 5350 5400 50  0000 C CNN
 F 1 "1uF" V 5550 5250 50  0000 C CNN
-F 2 "" H 5438 5100 50  0001 C CNN
+F 2 "Capacitors_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5438 5100 50  0001 C CNN
 F 3 "" H 5400 5250 50  0001 C CNN
 	1    5400 5250
 	0    -1   -1   0   
@@ -786,45 +786,45 @@ Wire Wire Line
 Wire Wire Line
 	8950 5700 8950 5000
 $Comp
-L conn:Conn_01x03 J11
+L RCTX-rescue:Conn_01x03-conn J11
 U 1 1 5EE5E331
 P 5950 5900
 F 0 "J11" V 5950 6200 50  0000 R CNN
 F 1 "ROTARY_9" V 6050 6100 50  0000 R CNN
-F 2 "" H 5950 5900 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 5950 5900 50  0001 C CNN
 F 3 "~" H 5950 5900 50  0001 C CNN
 	1    5950 5900
 	0    1    1    0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J13
+L RCTX-rescue:Conn_01x03-conn J13
 U 1 1 5EE5E32B
 P 6950 5900
 F 0 "J13" V 6950 6200 50  0000 R CNN
 F 1 "ROTARY_10" V 7050 6100 50  0000 R CNN
-F 2 "" H 6950 5900 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 6950 5900 50  0001 C CNN
 F 3 "~" H 6950 5900 50  0001 C CNN
 	1    6950 5900
 	0    1    1    0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J15
+L RCTX-rescue:Conn_01x03-conn J15
 U 1 1 5EE5E325
 P 7950 5900
 F 0 "J15" V 7950 6200 50  0000 R CNN
 F 1 "ROTARY_11" V 8050 6100 50  0000 R CNN
-F 2 "" H 7950 5900 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 7950 5900 50  0001 C CNN
 F 3 "~" H 7950 5900 50  0001 C CNN
 	1    7950 5900
 	0    1    1    0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J17
+L RCTX-rescue:Conn_01x03-conn J17
 U 1 1 5EE5E31F
 P 8950 5900
 F 0 "J17" V 8950 6200 50  0000 R CNN
 F 1 "ROTARY_12" V 9050 6100 50  0000 R CNN
-F 2 "" H 8950 5900 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 8950 5900 50  0001 C CNN
 F 3 "~" H 8950 5900 50  0001 C CNN
 	1    8950 5900
 	0    1    1    0   
@@ -846,45 +846,45 @@ Wire Wire Line
 Wire Wire Line
 	6150 5000 6150 5100
 $Comp
-L linear:LM324 U5
+L RCTX-rescue:LM324-linear U6
 U 2 1 5EE5E311
 P 6050 4700
-F 0 "U5" V 6150 4800 50  0000 L CNN
+F 0 "U6" V 6150 4800 50  0000 L CNN
 F 1 "LM324" V 6250 4750 50  0000 L CNN
-F 2 "" H 6000 4800 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 6000 4800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6100 4900 50  0001 C CNN
 	2    6050 4700
 	0    -1   -1   0   
 $EndComp
 $Comp
-L linear:LM324 U5
+L RCTX-rescue:LM324-linear U6
 U 4 1 5EE5E30B
 P 7050 4700
-F 0 "U5" V 7150 4800 50  0000 L CNN
+F 0 "U6" V 7150 4800 50  0000 L CNN
 F 1 "LM324" V 7250 4750 50  0000 L CNN
-F 2 "" H 7000 4800 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 7000 4800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7100 4900 50  0001 C CNN
 	4    7050 4700
 	0    -1   -1   0   
 $EndComp
 $Comp
-L linear:LM324 U6
+L RCTX-rescue:LM324-linear U7
 U 2 1 5EE5E305
 P 8050 4700
-F 0 "U6" V 8150 4800 50  0000 L CNN
+F 0 "U7" V 8150 4800 50  0000 L CNN
 F 1 "LM324" V 8250 4750 50  0000 L CNN
-F 2 "" H 8000 4800 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 8000 4800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 8100 4900 50  0001 C CNN
 	2    8050 4700
 	0    -1   -1   0   
 $EndComp
 $Comp
-L linear:LM324 U6
+L RCTX-rescue:LM324-linear U7
 U 4 1 5EE5E2FF
 P 9050 4700
-F 0 "U6" V 9150 4800 50  0000 L CNN
+F 0 "U7" V 9150 4800 50  0000 L CNN
 F 1 "LM324" V 9250 4750 50  0000 L CNN
-F 2 "" H 9000 4800 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 9000 4800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 9100 4900 50  0001 C CNN
 	4    9050 4700
 	0    -1   -1   0   
@@ -1012,23 +1012,23 @@ Wire Wire Line
 Wire Wire Line
 	1050 5250 1150 5250
 $Comp
-L device:CP C6
+L RCTX-rescue:CP-device C5
 U 1 1 5EE47DA5
 P 900 4800
-F 0 "C6" V 950 4650 50  0000 C CNN
+F 0 "C5" V 950 4650 50  0000 C CNN
 F 1 "100uF" V 750 4800 50  0000 C CNN
-F 2 "" H 938 4650 50  0001 C CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 938 4650 50  0001 C CNN
 F 3 "" H 900 4800 50  0001 C CNN
 	1    900  4800
 	0    1    1    0   
 $EndComp
 $Comp
-L device:C C7
+L RCTX-rescue:C-device C6
 U 1 1 5EE47D9F
 P 900 5250
-F 0 "C7" V 850 5400 50  0000 C CNN
+F 0 "C6" V 850 5400 50  0000 C CNN
 F 1 "1uF" V 1050 5250 50  0000 C CNN
-F 2 "" H 938 5100 50  0001 C CNN
+F 2 "Capacitors_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 938 5100 50  0001 C CNN
 F 3 "" H 900 5250 50  0001 C CNN
 	1    900  5250
 	0    -1   -1   0   
@@ -1070,45 +1070,45 @@ Wire Wire Line
 Wire Wire Line
 	4450 5700 4450 5000
 $Comp
-L conn:Conn_01x03 J2
+L RCTX-rescue:Conn_01x03-conn J2
 U 1 1 5EE47D85
 P 1450 5900
 F 0 "J2" V 1450 6200 50  0000 R CNN
 F 1 "ROTARY_5" V 1550 6100 50  0000 R CNN
-F 2 "" H 1450 5900 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 1450 5900 50  0001 C CNN
 F 3 "~" H 1450 5900 50  0001 C CNN
 	1    1450 5900
 	0    1    1    0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J4
+L RCTX-rescue:Conn_01x03-conn J4
 U 1 1 5D940DAF
 P 2450 5900
 F 0 "J4" V 2450 6200 50  0000 R CNN
 F 1 "ROTARY_6" V 2550 6100 50  0000 R CNN
-F 2 "" H 2450 5900 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 2450 5900 50  0001 C CNN
 F 3 "~" H 2450 5900 50  0001 C CNN
 	1    2450 5900
 	0    1    1    0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J6
+L RCTX-rescue:Conn_01x03-conn J6
 U 1 1 5D940DAE
 P 3450 5900
 F 0 "J6" V 3450 6200 50  0000 R CNN
 F 1 "ROTARY_7" V 3550 6100 50  0000 R CNN
-F 2 "" H 3450 5900 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 3450 5900 50  0001 C CNN
 F 3 "~" H 3450 5900 50  0001 C CNN
 	1    3450 5900
 	0    1    1    0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J8
+L RCTX-rescue:Conn_01x03-conn J8
 U 1 1 5EE47D73
 P 4450 5900
 F 0 "J8" V 4450 6200 50  0000 R CNN
 F 1 "ROTARY_8" V 4550 6100 50  0000 R CNN
-F 2 "" H 4450 5900 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 4450 5900 50  0001 C CNN
 F 3 "~" H 4450 5900 50  0001 C CNN
 	1    4450 5900
 	0    1    1    0   
@@ -1130,45 +1130,45 @@ Wire Wire Line
 Wire Wire Line
 	1650 5000 1650 5100
 $Comp
-L linear:LM324 U3
+L RCTX-rescue:LM324-linear U3
 U 2 1 5EE47D65
 P 1550 4700
 F 0 "U3" V 1650 4800 50  0000 L CNN
 F 1 "LM324" V 1750 4750 50  0000 L CNN
-F 2 "" H 1500 4800 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 1500 4800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 1600 4900 50  0001 C CNN
 	2    1550 4700
 	0    -1   -1   0   
 $EndComp
 $Comp
-L linear:LM324 U3
+L RCTX-rescue:LM324-linear U3
 U 4 1 5EE47D5F
 P 2550 4700
 F 0 "U3" V 2650 4800 50  0000 L CNN
 F 1 "LM324" V 2750 4750 50  0000 L CNN
-F 2 "" H 2500 4800 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 2500 4800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 2600 4900 50  0001 C CNN
 	4    2550 4700
 	0    -1   -1   0   
 $EndComp
 $Comp
-L linear:LM324 U4
+L RCTX-rescue:LM324-linear U4
 U 2 1 5EE47D59
 P 3550 4700
 F 0 "U4" V 3650 4800 50  0000 L CNN
 F 1 "LM324" V 3750 4750 50  0000 L CNN
-F 2 "" H 3500 4800 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 3500 4800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3600 4900 50  0001 C CNN
 	2    3550 4700
 	0    -1   -1   0   
 $EndComp
 $Comp
-L linear:LM324 U4
+L RCTX-rescue:LM324-linear U4
 U 4 1 5EE47D53
 P 4550 4700
 F 0 "U4" V 4650 4800 50  0000 L CNN
 F 1 "LM324" V 4750 4750 50  0000 L CNN
-F 2 "" H 4500 4800 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 4500 4800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 4600 4900 50  0001 C CNN
 	4    4550 4700
 	0    -1   -1   0   
@@ -1178,23 +1178,23 @@ Wire Wire Line
 Wire Wire Line
 	750  4300 1150 4300
 $Comp
-L conn:Conn_01x08 J18
+L RCTX-rescue:Conn_01x08-conn J18
 U 1 1 5F406C2D
 P 10600 2400
 F 0 "J18" V 10600 2800 50  0000 L CNN
 F 1 "MULTI_PROP_1" V 10700 2100 50  0000 L CNN
-F 2 "" H 10600 2400 50  0001 C CNN
+F 2 "Connectors_Samtec:SL-108-X-XX_1x08" H 10600 2400 50  0001 C CNN
 F 3 "~" H 10600 2400 50  0001 C CNN
 	1    10600 2400
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conn:Conn_01x08 J19
+L RCTX-rescue:Conn_01x08-conn J19
 U 1 1 5F40867F
 P 10700 4600
 F 0 "J19" V 10700 4000 50  0000 L CNN
 F 1 "MULTI_PROP_2" V 10800 4350 50  0000 L CNN
-F 2 "" H 10700 4600 50  0001 C CNN
+F 2 "Connectors_Samtec:SL-108-X-XX_1x08" H 10700 4600 50  0001 C CNN
 F 3 "~" H 10700 4600 50  0001 C CNN
 	1    10700 4600
 	0    1    1    0   
@@ -1383,12 +1383,12 @@ TRIM_11
 Text Notes 11050 5100 1    50   ~ 0
 TRIM_12
 $Comp
-L conn:Conn_01x04 J9
+L RCTX-rescue:Conn_01x04-conn J9
 U 1 1 5DAA4D26
 P 5150 1100
 F 0 "J9" V 5114 812 50  0000 R CNN
 F 1 "PWR_BUS" V 5250 1250 50  0000 R CNN
-F 2 "" H 5150 1100 50  0001 C CNN
+F 2 "Connectors_Samtec:SL-104-X-XX_1x04" H 5150 1100 50  0001 C CNN
 F 3 "~" H 5150 1100 50  0001 C CNN
 	1    5150 1100
 	0    -1   -1   0   
@@ -1417,58 +1417,58 @@ Wire Wire Line
 Wire Wire Line
 	5600 6400 5700 6400
 $Comp
-L device:C C?
+L RCTX-rescue:C-device C12
 U 1 1 5F43F557
 P 5700 6700
-F 0 "C?" H 5585 6746 50  0000 R CNN
+F 0 "C12" H 5585 6746 50  0000 R CNN
 F 1 "100nF" H 5585 6655 50  0000 R CNN
-F 2 "" H 5738 6550 50  0001 C CNN
+F 2 "Capacitors_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5738 6550 50  0001 C CNN
 F 3 "" H 5700 6700 50  0001 C CNN
 	1    5700 6700
 	-1   0    0    -1  
 $EndComp
 $Comp
-L device:CP C?
+L RCTX-rescue:CP-device C7
 U 1 1 5F43F55D
 P 4650 6700
-AR Path="/5036250D/5F43F55D" Ref="C?"  Part="1" 
+AR Path="/5036250D/5F43F55D" Ref="C7"  Part="1" 
 AR Path="/4C8BDE0A/5F43F55D" Ref="C?"  Part="1" 
-F 0 "C?" H 4750 6550 50  0000 C CNN
+F 0 "C7" H 4750 6550 50  0000 C CNN
 F 1 "1uF" H 4750 6850 50  0000 C CNN
-F 2 "" H 4688 6550 50  0001 C CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 4688 6550 50  0001 C CNN
 F 3 "" H 4650 6700 50  0001 C CNN
 	1    4650 6700
 	-1   0    0    -1  
 $EndComp
 $Comp
-L device:R R?
+L RCTX-rescue:R-device R4
 U 1 1 5F43F563
 P 4900 7150
-F 0 "R?" H 5000 7100 50  0000 C CNN
+F 0 "R4" H 5000 7100 50  0000 C CNN
 F 1 "150" H 5050 7200 50  0000 C CNN
-F 2 "" V 4830 7150 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 4830 7150 50  0001 C CNN
 F 3 "" H 4900 7150 50  0001 C CNN
 	1    4900 7150
 	1    0    0    1   
 $EndComp
 $Comp
-L device:R R?
+L RCTX-rescue:R-device R3
 U 1 1 5F43F569
 P 4900 6650
-F 0 "R?" H 4830 6696 50  0000 R CNN
+F 0 "R3" H 4830 6696 50  0000 R CNN
 F 1 "470" H 4830 6605 50  0000 R CNN
-F 2 "" V 4830 6650 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 4830 6650 50  0001 C CNN
 F 3 "" H 4900 6650 50  0001 C CNN
 	1    4900 6650
 	-1   0    0    -1  
 $EndComp
 $Comp
-L regul:LM117_TO3 U?
+L RCTX-rescue:LM117_TO3-regul U5
 U 1 1 5F43F56F
 P 5300 6400
-F 0 "U?" H 5150 6150 50  0000 C CNN
+F 0 "U5" H 5150 6150 50  0000 C CNN
 F 1 "LM117_TO3" H 5300 6551 50  0000 C CNN
-F 2 "TO_SOT_Packages_THT:TO-3" H 5300 6600 50  0001 C CIN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval" H 5300 6600 50  0001 C CIN
 F 3 "http://www.ti.com/lit/ds/symlink/lm317.pdf" H 5300 6400 50  0001 C CNN
 	1    5300 6400
 	-1   0    0    -1  
@@ -1510,10 +1510,10 @@ Connection ~ 3850 5500
 Wire Wire Line
 	3850 5500 3950 5500
 $Comp
-L power:GND #PWR?
+L RCTX-rescue:GND-power #PWR09
 U 1 1 5F5BEFE8
 P 4900 7500
-F 0 "#PWR?" H 4900 7250 50  0001 C CNN
+F 0 "#PWR09" H 4900 7250 50  0001 C CNN
 F 1 "GND" H 4905 7327 50  0000 C CNN
 F 2 "" H 4900 7500 50  0001 C CNN
 F 3 "" H 4900 7500 50  0001 C CNN
@@ -1521,10 +1521,10 @@ F 3 "" H 4900 7500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR?
+L RCTX-rescue:+3.3V-power #PWR010
 U 1 1 5F5C06CC
 P 9950 1300
-F 0 "#PWR?" H 9950 1150 50  0001 C CNN
+F 0 "#PWR010" H 9950 1150 50  0001 C CNN
 F 1 "+3.3V" H 9965 1473 50  0000 C CNN
 F 2 "" H 9950 1300 50  0001 C CNN
 F 3 "" H 9950 1300 50  0001 C CNN
@@ -1539,10 +1539,10 @@ Wire Wire Line
 Wire Wire Line
 	4900 7500 4900 7400
 $Comp
-L power:+5V #PWR?
+L RCTX-rescue:+5V-power #PWR08
 U 1 1 5F635144
 P 1150 4200
-F 0 "#PWR?" H 1150 4050 50  0001 C CNN
+F 0 "#PWR08" H 1150 4050 50  0001 C CNN
 F 1 "+5V" H 1165 4373 50  0000 C CNN
 F 2 "" H 1150 4200 50  0001 C CNN
 F 3 "" H 1150 4200 50  0001 C CNN
