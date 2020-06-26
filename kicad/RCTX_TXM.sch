@@ -1,12 +1,11 @@
 EESchema Schematic File Version 4
-LIBS:RCTX-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 7
 Title "TX connector and frequency probe"
-Date "30 jun 2013"
+Date "2020-04-15"
 Rev ""
 Comp ""
 Comment1 ""
@@ -309,11 +308,11 @@ Wire Wire Line
 Wire Wire Line
 	5900 4050 7350 4050
 Connection ~ 5900 4050
-Text Notes 7750 2300 0    60   ~ 0
-FRQ_METER
 Text Notes 7750 2200 0    60   ~ 0
-/RF_DETECT
+FRQ_METER
 Text Notes 7750 2100 0    60   ~ 0
+/RF_DETECT
+Text Notes 7750 2000 0    60   ~ 0
 PPM_OUT
 $Comp
 L conn:Conn_01x03 P18

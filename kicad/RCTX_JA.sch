@@ -1,12 +1,11 @@
 EESchema Schematic File Version 4
-LIBS:RCTX-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 7
 Title "Analogs inputs - unbuffered rotary sensors"
-Date "30 jun 2013"
+Date "2020-04-15"
 Rev ""
 Comp ""
 Comment1 ""
