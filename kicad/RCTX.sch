@@ -55,17 +55,6 @@ Wire Wire Line
 	6350 6350 6350 6450
 Wire Wire Line
 	6150 6350 6150 6450
-$Comp
-L conn:Conn_01x03 P6
-U 1 1 5038EC3A
-P 1750 4750
-F 0 "P6" V 1950 4750 50  0000 C CNN
-F 1 "TX_MOD" V 1850 4750 40  0000 C CNN
-F 2 "" H 1750 4750 60  0001 C CNN
-F 3 "" H 1750 4750 60  0001 C CNN
-	1    1750 4750
-	-1   0    0    -1  
-$EndComp
 Text Notes 1450 4700 2    60   ~ 0
 FRQ_METER
 $Sheet
@@ -242,33 +231,33 @@ $EndComp
 Text Notes 1450 3900 2    60   ~ 0
 nSRST
 Text Notes 1450 1700 2    60   ~ 0
-TRIM_8
+ROTARY_08
 Text Notes 1450 1600 2    60   ~ 0
-TRIM_7
+ROTARY_07
 Text Notes 1450 1500 2    60   ~ 0
-TRIM_6
+ROTARY_06
 Text Notes 1450 1400 2    60   ~ 0
-TRIM_5
+ROTARY_05
 Text Notes 1450 1300 2    60   ~ 0
-TRIM_4
+ROTARY_04
 Text Notes 1450 1200 2    60   ~ 0
-TRIM_3
+ROTARY_03
 Text Notes 1450 1100 2    60   ~ 0
-TRIM_2
+ROTARY_02
 Text Notes 1450 1000 2    60   ~ 0
-TRIM_1
+ROTARY_01
 Text Notes 1450 1900 2    60   ~ 0
-TRIM_10
+ROTARY_10
 Text Notes 1450 1800 2    60   ~ 0
-TRIM_9
+ROTARY_09
 Text Notes 1450 600  2    60   ~ 0
 H_RIGHT_JOYSTICK
 Text Notes 1450 700  2    60   ~ 0
 V_RIGHT_JOYSTICK
 Text Notes 1450 2000 2    60   ~ 0
-TRIM_11
+ROTARY_11
 Text Notes 1450 2100 2    60   ~ 0
-TRIM_12
+ROTARY_12
 Text Notes 1450 800  2    60   ~ 0
 H_LEFT_JOYSTICK
 Text Notes 1450 900  2    60   ~ 0
@@ -1180,4 +1169,15 @@ Wire Wire Line
 Connection ~ 4950 6050
 Wire Wire Line
 	4950 6050 4950 6500
+$Comp
+L conn:Conn_01x03 P6
+U 1 1 5038EC3A
+P 1750 4750
+F 0 "P6" V 1950 4750 50  0000 C CNN
+F 1 "TX_MOD" V 1850 4750 40  0000 C CNN
+F 2 "" H 1750 4750 60  0001 C CNN
+F 3 "" H 1750 4750 60  0001 C CNN
+	1    1750 4750
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC

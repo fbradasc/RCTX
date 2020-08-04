@@ -1358,29 +1358,29 @@ NoConn ~ 5350 1300
 Wire Wire Line
 	9450 4800 9450 5500
 Text Notes 10700 2250 1    50   ~ 0
-TRIM_1
+ROTARY_01
 Text Notes 10800 2250 1    50   ~ 0
-TRIM_2
+ROTARY_02
 Text Notes 10900 2250 1    50   ~ 0
-TRIM_3
+ROTARY_03
 Text Notes 11000 2250 1    50   ~ 0
-TRIM_4
-Text Notes 10350 5100 1    50   ~ 0
-TRIM_5
-Text Notes 10450 5100 1    50   ~ 0
-TRIM_6
-Text Notes 10550 5100 1    50   ~ 0
-TRIM_7
-Text Notes 10650 5100 1    50   ~ 0
-TRIM_8
-Text Notes 10750 5100 1    50   ~ 0
-TRIM_9
-Text Notes 10850 5100 1    50   ~ 0
-TRIM_10
-Text Notes 10950 5100 1    50   ~ 0
-TRIM_11
-Text Notes 11050 5100 1    50   ~ 0
-TRIM_12
+ROTARY_04
+Text Notes 10350 5200 1    50   ~ 0
+ROTARY_05
+Text Notes 10450 5200 1    50   ~ 0
+ROTARY_06
+Text Notes 10550 5200 1    50   ~ 0
+ROTARY_07
+Text Notes 10650 5200 1    50   ~ 0
+ROTARY_08
+Text Notes 10750 5200 1    50   ~ 0
+ROTARY_09
+Text Notes 10850 5200 1    50   ~ 0
+ROTARY_10
+Text Notes 10950 5200 1    50   ~ 0
+ROTARY_11
+Text Notes 11050 5200 1    50   ~ 0
+ROTARY_12
 $Comp
 L conn:Conn_01x04 J9
 U 1 1 5DAA4D26

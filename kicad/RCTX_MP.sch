@@ -720,29 +720,29 @@ Wire Wire Line
 	4900 1300 4900 1500
 NoConn ~ 5000 1300
 Text Notes 10400 2250 1    50   ~ 0
-TRIM_1
+ROTARY_01
 Text Notes 10500 2250 1    50   ~ 0
-TRIM_2
+ROTARY_02
 Text Notes 10600 2250 1    50   ~ 0
-TRIM_3
+ROTARY_03
 Text Notes 10700 2250 1    50   ~ 0
-TRIM_4
-Text Notes 10000 5100 1    50   ~ 0
-TRIM_5
-Text Notes 10100 5100 1    50   ~ 0
-TRIM_6
-Text Notes 10200 5100 1    50   ~ 0
-TRIM_7
-Text Notes 10300 5100 1    50   ~ 0
-TRIM_8
-Text Notes 10400 5100 1    50   ~ 0
-TRIM_9
-Text Notes 10500 5100 1    50   ~ 0
-TRIM_10
-Text Notes 10600 5100 1    50   ~ 0
-TRIM_11
-Text Notes 10700 5100 1    50   ~ 0
-TRIM_12
+ROTARY_04
+Text Notes 10000 5200 1    50   ~ 0
+ROTARY_05
+Text Notes 10100 5200 1    50   ~ 0
+ROTARY_06
+Text Notes 10200 5200 1    50   ~ 0
+ROTARY_07
+Text Notes 10300 5200 1    50   ~ 0
+ROTARY_08
+Text Notes 10400 5200 1    50   ~ 0
+ROTARY_09
+Text Notes 10500 5200 1    50   ~ 0
+ROTARY_10
+Text Notes 10600 5200 1    50   ~ 0
+ROTARY_11
+Text Notes 10700 5200 1    50   ~ 0
+ROTARY_12
 Wire Wire Line
 	3000 1500 4000 1500
 Wire Wire Line
