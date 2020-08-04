@@ -30,53 +30,53 @@ Text Notes 4850 950  1    60   ~ 0
 Text Notes 4750 950  1    60   ~ 0
 +3.3V
 $Comp
-L conn:Conn_01x03 J?
+L RCTX-rescue:Conn_01x03-conn J?
 U 1 1 5D940D9F
 P 1100 1100
 AR Path="/5036250D/5D940D9F" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5D940D9F" Ref="J24"  Part="1" 
 F 0 "J24" V 1100 900 50  0000 R CNN
 F 1 "ROTARY_4" V 1200 1300 50  0000 R CNN
-F 2 "" H 1100 1100 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 1100 1100 50  0001 C CNN
 F 3 "~" H 1100 1100 50  0001 C CNN
 	1    1100 1100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J?
+L RCTX-rescue:Conn_01x03-conn J?
 U 1 1 5EDA3588
 P 2100 1100
 AR Path="/5036250D/5EDA3588" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5EDA3588" Ref="J26"  Part="1" 
 F 0 "J26" V 2100 900 50  0000 R CNN
 F 1 "ROTARY_3" V 2200 1300 50  0000 R CNN
-F 2 "" H 2100 1100 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 2100 1100 50  0001 C CNN
 F 3 "~" H 2100 1100 50  0001 C CNN
 	1    2100 1100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J?
+L RCTX-rescue:Conn_01x03-conn J?
 U 1 1 5EDA4A13
 P 3100 1100
 AR Path="/5036250D/5EDA4A13" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5EDA4A13" Ref="J28"  Part="1" 
 F 0 "J28" V 3100 900 50  0000 R CNN
 F 1 "ROTARY_2" V 3200 1300 50  0000 R CNN
-F 2 "" H 3100 1100 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 3100 1100 50  0001 C CNN
 F 3 "~" H 3100 1100 50  0001 C CNN
 	1    3100 1100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J?
+L RCTX-rescue:Conn_01x03-conn J?
 U 1 1 5EDA562E
 P 4100 1100
 AR Path="/5036250D/5EDA562E" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5EDA562E" Ref="J30"  Part="1" 
 F 0 "J30" V 4100 900 50  0000 R CNN
 F 1 "ROTARY_1" V 4200 1300 50  0000 R CNN
-F 2 "" H 4100 1100 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 4100 1100 50  0001 C CNN
 F 3 "~" H 4100 1100 50  0001 C CNN
 	1    4100 1100
 	0    -1   -1   0   
@@ -136,53 +136,53 @@ Signal
 Text Notes 4050 900  1    50   ~ 0
 GND
 $Comp
-L linear:LM324 U?
+L RCTX-rescue:LM324-linear U?
 U 1 1 5EE1BED9
 P 5500 2300
 AR Path="/5036250D/5EE1BED9" Ref="U?"  Part="1" 
-AR Path="/4C8BDE0A/5EE1BED9" Ref="U9"  Part="1" 
-F 0 "U9" V 5600 2400 50  0000 L CNN
+AR Path="/4C8BDE0A/5EE1BED9" Ref="U11"  Part="1" 
+F 0 "U11" V 5600 2400 50  0000 L CNN
 F 1 "LM324" V 5700 2350 50  0000 L CNN
-F 2 "" H 5450 2400 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 5450 2400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 5550 2500 50  0001 C CNN
 	1    5500 2300
 	0    1    1    0   
 $EndComp
 $Comp
-L linear:LM324 U?
+L RCTX-rescue:LM324-linear U?
 U 2 1 5D940DA4
 P 6500 2300
 AR Path="/5036250D/5D940DA4" Ref="U?"  Part="2" 
-AR Path="/4C8BDE0A/5D940DA4" Ref="U9"  Part="2" 
-F 0 "U9" V 6600 2400 50  0000 L CNN
+AR Path="/4C8BDE0A/5D940DA4" Ref="U11"  Part="2" 
+F 0 "U11" V 6600 2400 50  0000 L CNN
 F 1 "LM324" V 6700 2350 50  0000 L CNN
-F 2 "" H 6450 2400 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 6450 2400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6550 2500 50  0001 C CNN
 	2    6500 2300
 	0    1    1    0   
 $EndComp
 $Comp
-L linear:LM324 U?
+L RCTX-rescue:LM324-linear U?
 U 3 1 5D940DA5
 P 7500 2300
 AR Path="/5036250D/5D940DA5" Ref="U?"  Part="3" 
-AR Path="/4C8BDE0A/5D940DA5" Ref="U9"  Part="3" 
-F 0 "U9" V 7600 2400 50  0000 L CNN
+AR Path="/4C8BDE0A/5D940DA5" Ref="U11"  Part="3" 
+F 0 "U11" V 7600 2400 50  0000 L CNN
 F 1 "LM324" V 7700 2350 50  0000 L CNN
-F 2 "" H 7450 2400 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 7450 2400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7550 2500 50  0001 C CNN
 	3    7500 2300
 	0    1    1    0   
 $EndComp
 $Comp
-L linear:LM324 U?
+L RCTX-rescue:LM324-linear U?
 U 4 1 5EE1BEEB
 P 8500 2300
 AR Path="/5036250D/5EE1BEEB" Ref="U?"  Part="4" 
-AR Path="/4C8BDE0A/5EE1BEEB" Ref="U9"  Part="4" 
-F 0 "U9" V 8600 2400 50  0000 L CNN
+AR Path="/4C8BDE0A/5EE1BEEB" Ref="U11"  Part="4" 
+F 0 "U11" V 8600 2400 50  0000 L CNN
 F 1 "LM324" V 8700 2350 50  0000 L CNN
-F 2 "" H 8450 2400 50  0001 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 8450 2400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 8550 2500 50  0001 C CNN
 	4    8500 2300
 	0    1    1    0   
@@ -198,53 +198,53 @@ Wire Wire Line
 Wire Wire Line
 	5400 2000 5400 1900
 $Comp
-L conn:Conn_01x03 J?
+L RCTX-rescue:Conn_01x03-conn J?
 U 1 1 5EE1BEF9
 P 5600 1100
 AR Path="/5036250D/5EE1BEF9" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5EE1BEF9" Ref="J33"  Part="1" 
 F 0 "J33" V 5600 900 50  0000 R CNN
 F 1 "H_RIGHT_JOYSTIC" V 5700 1450 50  0000 R CNN
-F 2 "" H 5600 1100 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 5600 1100 50  0001 C CNN
 F 3 "~" H 5600 1100 50  0001 C CNN
 	1    5600 1100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J?
+L RCTX-rescue:Conn_01x03-conn J?
 U 1 1 5D940DA8
 P 6600 1100
 AR Path="/5036250D/5D940DA8" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5D940DA8" Ref="J35"  Part="1" 
 F 0 "J35" V 6600 900 50  0000 R CNN
 F 1 "V_RIGHT_JOYSTIC" V 6700 1450 50  0000 R CNN
-F 2 "" H 6600 1100 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 6600 1100 50  0001 C CNN
 F 3 "~" H 6600 1100 50  0001 C CNN
 	1    6600 1100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J?
+L RCTX-rescue:Conn_01x03-conn J?
 U 1 1 5D940DA9
 P 7600 1100
 AR Path="/5036250D/5D940DA9" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5D940DA9" Ref="J37"  Part="1" 
 F 0 "J37" V 7600 900 50  0000 R CNN
 F 1 "H_LEFT_JOYSTIC" V 7700 1400 50  0000 R CNN
-F 2 "" H 7600 1100 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 7600 1100 50  0001 C CNN
 F 3 "~" H 7600 1100 50  0001 C CNN
 	1    7600 1100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J?
+L RCTX-rescue:Conn_01x03-conn J?
 U 1 1 5EE1BF0B
 P 8600 1100
 AR Path="/5036250D/5EE1BF0B" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5EE1BF0B" Ref="J39"  Part="1" 
 F 0 "J39" V 8600 900 50  0000 R CNN
 F 1 "V_LEFT_JOYSTIC" V 8700 1400 50  0000 R CNN
-F 2 "" H 8600 1100 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 8600 1100 50  0001 C CNN
 F 3 "~" H 8600 1100 50  0001 C CNN
 	1    8600 1100
 	0    -1   -1   0   
@@ -286,27 +286,27 @@ Connection ~ 6700 1400
 Wire Wire Line
 	8900 2200 8800 2200
 $Comp
-L device:C C?
+L RCTX-rescue:C-device C?
 U 1 1 5EE1BF25
 P 9150 1750
 AR Path="/5036250D/5EE1BF25" Ref="C?"  Part="1" 
-AR Path="/4C8BDE0A/5EE1BF25" Ref="C16"  Part="1" 
-F 0 "C16" V 9200 1600 50  0000 C CNN
+AR Path="/4C8BDE0A/5EE1BF25" Ref="C19"  Part="1" 
+F 0 "C19" V 9200 1600 50  0000 C CNN
 F 1 "C" V 9300 1600 50  0000 C CNN
-F 2 "" H 9188 1600 50  0001 C CNN
+F 2 "Capacitors_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9188 1600 50  0001 C CNN
 F 3 "" H 9150 1750 50  0001 C CNN
 	1    9150 1750
 	0    1    1    0   
 $EndComp
 $Comp
-L device:CP C?
+L RCTX-rescue:CP-device C?
 U 1 1 5EE1BF2B
 P 9150 2200
 AR Path="/5036250D/5EE1BF2B" Ref="C?"  Part="1" 
-AR Path="/4C8BDE0A/5EE1BF2B" Ref="C17"  Part="1" 
-F 0 "C17" V 9100 2350 50  0000 C CNN
+AR Path="/4C8BDE0A/5EE1BF2B" Ref="C20"  Part="1" 
+F 0 "C20" V 9100 2350 50  0000 C CNN
 F 1 "CP" V 9000 2350 50  0000 C CNN
-F 2 "" H 9188 2050 50  0001 C CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 9188 2050 50  0001 C CNN
 F 3 "" H 9150 2200 50  0001 C CNN
 	1    9150 2200
 	0    -1   -1   0   
@@ -492,53 +492,53 @@ Wire Wire Line
 Wire Wire Line
 	5500 4650 5500 4550
 $Comp
-L conn:Conn_01x03 J?
+L RCTX-rescue:Conn_01x03-conn J?
 U 1 1 5D940DB4
 P 5600 4850
 AR Path="/5036250D/5D940DB4" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5D940DB4" Ref="J34"  Part="1" 
 F 0 "J34" V 5600 5150 50  0000 R CNN
 F 1 "ROTARY_9" V 5700 5050 50  0000 R CNN
-F 2 "" H 5600 4850 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 5600 4850 50  0001 C CNN
 F 3 "~" H 5600 4850 50  0001 C CNN
 	1    5600 4850
 	0    1    1    0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J?
+L RCTX-rescue:Conn_01x03-conn J?
 U 1 1 5D940DB3
 P 6600 4850
 AR Path="/5036250D/5D940DB3" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5D940DB3" Ref="J36"  Part="1" 
 F 0 "J36" V 6600 5150 50  0000 R CNN
 F 1 "ROTARY_10" V 6700 5050 50  0000 R CNN
-F 2 "" H 6600 4850 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 6600 4850 50  0001 C CNN
 F 3 "~" H 6600 4850 50  0001 C CNN
 	1    6600 4850
 	0    1    1    0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J?
+L RCTX-rescue:Conn_01x03-conn J?
 U 1 1 5D940DB2
 P 7600 4850
 AR Path="/5036250D/5D940DB2" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5D940DB2" Ref="J38"  Part="1" 
 F 0 "J38" V 7600 5150 50  0000 R CNN
 F 1 "ROTARY_11" V 7700 5050 50  0000 R CNN
-F 2 "" H 7600 4850 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 7600 4850 50  0001 C CNN
 F 3 "~" H 7600 4850 50  0001 C CNN
 	1    7600 4850
 	0    1    1    0   
 $EndComp
 $Comp
-L conn:Conn_01x03 J?
+L RCTX-rescue:Conn_01x03-conn J?
 U 1 1 5D940DB1
 P 8600 4850
 AR Path="/5036250D/5D940DB1" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5D940DB1" Ref="J40"  Part="1" 
 F 0 "J40" V 8600 5150 50  0000 R CNN
 F 1 "ROTARY_12" V 8700 5050 50  0000 R CNN
-F 2 "" H 8600 4850 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 8600 4850 50  0001 C CNN
 F 3 "~" H 8600 4850 50  0001 C CNN
 	1    8600 4850
 	0    1    1    0   
@@ -581,40 +581,40 @@ Wire Wire Line
 Wire Wire Line
 	1000 4650 1000 4550
 $Comp
-L conn:Conn_01x03 J?
+L RCTX-rescue:Conn_01x03-conn J?
 U 1 1 5D940DB0
 P 1100 4850
 AR Path="/5036250D/5D940DB0" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5D940DB0" Ref="J25"  Part="1" 
 F 0 "J25" V 1100 5150 50  0000 R CNN
 F 1 "ROTARY_5" V 1200 5050 50  0000 R CNN
-F 2 "" H 1100 4850 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 1100 4850 50  0001 C CNN
 F 3 "~" H 1100 4850 50  0001 C CNN
 	1    1100 4850
 	0    1    1    0   
 $EndComp
 $Comp
-L conn:Conn_01x08 J?
+L RCTX-rescue:Conn_01x08-conn J?
 U 1 1 5D940DB8
 P 10250 2400
 AR Path="/5036250D/5D940DB8" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5D940DB8" Ref="J41"  Part="1" 
 F 0 "J41" V 10250 2800 50  0000 L CNN
 F 1 "MULTI_PROP_1" V 10350 2100 50  0000 L CNN
-F 2 "" H 10250 2400 50  0001 C CNN
+F 2 "Connectors_Samtec:SL-108-X-XX_1x08" H 10250 2400 50  0001 C CNN
 F 3 "~" H 10250 2400 50  0001 C CNN
 	1    10250 2400
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conn:Conn_01x08 J?
+L RCTX-rescue:Conn_01x08-conn J?
 U 1 1 5D940DB9
 P 10350 4600
 AR Path="/5036250D/5D940DB9" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5D940DB9" Ref="J42"  Part="1" 
 F 0 "J42" V 10350 4000 50  0000 L CNN
 F 1 "MULTI_PROP_2" V 10450 4350 50  0000 L CNN
-F 2 "" H 10350 4600 50  0001 C CNN
+F 2 "Connectors_Samtec:SL-108-X-XX_1x08" H 10350 4600 50  0001 C CNN
 F 3 "~" H 10350 4600 50  0001 C CNN
 	1    10350 4600
 	0    1    1    0   
@@ -784,12 +784,12 @@ Wire Wire Line
 Wire Wire Line
 	4100 1300 4100 3100
 $Comp
-L conn:Conn_01x04 J32
+L RCTX-rescue:Conn_01x04-conn J32
 U 1 1 5DE238D0
 P 4800 1100
 F 0 "J32" V 4764 812 50  0000 R CNN
 F 1 "PWR_BUS" V 4900 1250 50  0000 R CNN
-F 2 "" H 4800 1100 50  0001 C CNN
+F 2 "Connectors_Samtec:SL-104-X-XX_1x04" H 4800 1100 50  0001 C CNN
 F 3 "~" H 4800 1100 50  0001 C CNN
 	1    4800 1100
 	0    -1   -1   0   
@@ -818,58 +818,58 @@ Wire Wire Line
 Wire Wire Line
 	5000 5750 5100 5750
 $Comp
-L device:C C?
+L RCTX-rescue:C-device C18
 U 1 1 5F1DD7A5
 P 5100 6050
-F 0 "C?" H 4985 6096 50  0000 R CNN
+F 0 "C18" H 4985 6096 50  0000 R CNN
 F 1 "100nF" H 4985 6005 50  0000 R CNN
-F 2 "" H 5138 5900 50  0001 C CNN
+F 2 "Capacitors_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5138 5900 50  0001 C CNN
 F 3 "" H 5100 6050 50  0001 C CNN
 	1    5100 6050
 	-1   0    0    -1  
 $EndComp
 $Comp
-L device:CP C?
+L RCTX-rescue:CP-device C?
 U 1 1 5F1DB3A2
 P 4050 6050
 AR Path="/5036250D/5F1DB3A2" Ref="C?"  Part="1" 
-AR Path="/4C8BDE0A/5F1DB3A2" Ref="C?"  Part="1" 
-F 0 "C?" H 4150 5900 50  0000 C CNN
+AR Path="/4C8BDE0A/5F1DB3A2" Ref="C17"  Part="1" 
+F 0 "C17" H 4150 5900 50  0000 C CNN
 F 1 "1uF" H 4150 6200 50  0000 C CNN
-F 2 "" H 4088 5900 50  0001 C CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 4088 5900 50  0001 C CNN
 F 3 "" H 4050 6050 50  0001 C CNN
 	1    4050 6050
 	-1   0    0    -1  
 $EndComp
 $Comp
-L device:R R?
+L RCTX-rescue:R-device R12
 U 1 1 5F1DAA0F
 P 4300 6500
-F 0 "R?" H 4400 6450 50  0000 C CNN
+F 0 "R12" H 4400 6450 50  0000 C CNN
 F 1 "150" H 4450 6550 50  0000 C CNN
-F 2 "" V 4230 6500 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 4230 6500 50  0001 C CNN
 F 3 "" H 4300 6500 50  0001 C CNN
 	1    4300 6500
 	1    0    0    1   
 $EndComp
 $Comp
-L device:R R?
+L RCTX-rescue:R-device R11
 U 1 1 5F1D9CED
 P 4300 6000
-F 0 "R?" H 4230 6046 50  0000 R CNN
+F 0 "R11" H 4230 6046 50  0000 R CNN
 F 1 "470" H 4230 5955 50  0000 R CNN
-F 2 "" V 4230 6000 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 4230 6000 50  0001 C CNN
 F 3 "" H 4300 6000 50  0001 C CNN
 	1    4300 6000
 	-1   0    0    -1  
 $EndComp
 $Comp
-L regul:LM117_TO3 U?
+L RCTX-rescue:LM117_TO3-regul U10
 U 1 1 5F1D8E47
 P 4700 5750
-F 0 "U?" H 4700 5992 50  0000 C CNN
+F 0 "U10" H 4700 5992 50  0000 C CNN
 F 1 "LM117_TO3" H 4700 5901 50  0000 C CNN
-F 2 "TO_SOT_Packages_THT:TO-3" H 4700 5950 50  0001 C CIN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval" H 4700 5950 50  0001 C CIN
 F 3 "http://www.ti.com/lit/ds/symlink/lm317.pdf" H 4700 5750 50  0001 C CNN
 	1    4700 5750
 	-1   0    0    -1  
@@ -887,10 +887,10 @@ Wire Wire Line
 Wire Wire Line
 	4700 1400 5700 1400
 $Comp
-L power:+5V #PWR?
+L RCTX-rescue:+5V-power #PWR021
 U 1 1 5F66935D
 P 4800 1700
-F 0 "#PWR?" H 4800 1550 50  0001 C CNN
+F 0 "#PWR021" H 4800 1550 50  0001 C CNN
 F 1 "+5V" H 4815 1873 50  0000 C CNN
 F 2 "" H 4800 1700 50  0001 C CNN
 F 3 "" H 4800 1700 50  0001 C CNN
@@ -905,14 +905,14 @@ Wire Wire Line
 Wire Wire Line
 	4200 4450 4200 4650
 $Comp
-L conn:Conn_01x03 J?
+L RCTX-rescue:Conn_01x03-conn J?
 U 1 1 5D940DAD
 P 4100 4850
 AR Path="/5036250D/5D940DAD" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5D940DAD" Ref="J31"  Part="1" 
 F 0 "J31" V 4100 5150 50  0000 R CNN
 F 1 "ROTARY_8" V 4200 5050 50  0000 R CNN
-F 2 "" H 4100 4850 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 4100 4850 50  0001 C CNN
 F 3 "~" H 4100 4850 50  0001 C CNN
 	1    4100 4850
 	0    1    1    0   
@@ -926,14 +926,14 @@ Wire Wire Line
 Wire Wire Line
 	2200 4650 2200 4450
 $Comp
-L conn:Conn_01x03 J?
+L RCTX-rescue:Conn_01x03-conn J?
 U 1 1 5EE47D7F
 P 2100 4850
 AR Path="/5036250D/5EE47D7F" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5EE47D7F" Ref="J27"  Part="1" 
 F 0 "J27" V 2100 5150 50  0000 R CNN
 F 1 "ROTARY_6" V 2200 5050 50  0000 R CNN
-F 2 "" H 2100 4850 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 2100 4850 50  0001 C CNN
 F 3 "~" H 2100 4850 50  0001 C CNN
 	1    2100 4850
 	0    1    1    0   
@@ -947,14 +947,14 @@ Wire Wire Line
 Wire Wire Line
 	3200 4650 3200 4450
 $Comp
-L conn:Conn_01x03 J?
+L RCTX-rescue:Conn_01x03-conn J?
 U 1 1 5EE47D79
 P 3100 4850
 AR Path="/5036250D/5EE47D79" Ref="J?"  Part="1" 
 AR Path="/4C8BDE0A/5EE47D79" Ref="J29"  Part="1" 
 F 0 "J29" V 3100 5150 50  0000 R CNN
 F 1 "ROTARY_7" V 3200 5050 50  0000 R CNN
-F 2 "" H 3100 4850 50  0001 C CNN
+F 2 "servo_conn:SRV_1" H 3100 4850 50  0001 C CNN
 F 3 "~" H 3100 4850 50  0001 C CNN
 	1    3100 4850
 	0    1    1    0   
@@ -986,10 +986,10 @@ Connection ~ 3600 4450
 Wire Wire Line
 	3600 4450 4200 4450
 $Comp
-L power:+3.3V #PWR?
+L RCTX-rescue:+3.3V-power #PWR022
 U 1 1 5F825C33
 P 5100 5650
-F 0 "#PWR?" H 5100 5500 50  0001 C CNN
+F 0 "#PWR022" H 5100 5500 50  0001 C CNN
 F 1 "+3.3V" H 5115 5823 50  0000 C CNN
 F 2 "" H 5100 5650 50  0001 C CNN
 F 3 "" H 5100 5650 50  0001 C CNN
@@ -997,10 +997,10 @@ F 3 "" H 5100 5650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L RCTX-rescue:GND-power #PWR020
 U 1 1 5F827164
 P 4300 6850
-F 0 "#PWR?" H 4300 6600 50  0001 C CNN
+F 0 "#PWR020" H 4300 6600 50  0001 C CNN
 F 1 "GND" H 4305 6677 50  0000 C CNN
 F 2 "" H 4300 6850 50  0001 C CNN
 F 3 "" H 4300 6850 50  0001 C CNN
