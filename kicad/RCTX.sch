@@ -242,33 +242,33 @@ $EndComp
 Text Notes 1450 3900 2    60   ~ 0
 nSRST
 Text Notes 1450 1700 2    60   ~ 0
-TRIM_8
+ROTARY_08
 Text Notes 1450 1600 2    60   ~ 0
-TRIM_7
+ROTARY_07
 Text Notes 1450 1500 2    60   ~ 0
-TRIM_6
+ROTARY_06
 Text Notes 1450 1400 2    60   ~ 0
-TRIM_5
+ROTARY_05
 Text Notes 1450 1300 2    60   ~ 0
-TRIM_4
+ROTARY_04
 Text Notes 1450 1200 2    60   ~ 0
-TRIM_3
+ROTARY_03
 Text Notes 1450 1100 2    60   ~ 0
-TRIM_2
+ROTARY_02
 Text Notes 1450 1000 2    60   ~ 0
-TRIM_1
+ROTARY_01
 Text Notes 1450 1900 2    60   ~ 0
-TRIM_10
+ROTARY_10
 Text Notes 1450 1800 2    60   ~ 0
-TRIM_9
+ROTARY_09
 Text Notes 1450 600  2    60   ~ 0
 H_RIGHT_JOYSTICK
 Text Notes 1450 700  2    60   ~ 0
 V_RIGHT_JOYSTICK
 Text Notes 1450 2000 2    60   ~ 0
-TRIM_11
+ROTARY_11
 Text Notes 1450 2100 2    60   ~ 0
-TRIM_12
+ROTARY_12
 Text Notes 1450 800  2    60   ~ 0
 H_LEFT_JOYSTICK
 Text Notes 1450 900  2    60   ~ 0
@@ -440,17 +440,6 @@ F 3 "" H 10500 5950 60  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L RCTX-rescue:R_Network09-device RR2
-U 1 1 4EB6A2D0
-P 9600 5950
-F 0 "RR2" H 9350 6150 70  0000 C CNN
-F 1 "15K" H 9600 6150 70  0000 C CNN
-F 2 "Resistors_THT:R_Array_SIP10" H 9600 5950 60  0001 C CNN
-F 3 "" H 9600 5950 60  0001 C CNN
-	1    9600 5950
-	1    0    0    1   
-$EndComp
-$Comp
 L RCTX-rescue:Conn_01x09-conn P16
 U 1 1 4EB6A357
 P 9600 1250
@@ -471,17 +460,6 @@ F 2 "Connectors_Samtec:SL-109-X-XX_1x09" H 10500 1250 60  0001 C CNN
 F 3 "" H 10500 1250 60  0001 C CNN
 	1    10500 1250
 	0    -1   -1   0   
-$EndComp
-$Comp
-L RCTX-rescue:R_Network08-device RR1
-U 1 1 5F32EC78
-P 8800 5950
-F 0 "RR1" H 8650 6150 70  0000 R CNN
-F 1 "15k" H 8900 6150 70  0000 R CNN
-F 2 "Resistors_THT:R_Array_SIP9" V 9375 5950 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8800 5950 50  0001 C CNN
-	1    8800 5950
-	1    0    0    1   
 $EndComp
 $Comp
 L RCTX-rescue:Conn_01x02-conn P12
@@ -535,14 +513,6 @@ Wire Wire Line
 Connection ~ 7250 5150
 Wire Wire Line
 	8400 1450 8400 2250
-Wire Wire Line
-	7400 5850 7150 5850
-Wire Wire Line
-	7400 6350 7400 5850
-Wire Wire Line
-	8400 6150 8400 6350
-Wire Wire Line
-	8400 6350 7900 6350
 Wire Wire Line
 	10100 6250 10100 6150
 Wire Wire Line
@@ -728,9 +698,6 @@ Wire Wire Line
 Connection ~ 5600 7550
 Wire Wire Line
 	7150 2250 8400 2250
-Connection ~ 8400 2250
-Wire Wire Line
-	8400 2250 8400 5750
 Wire Wire Line
 	8500 1450 8500 2350
 Wire Wire Line
@@ -865,19 +832,10 @@ Wire Wire Line
 	8800 2850 8800 5750
 Wire Wire Line
 	7150 2750 8700 2750
-Connection ~ 8700 2750
-Wire Wire Line
-	8700 2750 8700 5750
 Wire Wire Line
 	7150 2650 8600 2650
-Connection ~ 8600 2650
-Wire Wire Line
-	8600 2650 8600 5750
 Wire Wire Line
 	7150 2350 8500 2350
-Connection ~ 8500 2350
-Wire Wire Line
-	8500 2350 8500 5750
 $Comp
 L RCTX-rescue:Conn_01x04-conn P9
 U 1 1 5DC9CF6B
@@ -1111,7 +1069,6 @@ Wire Wire Line
 Wire Wire Line
 	2150 3550 1950 3550
 Connection ~ 2150 2750
-NoConn ~ 7150 6050
 $Comp
 L RCTX-rescue:GND-power #PWR02
 U 1 1 5F8D92F0
@@ -1133,17 +1090,6 @@ F 2 "" H 4800 6050 50  0001 C CNN
 F 3 "" H 4800 6050 50  0001 C CNN
 	1    4800 6050
 	0    -1   -1   0   
-$EndComp
-$Comp
-L RCTX-rescue:+3.3V-power #PWR04
-U 1 1 5FA40E40
-P 7900 6150
-F 0 "#PWR04" H 7900 6000 50  0001 C CNN
-F 1 "+3.3V" H 7915 6323 50  0000 C CNN
-F 2 "" H 7900 6150 50  0001 C CNN
-F 3 "" H 7900 6150 50  0001 C CNN
-	1    7900 6150
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	7900 6150 7900 6350
@@ -1180,4 +1126,58 @@ Wire Wire Line
 Connection ~ 5150 6200
 Wire Wire Line
 	5150 6200 5150 6500
+$Comp
+L RCTX-rescue:R_Network09-device RR2
+U 1 1 4EB6A2D0
+P 9600 5950
+F 0 "RR2" H 9350 6150 70  0000 C CNN
+F 1 "15K" H 9600 6150 70  0000 C CNN
+F 2 "Resistors_THT:R_Array_SIP10" H 9600 5950 60  0001 C CNN
+F 3 "" H 9600 5950 60  0001 C CNN
+	1    9600 5950
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7400 6350 7400 6050
+NoConn ~ 7150 5850
+Wire Wire Line
+	8400 6350 7900 6350
+Wire Wire Line
+	8400 6150 8400 6350
+$Comp
+L RCTX-rescue:R_Network08-device RR1
+U 1 1 5F32EC78
+P 8800 5950
+F 0 "RR1" H 8650 6150 70  0000 R CNN
+F 1 "15k" H 8900 6150 70  0000 R CNN
+F 2 "Resistors_THT:R_Array_SIP9" V 9375 5950 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8800 5950 50  0001 C CNN
+	1    8800 5950
+	1    0    0    1   
+$EndComp
+Connection ~ 8400 2250
+Wire Wire Line
+	8400 2250 8400 5750
+Connection ~ 8500 2350
+Wire Wire Line
+	8500 2350 8500 5750
+Connection ~ 8600 2650
+Wire Wire Line
+	8600 2650 8600 5750
+Connection ~ 8700 2750
+Wire Wire Line
+	8700 2750 8700 5750
+Wire Wire Line
+	7400 6050 7150 6050
+$Comp
+L RCTX-rescue:GND-power #PWR?
+U 1 1 5F437E7A
+P 7900 6150
+F 0 "#PWR?" H 7900 5900 50  0001 C CNN
+F 1 "GND" H 7900 6000 50  0000 C CNN
+F 2 "" H 7900 6150 50  0001 C CNN
+F 3 "" H 7900 6150 50  0001 C CNN
+	1    7900 6150
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
