@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 7
+Sheet 2 8
 Title "TX connector and frequency probe"
 Date "2020-04-15"
 Rev ""
@@ -460,4 +460,10 @@ F 3 "" H 4450 2350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4450 2350 4450 2450
+$Sheet
+S 1900 6000 900  150 
+U 5F9FCACF
+F0 "Radio TX" 50
+F1 "RadioTX.sch" 50
+$EndSheet
 $EndSCHEMATC
