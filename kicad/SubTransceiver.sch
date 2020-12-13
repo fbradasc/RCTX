@@ -391,7 +391,7 @@ Wire Wire Line
 Wire Wire Line
 	1400 5050 1400 5150
 $Comp
-L RF_Mixer:ADE-6 U?
+L RCTX-rescue:ADE-6-RF_Mixer U?
 U 1 1 5FD5B378
 P 5100 4600
 F 0 "U?" H 5100 5017 50  0000 C CNN
