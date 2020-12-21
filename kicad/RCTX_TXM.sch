@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 8
+Sheet 2 11
 Title "TX connector and frequency probe"
 Date "2020-04-15"
 Rev ""
@@ -463,7 +463,25 @@ Wire Wire Line
 $Sheet
 S 1900 6000 900  150 
 U 5F9FCACF
-F0 "Radio TX" 50
-F1 "RadioTX.sch" 50
+F0 "UHF Transceiver" 50
+F1 "UHF_Transceiver.sch" 50
+$EndSheet
+$Sheet
+S 3150 6000 900  150 
+U 5FA4B6B9
+F0 "VHF Transceiver" 50
+F1 "VHF_Transceiver.sch" 50
+$EndSheet
+$Sheet
+S 1900 6550 900  150 
+U 5FCACB2A
+F0 "HF/VHF Tranceiver" 50
+F1 "SubTransceiver.sch" 50
+$EndSheet
+$Sheet
+S 3150 6550 900  150 
+U 5FCACBA1
+F0 "400MHz Transceiver" 50
+F1 "SrfTransceiver.sch" 50
 $EndSheet
 $EndSCHEMATC

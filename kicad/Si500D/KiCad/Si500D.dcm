@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Si500D
+D Standard Clock Oscillators
+K
+F https://www.mouser.com/datasheet/2/368/Si500D-1397771.pdf
+$ENDCMP
+#
+#End Doc Library
