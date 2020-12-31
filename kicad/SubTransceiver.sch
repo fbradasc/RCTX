@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 11
+Sheet 5 13
 Title ""
 Date ""
 Rev ""
@@ -1258,17 +1258,6 @@ F 3 "" H 5350 1100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9300 650  9300 1050
-$Comp
-L RF:Si4464 U?
-U 1 1 5FF51D98
-P 9700 4600
-F 0 "U?" H 9700 4750 50  0000 C CNN
-F 1 "Si4464" H 9700 4600 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm_ThermalVias" H 9700 5800 50  0001 C CNN
-F 3 "https://www.silabs.com/documents/public/data-sheets/Si4464-63-61-60.pdf" H 9400 4500 50  0001 C CNN
-	1    9700 4600
-	1    0    0    -1  
-$EndComp
 NoConn ~ 9950 5300
 Wire Wire Line
 	10500 5650 10500 4900
@@ -1592,4 +1581,15 @@ Wire Wire Line
 Wire Wire Line
 	4750 3750 4350 3750
 Connection ~ 8900 3050
+$Comp
+L RF:Si4464 U?
+U 1 1 5FEF1725
+P 9700 4600
+F 0 "U?" H 9750 4650 50  0000 R CNN
+F 1 "Si4464" H 9850 4550 50  0000 R CNN
+F 2 "Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm_ThermalVias" H 9700 5800 50  0001 C CNN
+F 3 "https://www.silabs.com/documents/public/data-sheets/Si4464-63-61-60.pdf" H 9800 4500 50  0001 C CNN
+	1    9700 4600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

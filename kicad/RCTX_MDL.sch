@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 11
+Sheet 8 13
 Title "LEDs and Switches (User, RF mode, Multi digital)"
 Date "2020-04-15"
 Rev ""
@@ -667,89 +667,6 @@ Wire Wire Line
 	2800 750  3700 750 
 Wire Wire Line
 	1900 4550 2400 4550
-Wire Wire Line
-	1250 6450 1250 6100
-Wire Wire Line
-	1250 6100 1250 5750
-$Comp
-L RCTX-rescue:SW_SPST-switches SW1
-U 1 1 4EB6D083
-P 1850 5750
-F 0 "SW1" H 1850 5850 70  0000 C CNN
-F 1 "Reset" H 1000 5750 70  0000 C CNN
-F 2 "Buttons_Switches_THT:SW_PUSH_6mm_h5mm" H 1850 5750 50  0001 C CNN
-F 3 "" H 1850 5750 50  0001 C CNN
-	1    1850 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L RCTX-rescue:SW_SPST-switches SW2
-U 1 1 4EB6D08C
-P 1850 6100
-F 0 "SW2" H 1850 6200 70  0000 C CNN
-F 1 "Program" H 950 6100 70  0000 C CNN
-F 2 "Buttons_Switches_THT:SW_PUSH_6mm_h5mm" H 1850 6100 50  0001 C CNN
-F 3 "" H 1850 6100 50  0001 C CNN
-	1    1850 6100
-	1    0    0    -1  
-$EndComp
-$Comp
-L RCTX-rescue:SW_SPST-switches SW3
-U 1 1 4EB6D091
-P 1850 6450
-F 0 "SW3" H 1850 6550 70  0000 C CNN
-F 1 "User" H 1050 6450 70  0000 C CNN
-F 2 "Buttons_Switches_THT:SW_PUSH_6mm_h5mm" H 1850 6450 50  0001 C CNN
-F 3 "" H 1850 6450 50  0001 C CNN
-	1    1850 6450
-	1    0    0    -1  
-$EndComp
-$Comp
-L RCTX-rescue:Conn_01x03-conn P22
-U 1 1 4EB6D0B4
-P 3100 5850
-F 0 "P22" H 3100 5650 50  0000 C CNN
-F 1 "SW" V 3200 5850 40  0000 C CNN
-F 2 "Connectors_Samtec:SL-103-X-XX_1x03" H 3100 5850 50  0001 C CNN
-F 3 "" H 3100 5850 50  0001 C CNN
-	1    3100 5850
-	1    0    0    -1  
-$EndComp
-NoConn ~ 2900 6450
-NoConn ~ 2900 6550
-NoConn ~ 2900 6750
-Text Notes 3400 5800 0    60   ~ 0
-Reset
-Text Notes 3400 5900 0    60   ~ 0
-Program
-Text Notes 3400 6000 0    60   ~ 0
-User
-Connection ~ 1250 6450
-Wire Wire Line
-	1250 6450 1650 6450
-Wire Wire Line
-	1250 5750 1650 5750
-Wire Wire Line
-	1250 6650 1250 6450
-Wire Wire Line
-	2900 6650 1250 6650
-Wire Wire Line
-	2450 5850 2900 5850
-Wire Wire Line
-	2450 6100 2450 5850
-Wire Wire Line
-	2050 6100 2450 6100
-Wire Wire Line
-	2900 5750 2050 5750
-Wire Wire Line
-	2550 6450 2050 6450
-Wire Wire Line
-	2550 5950 2550 6450
-Wire Wire Line
-	2900 5950 2550 5950
-Wire Wire Line
-	1250 6100 1650 6100
-Connection ~ 1250 6100
 $Comp
 L RCTX-rescue:Conn_01x02-conn P?
 U 1 1 5ED6BAC7
@@ -801,25 +718,6 @@ F 1 "PWR_BUS" V 4000 4700 50  0000 L CNN
 F 2 "Connectors_Samtec:SL-104-X-XX_1x04" H 3900 4900 50  0001 C CNN
 F 3 "~" H 3900 4900 50  0001 C CNN
 	1    3900 4900
-	1    0    0    -1  
-$EndComp
-Text Notes 3650 6500 2    60   ~ 0
-+3.3V
-Text Notes 3400 6700 0    60   ~ 0
-GND
-Text Notes 3400 6600 0    60   ~ 0
-+5V
-Text Notes 3400 6800 0    60   ~ 0
-VBAT+
-$Comp
-L RCTX-rescue:Conn_01x04-conn P23
-U 1 1 5DEA4D3C
-P 3100 6550
-F 0 "P23" H 3050 6250 50  0000 L CNN
-F 1 "PWR_BUS" V 3200 6350 50  0000 L CNN
-F 2 "Connectors_Samtec:SL-104-X-XX_1x04" H 3100 6550 50  0001 C CNN
-F 3 "~" H 3100 6550 50  0001 C CNN
-	1    3100 6550
 	1    0    0    -1  
 $EndComp
 Text Notes 6550 6950 2    60   ~ 0
@@ -926,17 +824,6 @@ F 3 "" H 7250 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RCTX-rescue:+3.3V-power #PWR014
-U 1 1 5F85F799
-P 4200 5650
-F 0 "#PWR014" H 4200 5500 50  0001 C CNN
-F 1 "+3.3V" H 4215 5823 50  0000 C CNN
-F 2 "" H 4200 5650 50  0001 C CNN
-F 3 "" H 4200 5650 50  0001 C CNN
-	1    4200 5650
-	1    0    0    -1  
-$EndComp
-$Comp
 L RCTX-rescue:+3.3V-power #PWR013
 U 1 1 5F86063A
 P 2000 1100
@@ -959,28 +846,6 @@ F 3 "" H 7150 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RCTX-rescue:GND-power #PWR015
-U 1 1 5F862221
-P 4200 7000
-F 0 "#PWR015" H 4200 6750 50  0001 C CNN
-F 1 "GND" H 4205 6827 50  0000 C CNN
-F 2 "" H 4200 7000 50  0001 C CNN
-F 3 "" H 4200 7000 50  0001 C CNN
-	1    4200 7000
-	1    0    0    -1  
-$EndComp
-$Comp
-L RCTX-rescue:GND-power #PWR011
-U 1 1 5F863347
-P 1250 6750
-F 0 "#PWR011" H 1250 6500 50  0001 C CNN
-F 1 "GND" H 1255 6577 50  0000 C CNN
-F 2 "" H 1250 6750 50  0001 C CNN
-F 3 "" H 1250 6750 50  0001 C CNN
-	1    1250 6750
-	1    0    0    -1  
-$EndComp
-$Comp
 L RCTX-rescue:GND-power #PWR012
 U 1 1 5F864106
 P 1900 5100
@@ -998,12 +863,6 @@ Wire Wire Line
 	7150 5050 7150 5150
 Connection ~ 7150 5050
 Wire Wire Line
-	4200 6900 4200 7000
-Connection ~ 4200 6900
-Wire Wire Line
-	1250 6650 1250 6750
-Connection ~ 1250 6650
-Wire Wire Line
 	1900 5000 1900 5100
 Connection ~ 1900 5000
 Wire Wire Line
@@ -1012,4 +871,15 @@ Connection ~ 2000 1150
 Wire Wire Line
 	4200 5650 4200 5750
 Connection ~ 4200 5750
+$Comp
+L RCTX-rescue:+3.3V-power #PWR014
+U 1 1 5F85F799
+P 4200 5650
+F 0 "#PWR014" H 4200 5500 50  0001 C CNN
+F 1 "+3.3V" H 4215 5823 50  0000 C CNN
+F 2 "" H 4200 5650 50  0001 C CNN
+F 3 "" H 4200 5650 50  0001 C CNN
+	1    4200 5650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

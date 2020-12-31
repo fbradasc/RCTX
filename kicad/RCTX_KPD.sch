@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 10 11
+Sheet 10 13
 Title "Buttons and encoders"
 Date "2020-04-15"
 Rev ""
@@ -488,4 +488,120 @@ F 3 "" H 5400 3850 50  0001 C CNN
 	1    5400 3850
 	0    -1   -1   0   
 $EndComp
+Wire Wire Line
+	3550 7100 3550 6750
+Wire Wire Line
+	3550 6750 3550 6400
+$Comp
+L RCTX-rescue:SW_SPST-switches SW?
+U 1 1 6017CE9A
+P 4150 6400
+F 0 "SW?" H 4150 6500 70  0000 C CNN
+F 1 "Reset" H 3300 6400 70  0000 C CNN
+F 2 "Buttons_Switches_THT:SW_PUSH_6mm_h5mm" H 4150 6400 50  0001 C CNN
+F 3 "" H 4150 6400 50  0001 C CNN
+	1    4150 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L RCTX-rescue:SW_SPST-switches SW?
+U 1 1 6017CEA0
+P 4150 6750
+F 0 "SW?" H 4150 6850 70  0000 C CNN
+F 1 "Program" H 3250 6750 70  0000 C CNN
+F 2 "Buttons_Switches_THT:SW_PUSH_6mm_h5mm" H 4150 6750 50  0001 C CNN
+F 3 "" H 4150 6750 50  0001 C CNN
+	1    4150 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L RCTX-rescue:SW_SPST-switches SW?
+U 1 1 6017CEA6
+P 4150 7100
+F 0 "SW?" H 4150 7200 70  0000 C CNN
+F 1 "User" H 3350 7100 70  0000 C CNN
+F 2 "Buttons_Switches_THT:SW_PUSH_6mm_h5mm" H 4150 7100 50  0001 C CNN
+F 3 "" H 4150 7100 50  0001 C CNN
+	1    4150 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L RCTX-rescue:Conn_01x03-conn P?
+U 1 1 6017CEAC
+P 5400 6500
+F 0 "P?" H 5400 6300 50  0000 C CNN
+F 1 "SW" V 5500 6500 40  0000 C CNN
+F 2 "Connectors_Samtec:SL-103-X-XX_1x03" H 5400 6500 50  0001 C CNN
+F 3 "" H 5400 6500 50  0001 C CNN
+	1    5400 6500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5200 7100
+NoConn ~ 5200 7200
+NoConn ~ 5200 7400
+Text Notes 5700 6450 0    60   ~ 0
+Reset
+Text Notes 5700 6550 0    60   ~ 0
+Program
+Text Notes 5700 6650 0    60   ~ 0
+User
+Connection ~ 3550 7100
+Wire Wire Line
+	3550 7100 3950 7100
+Wire Wire Line
+	3550 6400 3950 6400
+Wire Wire Line
+	3550 7300 3550 7100
+Wire Wire Line
+	5200 7300 3550 7300
+Wire Wire Line
+	4750 6500 5200 6500
+Wire Wire Line
+	4750 6750 4750 6500
+Wire Wire Line
+	4350 6750 4750 6750
+Wire Wire Line
+	5200 6400 4350 6400
+Wire Wire Line
+	4850 7100 4350 7100
+Wire Wire Line
+	4850 6600 4850 7100
+Wire Wire Line
+	5200 6600 4850 6600
+Wire Wire Line
+	3550 6750 3950 6750
+Connection ~ 3550 6750
+Text Notes 5950 7150 2    60   ~ 0
++3.3V
+Text Notes 5700 7350 0    60   ~ 0
+GND
+Text Notes 5700 7250 0    60   ~ 0
++5V
+Text Notes 5700 7450 0    60   ~ 0
+VBAT+
+$Comp
+L RCTX-rescue:Conn_01x04-conn P?
+U 1 1 6017CECA
+P 5400 7200
+F 0 "P?" H 5350 6900 50  0000 L CNN
+F 1 "PWR_BUS" V 5500 7000 50  0000 L CNN
+F 2 "Connectors_Samtec:SL-104-X-XX_1x04" H 5400 7200 50  0001 C CNN
+F 3 "~" H 5400 7200 50  0001 C CNN
+	1    5400 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L RCTX-rescue:GND-power #PWR?
+U 1 1 6017CED0
+P 3550 7400
+F 0 "#PWR?" H 3550 7150 50  0001 C CNN
+F 1 "GND" H 3555 7227 50  0000 C CNN
+F 2 "" H 3550 7400 50  0001 C CNN
+F 3 "" H 3550 7400 50  0001 C CNN
+	1    3550 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 7300 3550 7400
+Connection ~ 3550 7300
 $EndSCHEMATC
