@@ -1,0 +1,1283 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 13
+Title "Remote Control Transmitter"
+Date "2020-04-15"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 2550 7100 900  150 
+U 5038E44C
+F0 "Trasmiter" 60
+F1 "RCTX_TXM.sch" 60
+$EndSheet
+$Sheet
+S 650  7100 900  150 
+U 5036250D
+F0 "Analogs" 60
+F1 "RCTX_JA.sch" 60
+$EndSheet
+$Sheet
+S 650  7450 900  150 
+U 4C8BDE8D
+F0 "Switches" 60
+F1 "RCTX_MDL.sch" 60
+$EndSheet
+$Sheet
+S 1600 7450 900  150 
+U 4F8AA1D1
+F0 "Displays" 60
+F1 "RCTX_LEDS.sch" 60
+$EndSheet
+Text Notes 13800 4910 0    60   ~ 0
++3.3V
+Text Notes 13800 4810 0    60   ~ 0
++5V
+Text Notes 13800 4610 0    60   ~ 0
+VBATT+
+Text Notes 13800 4710 0    60   ~ 0
+GND
+$Comp
+L RCTX-rescue:Conn_01x08-conn P2
+U 1 1 4E480E8F
+P 3450 2550
+F 0 "P2" V 3650 2550 60  0000 C CNN
+F 1 "MULTI_PROP_2" V 3550 2550 60  0000 C CNN
+F 2 "Connectors_Samtec:SL-108-X-XX_1x08" H 3450 2550 60  0001 C CNN
+F 3 "" H 3450 2550 60  0001 C CNN
+	1    3450 2550
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 2550 7450 900  150 
+U 4C8BDF50
+F0 "Buttons" 60
+F1 "RCTX_KPD.sch" 60
+$EndSheet
+$Sheet
+S 1600 7100 900  150 
+U 4C8BDE0A
+F0 "Analogs Alt" 60
+F1 "RCTX_MP.sch" 60
+$EndSheet
+Text Notes 11500 3200 2    60   ~ 0
+PPM_OUT
+Text Notes 11500 3100 2    60   ~ 0
+PPM_IN
+Text Notes 11500 2600 2    60   ~ 0
+nSRST
+Text Notes 11500 3000 2    60   ~ 0
+TDO
+Text Notes 11500 2900 2    60   ~ 0
+TDI
+Text Notes 11500 2800 2    60   ~ 0
+TCK
+Text Notes 11500 2700 2    60   ~ 0
+TMS
+Wire Wire Line
+	3250 2950 3000 2950
+Wire Wire Line
+	3250 2850 3000 2850
+Wire Wire Line
+	3250 2750 3000 2750
+Wire Wire Line
+	3250 2650 3000 2650
+Wire Wire Line
+	3250 2550 3000 2550
+Wire Wire Line
+	3250 2450 3000 2450
+Wire Wire Line
+	3250 2350 3000 2350
+Wire Wire Line
+	3250 2250 3000 2250
+Wire Wire Line
+	3250 2000 3000 2000
+Wire Wire Line
+	3250 1900 3000 1900
+Wire Wire Line
+	3250 1800 3000 1800
+Wire Wire Line
+	3250 1700 3000 1700
+Wire Wire Line
+	3250 1600 3000 1600
+Wire Wire Line
+	3250 1500 3000 1500
+Wire Wire Line
+	3250 1400 3000 1400
+Wire Wire Line
+	3250 1300 3000 1300
+$Comp
+L RCTX-rescue:Conn_01x08-conn P15
+U 1 1 4E480DFC
+P 8350 1600
+F 0 "P15" V 8550 1600 60  0000 C CNN
+F 1 "SWITCHES" V 8450 1600 60  0000 C CNN
+F 2 "Connectors_Samtec:SL-108-X-XX_1x08" H 8350 1600 60  0001 C CNN
+F 3 "" H 8350 1600 60  0001 C CNN
+	1    8350 1600
+	1    0    0    -1  
+$EndComp
+Text Notes -1400 7750 2    60   ~ 0
+PPM_IN
+Text Notes -1400 7850 2    60   ~ 0
+PPM_OUT
+Text Notes -1400 7950 2    60   ~ 0
+RTS2
+Text Notes -1400 8050 2    60   ~ 0
+CTS2
+Text Notes -1400 8150 2    60   ~ 0
+CTS1
+Text Notes -1400 8250 2    60   ~ 0
+RTS1
+Text Notes -1400 8350 2    60   ~ 0
+RX2
+Text Notes -1400 8450 2    60   ~ 0
+TX2
+Text Notes -1400 8550 2    60   ~ 0
+RX1
+Text Notes -1400 8650 2    60   ~ 0
+TX1
+Text Notes -1400 8750 2    60   ~ 0
+SCL
+Text Notes -1400 8850 2    60   ~ 0
+SDA
+$Comp
+L RCTX-rescue:Conn_01x12-conn P8
+U 1 1 5DE86FD1
+P -1100 8200
+F 0 "P8" V -900 8200 50  0000 C CNN
+F 1 "AUX_DB15_PORT" V -1000 8200 50  0000 C CNN
+F 2 "Connectors_Samtec:SL-112-X-XX_1x12" H -1100 8200 50  0001 C CNN
+F 3 "~" H -1100 8200 50  0001 C CNN
+	1    -1100 8200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L RCTX-rescue:Conn_01x04-conn P9
+U 1 1 5DC9CF6B
+P 13550 4800
+F 0 "P9" V 13750 4850 50  0000 R CNN
+F 1 "PWR_BUS" V 13650 4950 50  0000 R CNN
+F 2 "Connectors_Samtec:SL-104-X-XX_1x04" H 13550 4800 50  0001 C CNN
+F 3 "~" H 13550 4800 50  0001 C CNN
+	1    13550 4800
+	1    0    0    1   
+$EndComp
+$Comp
+L RCTX-rescue:Conn_01x08-conn P6
+U 1 1 4E480F09
+P 11800 2850
+F 0 "P6" V 12000 2800 60  0000 C CNN
+F 1 "EJTAG + IO_PORT" V 11900 2800 60  0000 C CNN
+F 2 "Connectors_Samtec:SL-108-X-XX_1x08" H 11800 2850 60  0001 C CNN
+F 3 "" H 11800 2850 60  0001 C CNN
+	1    11800 2850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L RCTX-rescue:+3.3V-power #PWR01
+U 1 1 5F8D9AA9
+P 12750 4900
+F 0 "#PWR01" H 12750 4750 50  0001 C CNN
+F 1 "+3.3V" V 12750 5050 50  0000 L CNN
+F 2 "" H 12750 4900 50  0001 C CNN
+F 3 "" H 12750 4900 50  0001 C CNN
+	1    12750 4900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	12750 4900 13350 4900
+Wire Wire Line
+	8150 1300 7800 1300
+Wire Wire Line
+	8150 1400 7800 1400
+Wire Wire Line
+	8150 1500 7800 1500
+Wire Wire Line
+	8150 1600 7800 1600
+Wire Wire Line
+	8150 1700 7800 1700
+Wire Wire Line
+	8150 1800 7800 1800
+Wire Wire Line
+	8150 1900 7800 1900
+Wire Wire Line
+	8150 2000 7800 2000
+Wire Wire Line
+	12750 4800 13350 4800
+$Comp
+L RCTX-rescue:+5V-power #PWR03
+U 1 1 5FA5D2F0
+P 12750 4800
+F 0 "#PWR03" H 12750 4650 50  0001 C CNN
+F 1 "+5V" V 12750 4950 50  0000 L CNN
+F 2 "" H 12750 4800 50  0001 C CNN
+F 3 "" H 12750 4800 50  0001 C CNN
+	1    12750 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L RCTX-rescue:GND-power #PWR02
+U 1 1 5F8D92F0
+P 12750 4700
+F 0 "#PWR02" H 12750 4450 50  0001 C CNN
+F 1 "GND" V 12750 4550 50  0000 R CNN
+F 2 "" H 12750 4700 50  0001 C CNN
+F 3 "" H 12750 4700 50  0001 C CNN
+	1    12750 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	12750 4600 12850 4600
+$Comp
+L power:+BATT #PWR?
+U 1 1 6047D4DF
+P 12750 4600
+F 0 "#PWR?" H 12750 4450 50  0001 C CNN
+F 1 "+BATT" V 12750 4750 50  0000 L CNN
+F 2 "" H 12750 4600 50  0001 C CNN
+F 3 "" H 12750 4600 50  0001 C CNN
+	1    12750 4600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L RCTX-rescue:Conn_01x04-conn P10
+U 1 1 4C4C8D77
+P 13550 4300
+F 0 "P10" V 13750 4250 50  0000 C CNN
+F 1 "POWER_IN" V 13650 4250 50  0000 C CNN
+F 2 "Connectors_Samtec:SL-104-X-XX_1x04" H 13550 4300 60  0001 C CNN
+F 3 "" H 13550 4300 60  0001 C CNN
+	1    13550 4300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	13350 4400 13250 4400
+Wire Wire Line
+	13150 4300 13350 4300
+Wire Wire Line
+	13350 4200 13150 4200
+Wire Wire Line
+	13350 4100 13250 4100
+Text Notes 13800 4360 0    60   ~ 0
+GND
+Text Notes 13800 4460 0    60   ~ 0
+VBATT+
+Text Notes 13800 4260 0    60   ~ 0
+GND
+Text Notes 13800 4160 0    60   ~ 0
+AMPEROMETER
+Wire Wire Line
+	13150 4200 13150 4300
+$Comp
+L RCTX-rescue:POT_TRIM-device RV1
+U 1 1 4C4C7454
+P 12850 4350
+F 0 "RV1" V 12950 4450 50  0000 C CNN
+F 1 "POT" V 12950 4250 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Trimmer_ACP_CA6v_Horizontal" H 12850 4350 60  0001 C CNN
+F 3 "" H 12850 4350 60  0001 C CNN
+	1    12850 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L RCTX-rescue:D_Zener-device ZD1
+U 1 1 4C4C7639
+P 13100 4100
+F 0 "ZD1" H 13100 4300 50  0000 C CNN
+F 1 "ZENER" H 13100 4200 40  0000 C CNN
+F 2 "Diodes_THT:D_5W_P5.08mm_Vertical_KathodeUp" H 13100 4100 60  0001 C CNN
+F 3 "" H 13100 4100 60  0001 C CNN
+	1    13100 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12850 4200 12850 4100
+Wire Wire Line
+	12650 4350 12700 4350
+Wire Wire Line
+	12650 4100 12650 4350
+Wire Wire Line
+	12850 4100 12650 4100
+Wire Wire Line
+	13350 4700 13150 4700
+Wire Wire Line
+	13150 4700 13150 4300
+Connection ~ 13150 4300
+Wire Wire Line
+	13350 4600 13250 4600
+Wire Wire Line
+	13250 4600 13250 4400
+Wire Wire Line
+	12950 4100 12850 4100
+Connection ~ 12850 4100
+Wire Wire Line
+	13250 4600 12850 4600
+Wire Wire Line
+	12850 4600 12850 4500
+Connection ~ 13250 4600
+Wire Wire Line
+	12750 4700 13150 4700
+Connection ~ 13150 4700
+Connection ~ 12850 4600
+$Comp
+L RCTX-rescue:Conn_01x02-conn P12
+U 1 1 4C8B9793
+P 8350 2850
+F 0 "P12" V 8550 2800 40  0000 C CNN
+F 1 "BUZZ" V 8450 2800 40  0000 C CNN
+F 2 "Connectors_Samtec:SL-102-X-XX_1x02" H 8350 2850 60  0001 C CNN
+F 3 "" H 8350 2850 60  0001 C CNN
+	1    8350 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L RCTX-rescue:Conn_01x04-conn P14
+U 1 1 4E480E18
+P 8350 2500
+F 0 "P14" V 8550 2450 50  0000 C CNN
+F 1 "LEDS" V 8450 2450 50  0000 C CNN
+F 2 "Connectors_Samtec:SL-104-X-XX_1x04" H 8350 2500 60  0001 C CNN
+F 3 "" H 8350 2500 60  0001 C CNN
+	1    8350 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 2700 8150 2700
+Wire Wire Line
+	7800 2400 8150 2400
+Wire Wire Line
+	7800 2500 8150 2500
+Wire Wire Line
+	7800 2600 8150 2600
+Text Notes 8700 2650 0    50   ~ 0
+Pins cfg:\n\nDOUT
+Text Notes 8700 2300 0    50   ~ 0
+Pins cfg:\n\nDIN + PULL_UP
+Text Notes 8700 3050 0    50   ~ 0
+Pins cfg:\n\nDOUT + WAVE_GEN
+Text Notes 4100 2250 0    50   ~ 0
+Pins cfg:\n\nAIN + ADC
+$Comp
+L RCTX-rescue:Conn_01x04-conn P?
+U 1 1 60035F2D
+P 11800 1250
+F 0 "P?" V 12000 1200 50  0000 C CNN
+F 1 "SD_CARD" V 11900 1200 50  0000 C CNN
+F 2 "Connectors_Samtec:SL-104-X-XX_1x04" H 11800 1250 60  0001 C CNN
+F 3 "" H 11800 1250 60  0001 C CNN
+	1    11800 1250
+	-1   0    0    -1  
+$EndComp
+Text Notes 11500 1500 2    60   ~ 0
+SS/CS
+Text Notes 11500 1400 2    60   ~ 0
+SDO
+Text Notes 11500 1300 2    60   ~ 0
+SDI
+Text Notes 11500 1200 2    60   ~ 0
+SCK
+Wire Wire Line
+	12000 1150 12100 1150
+Text Notes 11500 1900 2    60   ~ 0
+/PWM
+Text Notes 11500 1800 2    60   ~ 0
+LE
+Text Notes 11500 1700 2    60   ~ 0
+DIN
+Text Notes 11500 1600 2    60   ~ 0
+CLK
+$Comp
+L RCTX-rescue:Conn_01x04-conn P?
+U 1 1 60035F3E
+P 11800 1650
+F 0 "P?" V 12000 1650 50  0000 C CNN
+F 1 "LEDs" V 11900 1600 50  0000 C CNN
+F 2 "Connectors_Samtec:SL-104-X-XX_1x04" H 11800 1650 50  0001 C CNN
+F 3 "~" H 11800 1650 50  0001 C CNN
+	1    11800 1650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L RCTX-rescue:Conn_01x05-conn P?
+U 1 1 60035F44
+P 11800 2150
+F 0 "P?" V 12000 2150 50  0000 C CNN
+F 1 "DISPLAY" V 11900 2150 50  0000 C CNN
+F 2 "Connectors_Samtec:SL-106-X-XX_1x06" H 11800 2150 50  0001 C CNN
+F 3 "~" H 11800 2150 50  0001 C CNN
+	1    11800 2150
+	-1   0    0    -1  
+$EndComp
+Text Notes 11500 2400 2    60   ~ 0
+SCK
+Text Notes 11350 2300 0    60   ~ 0
+SDI
+Text Notes 11300 2200 0    60   ~ 0
+D/C
+Text Notes 11150 2100 0    60   ~ 0
+/RESET
+Text Notes 11300 2000 0    60   ~ 0
+/CE
+Wire Wire Line
+	12100 2350 12000 2350
+Wire Wire Line
+	12300 2150 12000 2150
+Wire Wire Line
+	12100 1150 12100 2350
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 6004B2C0
+P 13000 1250
+F 0 "J?" V 13100 1300 50  0000 R CNN
+F 1 "SPI" V 13200 1300 50  0000 R CNN
+F 2 "" H 13000 1250 50  0001 C CNN
+F 3 "~" H 13000 1250 50  0001 C CNN
+	1    13000 1250
+	1    0    0    -1  
+$EndComp
+Text Notes 13250 1200 0    60   ~ 0
+SCK
+Wire Wire Line
+	12000 2250 12200 2250
+Wire Wire Line
+	12200 1650 12200 2250
+Connection ~ 12200 1650
+Wire Wire Line
+	12000 1650 12200 1650
+Wire Wire Line
+	12300 1350 12300 2150
+Wire Wire Line
+	12000 1350 12300 1350
+Wire Wire Line
+	12200 1250 12200 1650
+Wire Wire Line
+	12000 1250 12200 1250
+Text Notes 13250 1300 0    60   ~ 0
+SDI
+Text Notes 13250 1400 0    60   ~ 0
+SDO
+Wire Wire Line
+	12100 1150 12800 1150
+Connection ~ 12100 1150
+Wire Wire Line
+	12200 1250 12800 1250
+Connection ~ 12200 1250
+Wire Wire Line
+	12300 1350 12800 1350
+Connection ~ 12300 1350
+$Comp
+L conn:Conn_01x06 J?
+U 1 1 600E2C62
+P 13000 1650
+F 0 "J?" V 13100 1600 50  0000 L CNN
+F 1 "SPI_USERS" V 13200 1400 50  0000 L CNN
+F 2 "" H 13000 1650 50  0001 C CNN
+F 3 "~" H 13000 1650 50  0001 C CNN
+	1    13000 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12000 1450 12800 1450
+Wire Wire Line
+	12000 1550 12800 1550
+Wire Wire Line
+	12000 1750 12400 1750
+Wire Wire Line
+	12400 1750 12400 1650
+Wire Wire Line
+	12400 1650 12800 1650
+Wire Wire Line
+	12000 1850 12500 1850
+Wire Wire Line
+	12500 1850 12500 1750
+Wire Wire Line
+	12500 1750 12800 1750
+Wire Wire Line
+	12000 1950 12600 1950
+Wire Wire Line
+	12600 1950 12600 1850
+Wire Wire Line
+	12600 1850 12800 1850
+Wire Wire Line
+	12000 2050 12700 2050
+Wire Wire Line
+	12700 2050 12700 1950
+Wire Wire Line
+	12700 1950 12800 1950
+Text Notes 13250 1500 0    60   ~ 0
+SD_CARD SS/CS
+Text Notes 13250 1600 0    60   ~ 0
+LEDs CLK
+Text Notes 13250 1700 0    60   ~ 0
+LEDs LE
+Text Notes 13250 1800 0    60   ~ 0
+LEDS /PWM
+Text Notes 13250 1900 0    60   ~ 0
+LCD /CE
+Text Notes 13250 2000 0    60   ~ 0
+LCD /RESET
+$Comp
+L silabs_efr32:EFR32FG12P431F1024GM68 U?
+U 1 1 5FED240C
+P 8750 6900
+F 0 "U?" H 8750 6950 50  0000 C CNN
+F 1 "EFR32FG12P431F1024GM68" H 8750 6850 50  0000 C CNN
+F 2 "Footprint" H 8750 6650 50  0001 C CNN
+F 3 "Dataset" H 8750 6750 50  0001 C CNN
+	1    8750 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 5FF01E8A
+P 10850 6550
+F 0 "C?" H 10900 6650 50  0000 L CNN
+F 1 "10u" H 10900 6450 50  0000 L CNN
+F 2 "" H 10888 6400 50  0001 C CNN
+F 3 "" H 10850 6550 50  0001 C CNN
+	1    10850 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 5FF0292A
+P 11200 6550
+F 0 "C?" H 11250 6650 50  0000 L CNN
+F 1 "10n" H 11250 6450 50  0000 L CNN
+F 2 "" H 11238 6400 50  0001 C CNN
+F 3 "" H 11200 6550 50  0001 C CNN
+	1    11200 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R?
+U 1 1 5FF03765
+P 11450 6300
+F 0 "R?" V 11250 6300 50  0000 C CNN
+F 1 "1R" V 11350 6300 50  0000 C CNN
+F 2 "" V 11380 6300 50  0001 C CNN
+F 3 "" H 11450 6300 50  0001 C CNN
+	1    11450 6300
+	0    1    1    0   
+$EndComp
+$Comp
+L device:L_Core_Iron L?
+U 1 1 5FF05563
+P 11850 6300
+F 0 "L?" V 12075 6300 50  0000 C CNN
+F 1 "CBF102WB" V 11984 6300 50  0000 C CNN
+F 2 "" H 11850 6300 50  0001 C CNN
+F 3 "" H 11850 6300 50  0001 C CNN
+	1    11850 6300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10100 6300 10850 6300
+Wire Wire Line
+	10850 6300 10850 6400
+Wire Wire Line
+	10850 6300 11200 6300
+Wire Wire Line
+	11200 6300 11200 6400
+Connection ~ 10850 6300
+Wire Wire Line
+	11200 6300 11300 6300
+Connection ~ 11200 6300
+Wire Wire Line
+	11600 6300 11700 6300
+$Comp
+L power:GND #PWR?
+U 1 1 5FF131B4
+P 10850 6800
+F 0 "#PWR?" H 10850 6550 50  0001 C CNN
+F 1 "GND" H 10855 6627 50  0000 C CNN
+F 2 "" H 10850 6800 50  0001 C CNN
+F 3 "" H 10850 6800 50  0001 C CNN
+	1    10850 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FF13562
+P 11200 6800
+F 0 "#PWR?" H 11200 6550 50  0001 C CNN
+F 1 "GND" H 11205 6627 50  0000 C CNN
+F 2 "" H 11200 6800 50  0001 C CNN
+F 3 "" H 11200 6800 50  0001 C CNN
+	1    11200 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10850 6700 10850 6800
+Wire Wire Line
+	11200 6700 11200 6800
+$Comp
+L device:C C?
+U 1 1 5FF1E6BB
+P 10850 5550
+F 0 "C?" H 10900 5650 50  0000 L CNN
+F 1 "10u" H 10900 5450 50  0000 L CNN
+F 2 "" H 10888 5400 50  0001 C CNN
+F 3 "" H 10850 5550 50  0001 C CNN
+	1    10850 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 5FF1E6C1
+P 11200 5550
+F 0 "C?" H 11250 5650 50  0000 L CNN
+F 1 "1u" H 11250 5450 50  0000 L CNN
+F 2 "" H 11238 5400 50  0001 C CNN
+F 3 "" H 11200 5550 50  0001 C CNN
+	1    11200 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10850 5300 10850 5400
+Wire Wire Line
+	10850 5300 11200 5300
+Wire Wire Line
+	11200 5300 11200 5400
+Connection ~ 10850 5300
+$Comp
+L power:GND #PWR?
+U 1 1 5FF1E6CE
+P 10850 5800
+F 0 "#PWR?" H 10850 5550 50  0001 C CNN
+F 1 "GND" H 10855 5627 50  0000 C CNN
+F 2 "" H 10850 5800 50  0001 C CNN
+F 3 "" H 10850 5800 50  0001 C CNN
+	1    10850 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FF1E6D4
+P 11200 5800
+F 0 "#PWR?" H 11200 5550 50  0001 C CNN
+F 1 "GND" H 11205 5627 50  0000 C CNN
+F 2 "" H 11200 5800 50  0001 C CNN
+F 3 "" H 11200 5800 50  0001 C CNN
+	1    11200 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10850 5700 10850 5800
+Wire Wire Line
+	11200 5700 11200 5800
+Wire Wire Line
+	9350 5550 9350 5300
+Wire Wire Line
+	9350 5300 10850 5300
+$Comp
+L device:C C?
+U 1 1 5FF28194
+P 10850 7350
+F 0 "C?" H 10900 7450 50  0000 L CNN
+F 1 "1u" H 10900 7250 50  0000 L CNN
+F 2 "" H 10888 7200 50  0001 C CNN
+F 3 "" H 10850 7350 50  0001 C CNN
+	1    10850 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 5FF2819A
+P 11200 7350
+F 0 "C?" H 11250 7450 50  0000 L CNN
+F 1 "100n" H 11250 7250 50  0000 L CNN
+F 2 "" H 11238 7200 50  0001 C CNN
+F 3 "" H 11200 7350 50  0001 C CNN
+	1    11200 7350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10850 7100 10850 7200
+Wire Wire Line
+	10850 7100 11200 7100
+Wire Wire Line
+	11200 7100 11200 7200
+Connection ~ 10850 7100
+$Comp
+L power:GND #PWR?
+U 1 1 5FF281A7
+P 10850 7600
+F 0 "#PWR?" H 10850 7350 50  0001 C CNN
+F 1 "GND" H 10855 7427 50  0000 C CNN
+F 2 "" H 10850 7600 50  0001 C CNN
+F 3 "" H 10850 7600 50  0001 C CNN
+	1    10850 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FF281AD
+P 11200 7600
+F 0 "#PWR?" H 11200 7350 50  0001 C CNN
+F 1 "GND" H 11205 7427 50  0000 C CNN
+F 2 "" H 11200 7600 50  0001 C CNN
+F 3 "" H 11200 7600 50  0001 C CNN
+	1    11200 7600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10850 7500 10850 7600
+Wire Wire Line
+	11200 7500 11200 7600
+Wire Wire Line
+	6850 7500 6850 7600
+Wire Wire Line
+	7400 7600 7050 7600
+$Comp
+L power:GND #PWR?
+U 1 1 5FF81F7C
+P 6550 7950
+F 0 "#PWR?" H 6550 7700 50  0001 C CNN
+F 1 "GND" H 6555 7777 50  0000 C CNN
+F 2 "" H 6550 7950 50  0001 C CNN
+F 3 "" H 6550 7950 50  0001 C CNN
+	1    6550 7950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FF899A8
+P 8450 8450
+F 0 "#PWR?" H 8450 8200 50  0001 C CNN
+F 1 "GND" H 8455 8277 50  0000 C CNN
+F 2 "" H 8450 8450 50  0001 C CNN
+F 3 "" H 8450 8450 50  0001 C CNN
+	1    8450 8450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 8250 8350 8350
+Wire Wire Line
+	8350 8350 8450 8350
+Wire Wire Line
+	8450 8350 8450 8250
+Wire Wire Line
+	8450 8350 8450 8450
+Connection ~ 8450 8350
+Wire Wire Line
+	11200 5300 12100 5300
+Wire Wire Line
+	12100 5300 12100 6300
+Wire Wire Line
+	12100 6300 12000 6300
+Connection ~ 11200 5300
+Wire Wire Line
+	11200 7100 12100 7100
+Wire Wire Line
+	12100 7100 12100 6300
+Connection ~ 11200 7100
+Connection ~ 12100 6300
+$Comp
+L device:L L?
+U 1 1 5FFAC17E
+P 9450 5100
+F 0 "L?" H 9502 5146 50  0000 L CNN
+F 1 "4u7" H 9502 5055 50  0000 L CNN
+F 2 "" H 9450 5100 50  0001 C CNN
+F 3 "" H 9450 5100 50  0001 C CNN
+	1    9450 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6008B62F
+P 10150 5550
+F 0 "#PWR?" H 10150 5300 50  0001 C CNN
+F 1 "GND" H 10155 5377 50  0000 C CNN
+F 2 "" H 10150 5550 50  0001 C CNN
+F 3 "" H 10150 5550 50  0001 C CNN
+	1    10150 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 5550 9550 5450
+Wire Wire Line
+	9550 5450 10150 5450
+Wire Wire Line
+	10150 5450 10150 5550
+Wire Wire Line
+	6850 7500 7400 7500
+Wire Wire Line
+	6550 7750 6550 7950
+Wire Wire Line
+	6650 7750 6550 7750
+Wire Wire Line
+	7050 7600 7050 8000
+Wire Wire Line
+	7050 8000 6850 8000
+Wire Wire Line
+	6850 8000 6850 7900
+$Comp
+L device:Crystal_GND2 Y?
+U 1 1 5FF731CC
+P 6850 7750
+F 0 "Y?" V 6750 7400 50  0000 L CNN
+F 1 "38.400 MHz" V 6650 7250 50  0000 L CNN
+F 2 "" H 6850 7750 50  0001 C CNN
+F 3 "" H 6850 7750 50  0001 C CNN
+	1    6850 7750
+	0    1    1    0   
+$EndComp
+$Comp
+L device:C C?
+U 1 1 601154C6
+P 6050 7650
+F 0 "C?" H 6100 7750 50  0000 L CNN
+F 1 "10p" H 6100 7550 50  0000 L CNN
+F 2 "" H 6088 7500 50  0001 C CNN
+F 3 "" H 6050 7650 50  0001 C CNN
+	1    6050 7650
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 60116311
+P 5750 7650
+F 0 "C?" H 5800 7750 50  0000 L CNN
+F 1 "100p" H 5800 7550 50  0000 L CNN
+F 2 "" H 5788 7500 50  0001 C CNN
+F 3 "" H 5750 7650 50  0001 C CNN
+	1    5750 7650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 7400 6050 7500
+Wire Wire Line
+	6050 7400 5750 7400
+Wire Wire Line
+	5750 7400 5750 7500
+Connection ~ 6050 7400
+$Comp
+L power:GND #PWR?
+U 1 1 60133091
+P 6050 7900
+F 0 "#PWR?" H 6050 7650 50  0001 C CNN
+F 1 "GND" H 6055 7727 50  0000 C CNN
+F 2 "" H 6050 7900 50  0001 C CNN
+F 3 "" H 6050 7900 50  0001 C CNN
+	1    6050 7900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 601334B7
+P 5750 7900
+F 0 "#PWR?" H 5750 7650 50  0001 C CNN
+F 1 "GND" H 5755 7727 50  0000 C CNN
+F 2 "" H 5750 7900 50  0001 C CNN
+F 3 "" H 5750 7900 50  0001 C CNN
+	1    5750 7900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 7800 6050 7900
+Wire Wire Line
+	5750 7800 5750 7900
+Text GLabel 5250 7400 0    50   Input ~ 0
+VDCDC
+$Comp
+L device:L_Core_Iron L?
+U 1 1 6022E128
+P 5500 7400
+F 0 "L?" V 5725 7400 50  0000 C CNN
+F 1 "BLM18AG601SN1" V 5634 7400 50  0000 C CNN
+F 2 "" H 5500 7400 50  0001 C CNN
+F 3 "" H 5500 7400 50  0001 C CNN
+	1    5500 7400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5250 7400 5350 7400
+Wire Wire Line
+	5650 7400 5750 7400
+Connection ~ 5750 7400
+Wire Wire Line
+	7400 7400 6050 7400
+Wire Wire Line
+	9450 5550 9450 5250
+Wire Wire Line
+	9250 5550 9250 4850
+Wire Wire Line
+	9150 5550 9150 4850
+Connection ~ 9550 4850
+Wire Wire Line
+	9550 4850 9700 4850
+Text GLabel 9700 4850 2    50   Input ~ 0
+VDCDC
+Connection ~ 9250 4350
+Wire Wire Line
+	9550 4350 9550 4450
+Wire Wire Line
+	9250 4350 9550 4350
+Connection ~ 8950 4350
+Wire Wire Line
+	9250 4350 9250 4450
+Wire Wire Line
+	8950 4350 9250 4350
+Wire Wire Line
+	8950 4350 8950 4450
+Wire Wire Line
+	8700 4350 8950 4350
+Wire Wire Line
+	8700 4450 8700 4350
+Wire Wire Line
+	8950 4850 8950 4750
+Wire Wire Line
+	9150 4850 8950 4850
+Connection ~ 9450 4850
+Wire Wire Line
+	9550 4850 9550 4750
+Wire Wire Line
+	9450 4850 9550 4850
+Connection ~ 9250 4850
+Wire Wire Line
+	9250 4750 9250 4850
+$Comp
+L device:C C?
+U 1 1 5FFC8468
+P 9550 4600
+F 0 "C?" H 9600 4700 50  0000 L CNN
+F 1 "4u7" H 9600 4500 50  0000 L CNN
+F 2 "" H 9588 4450 50  0001 C CNN
+F 3 "" H 9550 4600 50  0001 C CNN
+	1    9550 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 4850 9450 4950
+Wire Wire Line
+	9250 4850 9450 4850
+$Comp
+L power:GND #PWR?
+U 1 1 5FFAF864
+P 8700 4450
+F 0 "#PWR?" H 8700 4200 50  0001 C CNN
+F 1 "GND" H 8705 4277 50  0000 C CNN
+F 2 "" H 8700 4450 50  0001 C CNN
+F 3 "" H 8700 4450 50  0001 C CNN
+	1    8700 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 5FFAEBD8
+P 9250 4600
+F 0 "C?" H 9300 4700 50  0000 L CNN
+F 1 "100n" H 9300 4500 50  0000 L CNN
+F 2 "" H 9288 4450 50  0001 C CNN
+F 3 "" H 9250 4600 50  0001 C CNN
+	1    9250 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 5FF370A2
+P 8950 4600
+F 0 "C?" H 9000 4700 50  0000 L CNN
+F 1 "1u" H 9000 4500 50  0000 L CNN
+F 2 "" H 8988 4450 50  0001 C CNN
+F 3 "" H 8950 4600 50  0001 C CNN
+	1    8950 4600
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 850  5900 850  150 
+U 5FF689BA
+F0 "Analog Switches" 50
+F1 "AnalogSwitches.sch" 50
+$EndSheet
+Text GLabel 7800 1300 0    50   Input ~ 0
+SW_RX_SUB_ID_SCAN
+Text GLabel 7800 1400 0    50   Input ~ 0
+SW_RX_ID_SCAN
+Text GLabel 7800 1500 0    50   Input ~ 0
+SW_RF_BAND_SCAN
+Text GLabel 7800 1600 0    50   Input ~ 0
+SW_SELECTOR_SCAN
+Text GLabel 7800 1700 0    50   Input ~ 0
+SW_DATA_A
+Text GLabel 7800 1800 0    50   Input ~ 0
+SW_DATA_B
+Text GLabel 7800 1900 0    50   Input ~ 0
+SW_DATA_C
+Text GLabel 7800 2000 0    50   Input ~ 0
+SW_DATA_D
+Wire Wire Line
+	8150 2150 7800 2150
+Wire Wire Line
+	8150 2250 7800 2250
+Text GLabel 7800 2150 0    50   Input ~ 0
+PB_LEFT
+Text GLabel 7800 2250 0    50   Input ~ 0
+PB_RIGHT
+$Comp
+L RCTX-rescue:SW_Push-switches SW?
+U 1 1 609FFAA0
+P 7300 8000
+F 0 "SW?" V 7450 8200 50  0000 R CNN
+F 1 "RESET" H 7400 7900 50  0000 R CNN
+F 2 "" H 7300 8200 50  0001 C CNN
+F 3 "" H 7300 8200 50  0001 C CNN
+	1    7300 8000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60A0172F
+P 7300 8300
+F 0 "#PWR?" H 7300 8050 50  0001 C CNN
+F 1 "GND" H 7305 8127 50  0000 C CNN
+F 2 "" H 7300 8300 50  0001 C CNN
+F 3 "" H 7300 8300 50  0001 C CNN
+	1    7300 8300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 8200 7300 8300
+Wire Wire Line
+	7400 7700 7300 7700
+Wire Wire Line
+	7300 7700 7300 7800
+$Comp
+L RCTX-rescue:Conn_01x02-conn P?
+U 1 1 60A158B7
+P 8350 2150
+F 0 "P?" V 8550 2100 60  0000 C CNN
+F 1 "SW" V 8450 2100 60  0000 C CNN
+F 2 "Connectors_Samtec:SL-102-X-XX_1x02" H 8350 2150 60  0001 C CNN
+F 3 "" H 8350 2150 60  0001 C CNN
+	1    8350 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 6900 7900 6900
+Wire Wire Line
+	7900 6900 7900 6150
+Wire Wire Line
+	7900 6150 9050 6150
+Wire Wire Line
+	9050 6150 9050 5550
+Wire Wire Line
+	9050 6150 9600 6150
+Wire Wire Line
+	9600 6150 9600 7100
+Wire Wire Line
+	9600 7100 10100 7100
+Connection ~ 9050 6150
+Connection ~ 10100 7100
+Wire Wire Line
+	10100 7100 10850 7100
+Text GLabel 3000 1300 0    50   Input ~ 0
+H_RIGHT_JOYSTICK
+Text GLabel 3000 1400 0    50   Input ~ 0
+V_RIGHT_JOYSTICK
+Text GLabel 3000 1500 0    50   Input ~ 0
+H_LEFT_JOYSTICK
+Text GLabel 3000 1600 0    50   Input ~ 0
+V_LEFT_JOYSTICK
+Text GLabel 3000 1700 0    50   Input ~ 0
+ROTARY_01
+Text GLabel 3000 1800 0    50   Input ~ 0
+ROTARY_02
+Text GLabel 3000 1900 0    50   Input ~ 0
+ROTARY_03
+Text GLabel 3000 2000 0    50   Input ~ 0
+ROTARY_04
+Text GLabel 3000 2250 0    50   Input ~ 0
+ROTARY_05
+Text GLabel 3000 2350 0    50   Input ~ 0
+ROTARY_06
+Text GLabel 3000 2550 0    50   Input ~ 0
+ROTARY_08
+Text GLabel 3000 2650 0    50   Input ~ 0
+ROTARY_09
+Text GLabel 3000 2750 0    50   Input ~ 0
+ROTARY_10
+Text GLabel 3000 2850 0    50   Input ~ 0
+ROTARY_11
+Text GLabel 3000 2950 0    50   Input ~ 0
+ROTARY_12
+Text GLabel 3000 2450 0    50   Input ~ 0
+ROTARY_07
+$Comp
+L conn:Conn_01x02 P?
+U 1 1 60A81BE0
+P 3450 3200
+F 0 "P?" V 3650 3100 60  0000 L CNN
+F 1 "KEYPAD" V 3550 3000 60  0000 L CNN
+F 2 "" H 3450 3200 50  0001 C CNN
+F 3 "~" H 3450 3200 50  0001 C CNN
+	1    3450 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L RCTX-rescue:Conn_01x08-conn P1
+U 1 1 4E480FEC
+P 3450 1600
+F 0 "P1" V 3650 1550 60  0000 C CNN
+F 1 "MULTI_PROP_1" V 3550 1550 60  0000 C CNN
+F 2 "Connectors_Samtec:SL-108-X-XX_1x08" H 3450 1600 60  0001 C CNN
+F 3 "" H 3450 1600 60  0001 C CNN
+	1    3450 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 3300 3000 3300
+Wire Wire Line
+	3250 3200 3000 3200
+Text GLabel 3000 3200 0    50   Input ~ 0
+MULTI_DIGITAL_LEFT
+Text GLabel 3000 3300 0    50   Input ~ 0
+MULTI_DIGITAL_RIGHT
+$Comp
+L RCTX-rescue:Conn_01x08-conn P?
+U 1 1 60AA3354
+P 7150 6400
+F 0 "P?" V 7350 6350 60  0000 C CNN
+F 1 "MULTI_PROP_1" V 7250 6350 60  0000 C CNN
+F 2 "Connectors_Samtec:SL-108-X-XX_1x08" H 7150 6400 60  0001 C CNN
+F 3 "" H 7150 6400 60  0001 C CNN
+	1    7150 6400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L RCTX-rescue:Conn_01x08-conn P?
+U 1 1 60AA5600
+P 8250 5300
+F 0 "P?" V 8450 5300 60  0000 C CNN
+F 1 "MULTI_PROP_2" V 8350 5300 60  0000 C CNN
+F 2 "Connectors_Samtec:SL-108-X-XX_1x08" H 8250 5300 60  0001 C CNN
+F 3 "" H 8250 5300 60  0001 C CNN
+	1    8250 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L conn:Conn_01x02 P?
+U 1 1 60AAA3BD
+P 8750 5300
+F 0 "P?" V 8950 5200 60  0000 L CNN
+F 1 "KEYPAD" V 8850 5100 60  0000 L CNN
+F 2 "" H 8750 5300 50  0001 C CNN
+F 3 "~" H 8750 5300 50  0001 C CNN
+	1    8750 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L conn:Conn_01x01 J?
+U 1 1 60AAB151
+P 8950 5300
+F 0 "J?" V 9050 5250 50  0000 L CNN
+F 1 "BUZZ" V 9150 5200 50  0000 L CNN
+F 2 "" H 8950 5300 50  0001 C CNN
+F 3 "~" H 8950 5300 50  0001 C CNN
+	1    8950 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L RCTX-rescue:Conn_01x08-conn P?
+U 1 1 60AABF26
+P 9150 8500
+F 0 "P?" V 9350 8500 60  0000 C CNN
+F 1 "SWITCHES" V 9250 8500 60  0000 C CNN
+F 2 "Connectors_Samtec:SL-108-X-XX_1x08" H 9150 8500 60  0001 C CNN
+F 3 "" H 9150 8500 60  0001 C CNN
+	1    9150 8500
+	0    -1   1    0   
+$EndComp
+$Comp
+L RCTX-rescue:Conn_01x02-conn P?
+U 1 1 60AAE7AB
+P 10350 6100
+F 0 "P?" V 10550 6050 60  0000 C CNN
+F 1 "SW" V 10450 6050 60  0000 C CNN
+F 2 "Connectors_Samtec:SL-102-X-XX_1x02" H 10350 6100 60  0001 C CNN
+F 3 "" H 10350 6100 60  0001 C CNN
+	1    10350 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L RCTX-rescue:Conn_01x04-conn P?
+U 1 1 60AAF69D
+P 7150 7100
+F 0 "P?" V 7250 7050 50  0000 C CNN
+F 1 "LEDS" V 7350 7050 50  0000 C CNN
+F 2 "Connectors_Samtec:SL-104-X-XX_1x04" H 7150 7100 60  0001 C CNN
+F 3 "" H 7150 7100 60  0001 C CNN
+	1    7150 7100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 2850 7800 2850
+$Comp
+L power:GND #PWR?
+U 1 1 60AD58A4
+P 8050 3050
+F 0 "#PWR?" H 8050 2800 50  0001 C CNN
+F 1 "GND" H 8055 2877 50  0000 C CNN
+F 2 "" H 8050 3050 50  0001 C CNN
+F 3 "" H 8050 3050 50  0001 C CNN
+	1    8050 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 2950 8050 2950
+Wire Wire Line
+	8050 2950 8050 3050
+Text GLabel 7800 2850 0    50   Input ~ 0
+BUZZER
+Text GLabel 7800 2400 0    50   Input ~ 0
+LED1
+Text GLabel 7800 2500 0    50   Input ~ 0
+LED2
+Text GLabel 7800 2600 0    50   Input ~ 0
+LED3
+Text GLabel 7800 2700 0    50   Input ~ 0
+LED4
+Text Notes 8700 1600 0    50   ~ 0
+Pins cfg:\n\nDOUT
+Text Notes 8700 1950 0    50   ~ 0
+Pins cfg:\n\nDIN\n
+$Comp
+L conn:Conn_01x03 J?
+U 1 1 60B4803B
+P 10350 7300
+F 0 "J?" V 10450 7350 50  0000 R CNN
+F 1 "SPI" V 10550 7350 50  0000 R CNN
+F 2 "" H 10350 7300 50  0001 C CNN
+F 3 "~" H 10350 7300 50  0001 C CNN
+	1    10350 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L conn:Conn_01x06 J?
+U 1 1 60B49028
+P 10350 6600
+F 0 "J?" V 10450 6550 50  0000 L CNN
+F 1 "SPI_USERS" V 10550 6350 50  0000 L CNN
+F 2 "" H 10350 6600 50  0001 C CNN
+F 3 "~" H 10350 6600 50  0001 C CNN
+	1    10350 6600
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 2350 5950 850  150 
+U 60B691DB
+F0 "DisplayI2C" 50
+F1 "DisplayI2C.sch" 50
+$EndSheet
+$EndSCHEMATC
