@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 8268 11693 portrait
 encoding utf-8
-Sheet 12 13
+Sheet 9 10
 Title ""
 Date ""
 Rev ""
@@ -699,30 +699,6 @@ NoConn ~ 3300 7400
 Wire Wire Line
 	2000 1250 2000 1500
 Wire Wire Line
-	3800 7400 3800 7800
-$Comp
-L RCTX-rescue:Conn_01x02-conn P?
-U 1 1 600F86D5
-P 3900 8000
-AR Path="/600F86D5" Ref="P?"  Part="1" 
-AR Path="/4C8BDE8D/600F86D5" Ref="P?"  Part="1" 
-AR Path="/5FF689BA/600F86D5" Ref="P?"  Part="1" 
-F 0 "P?" H 3850 7800 50  0000 L CNN
-F 1 "TX_VCC" V 4000 7800 50  0000 L CNN
-F 2 "Connectors_Samtec:SL-102-X-XX_1x02" H 3900 8000 50  0001 C CNN
-F 3 "~" H 3900 8000 50  0001 C CNN
-	1    3900 8000
-	0    1    1    0   
-$EndComp
-Text Notes 3850 8150 3    50   ~ 0
-to TXM (RF MODULE VCC)
-Text Notes 3950 8150 3    50   ~ 0
-from TXM (RF MODULE VCC)
-Wire Wire Line
-	3900 7800 3900 6850
-Wire Wire Line
-	3900 6850 3700 6850
-Wire Wire Line
 	3700 6850 3700 7000
 $Comp
 L RCTX-rescue:SW_SP3T-switches SW?
@@ -731,7 +707,7 @@ P 3700 7200
 AR Path="/4C8BDE8D/600F86E0" Ref="SW?"  Part="1" 
 AR Path="/5FF689BA/600F86E0" Ref="SW?"  Part="1" 
 F 0 "SW?" H 3550 7300 50  0000 C CNN
-F 1 "RF_SW" H 4150 7250 50  0000 C CNN
+F 1 "RF_SW" H 3700 7400 50  0000 C CNN
 F 2 "Buttons_Switches_THT:SW_CuK_JS202011AQN_DPDT_Angled" H 3075 7375 50  0001 C CNN
 F 3 "" H 3075 7375 50  0001 C CNN
 	1    3700 7200
@@ -752,7 +728,6 @@ F 3 "" H 2675 7375 50  0001 C CNN
 $EndComp
 Wire Notes Line
 	3350 7200 3750 7200
-NoConn ~ 3700 7400
 NoConn ~ 3600 7400
 Wire Notes Line
 	3850 6950 3100 6950
@@ -772,7 +747,7 @@ P 2800 7200
 AR Path="/4C8BDE8D/6016949E" Ref="SW?"  Part="1" 
 AR Path="/5FF689BA/6016949E" Ref="SW?"  Part="1" 
 F 0 "SW?" H 2650 7300 50  0000 C CNN
-F 1 "SW_NC" H 3250 7200 50  0000 C CNN
+F 1 "SW_NC" H 2800 7400 50  0000 C CNN
 F 2 "Buttons_Switches_THT:SW_CuK_JS202011AQN_DPDT_Angled" H 2175 7375 50  0001 C CNN
 F 3 "" H 2175 7375 50  0001 C CNN
 	1    2800 7200
@@ -793,8 +768,6 @@ F 3 "" H 1775 7375 50  0001 C CNN
 $EndComp
 Wire Notes Line
 	2450 7200 2850 7200
-NoConn ~ 2800 7400
-NoConn ~ 2700 7400
 Wire Notes Line
 	2950 6950 2200 6950
 Wire Notes Line
@@ -1365,9 +1338,6 @@ Wire Wire Line
 Connection ~ 5500 9600
 Wire Wire Line
 	5500 9600 6400 9600
-Connection ~ 1200 10850
-Wire Wire Line
-	1200 10850 1200 10950
 $Comp
 L RCTX-rescue:GND-power #PWR?
 U 1 1 602DC4B0
@@ -1381,54 +1351,21 @@ F 3 "" H 1200 10950 50  0001 C CNN
 	1    1200 10950
 	1    0    0    -1  
 $EndComp
-$Comp
-L RCTX-rescue:Conn_01x04-conn P?
-U 1 1 602DC4AA
-P 2750 10750
-AR Path="/4C8BDF50/602DC4AA" Ref="P?"  Part="1" 
-AR Path="/5FF689BA/602DC4AA" Ref="P?"  Part="1" 
-F 0 "P?" H 2700 10450 50  0000 L CNN
-F 1 "PWR_BUS" V 2850 10550 50  0000 L CNN
-F 2 "Connectors_Samtec:SL-104-X-XX_1x04" H 2750 10750 50  0001 C CNN
-F 3 "~" H 2750 10750 50  0001 C CNN
-	1    2750 10750
-	1    0    0    -1  
-$EndComp
-Text Notes 2950 11000 0    60   ~ 0
-VBAT+
-Text Notes 2950 10800 0    60   ~ 0
-+5V
-Text Notes 2950 10900 0    60   ~ 0
-GND
-Text Notes 3200 10700 2    60   ~ 0
-+3.3V
 Wire Wire Line
 	1200 10350 1300 10350
 Wire Wire Line
-	2550 10250 2200 10250
+	1900 10450 1800 10450
 Wire Wire Line
-	2200 10250 2200 10650
+	1800 10450 1800 10650
 Wire Wire Line
-	2200 10650 1700 10650
-Wire Wire Line
-	1700 10350 2100 10350
-Wire Wire Line
-	2100 10350 2100 10150
-Wire Wire Line
-	2100 10150 2550 10150
-Wire Wire Line
-	2550 10850 1200 10850
-Wire Wire Line
-	1200 10850 1200 10650
+	1800 10650 1700 10650
 Wire Wire Line
 	1200 10650 1300 10650
 Connection ~ 1200 10650
-Text Notes 2950 10300 0    60   ~ 0
+Text Notes 2600 10500 0    60   ~ 0
 PB_RIGHT
-Text Notes 2950 10200 0    60   ~ 0
+Text Notes 2600 10400 0    60   ~ 0
 PB_LEFT
-NoConn ~ 2550 10950
-NoConn ~ 2550 10750
 $Comp
 L RCTX-rescue:SW_SPST-switches SW?
 U 1 1 602DC486
@@ -1457,65 +1394,172 @@ F 3 "" H 1500 10350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1200 10650 1200 10350
+Wire Wire Line
+	3950 1250 3950 1350
+Wire Wire Line
+	3400 1250 3950 1250
+Wire Wire Line
+	4150 1250 4150 1350
+Wire Wire Line
+	4150 1250 4750 1250
 $Comp
-L RCTX-rescue:Conn_01x08-conn P?
-U 1 1 602DC3C3
+L conn:Conn_02x03_Odd_Even P?
+U 1 1 621405B6
+P 4050 1550
+F 0 "P?" V 4047 1730 60  0000 L CNN
+F 1 "KEYPAD" V 4153 1730 60  0000 L CNN
+F 2 "" H 4050 1550 50  0001 C CNN
+F 3 "~" H 4050 1550 50  0001 C CNN
+	1    4050 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 6216157C
+P 4050 750
+F 0 "#PWR?" H 4050 600 50  0001 C CNN
+F 1 "+3.3V" H 4065 923 50  0000 C CNN
+F 2 "" H 4050 750 50  0001 C CNN
+F 3 "" H 4050 750 50  0001 C CNN
+	1    4050 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 1350 4050 750 
+Wire Wire Line
+	3950 1850 3950 1950
+Wire Wire Line
+	3950 1950 4050 1950
+Wire Wire Line
+	4050 1950 4050 1850
+Wire Wire Line
+	4050 1950 4150 1950
+Wire Wire Line
+	4150 1950 4150 1850
+Connection ~ 4050 1950
+$Comp
+L power:GND #PWR?
+U 1 1 62194603
+P 4050 2050
+F 0 "#PWR?" H 4050 1800 50  0001 C CNN
+F 1 "GND" H 4055 1877 50  0000 C CNN
+F 2 "" H 4050 2050 50  0001 C CNN
+F 3 "" H 4050 2050 50  0001 C CNN
+	1    4050 2050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 2050 4050 1950
+$Comp
+L conn:Conn_02x08_Odd_Even P?
+U 1 1 621AA0DF
 P 1450 9200
-AR Path="/4C8BDF50/602DC3C3" Ref="P?"  Part="1" 
-AR Path="/5FF689BA/602DC3C3" Ref="P?"  Part="1" 
-F 0 "P?" H 1450 8700 60  0000 C CNN
-F 1 "SWITCHES" V 1550 9200 60  0000 C CNN
-F 2 "Connectors_Samtec:SL-108-X-XX_1x08" H 1450 9200 50  0001 C CNN
-F 3 "" H 1450 9200 50  0001 C CNN
+F 0 "P?" H 1500 8600 60  0000 C CNN
+F 1 "SWITCHES" H 1500 9900 60  0000 C CNN
+F 2 "" H 1450 9200 50  0001 C CNN
+F 3 "~" H 1450 9200 50  0001 C CNN
 	1    1450 9200
 	-1   0    0    -1  
 $EndComp
+Wire Wire Line
+	1150 8900 1050 8900
+Wire Wire Line
+	1050 8900 1050 9000
+Wire Wire Line
+	1050 9000 1150 9000
+Wire Wire Line
+	1050 9000 1050 9100
+Wire Wire Line
+	1050 9100 1150 9100
+Connection ~ 1050 9000
+Wire Wire Line
+	1050 9100 1050 9200
+Wire Wire Line
+	1050 9200 1150 9200
+Connection ~ 1050 9100
+Wire Wire Line
+	1050 9200 1050 9300
+Wire Wire Line
+	1050 9300 1150 9300
+Connection ~ 1050 9200
+Wire Wire Line
+	1050 9300 1050 9400
+Wire Wire Line
+	1050 9400 1150 9400
+Connection ~ 1050 9300
+Wire Wire Line
+	1050 9400 1050 9500
+Wire Wire Line
+	1050 9500 1150 9500
+Connection ~ 1050 9400
+Wire Wire Line
+	1050 9600 1150 9600
 $Comp
-L RCTX-rescue:Conn_01x02-conn P?
-U 1 1 6083DFDA
-P 4000 1550
-AR Path="/6083DFDA" Ref="P?"  Part="1" 
-AR Path="/4C8BDE8D/6083DFDA" Ref="P?"  Part="1" 
-AR Path="/5FF689BA/6083DFDA" Ref="P?"  Part="1" 
-F 0 "P?" H 3950 1350 50  0000 L CNN
-F 1 "KEYPAD" V 4100 1350 50  0000 L CNN
-F 2 "Connectors_Samtec:SL-102-X-XX_1x02" H 4000 1550 50  0001 C CNN
-F 3 "~" H 4000 1550 50  0001 C CNN
-	1    4000 1550
-	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	4000 1250 4000 1350
-Wire Wire Line
-	3400 1250 4000 1250
-Wire Wire Line
-	4100 1250 4100 1350
-Wire Wire Line
-	4100 1250 4750 1250
-$Comp
-L power:+3.3V #PWR?
-U 1 1 608CF11F
-P 2450 10550
-F 0 "#PWR?" H 2450 10400 50  0001 C CNN
-F 1 "+3.3V" H 2465 10723 50  0000 C CNN
-F 2 "" H 2450 10550 50  0001 C CNN
-F 3 "" H 2450 10550 50  0001 C CNN
-	1    2450 10550
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	2550 10650 2450 10650
-Wire Wire Line
-	2450 10650 2450 10550
-$Comp
-L conn:Conn_01x02 P?
-U 1 1 60A7F950
-P 2750 10150
-F 0 "P?" H 2700 9950 50  0000 L CNN
-F 1 "SW" V 2850 10050 50  0000 L CNN
-F 2 "" H 2750 10150 50  0001 C CNN
-F 3 "~" H 2750 10150 50  0001 C CNN
-	1    2750 10150
+L RCTX-rescue:GND-power #PWR?
+U 1 1 62244791
+P 1050 9700
+AR Path="/4C8BDF50/62244791" Ref="#PWR?"  Part="1" 
+AR Path="/5FF689BA/62244791" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1050 9450 50  0001 C CNN
+F 1 "GND" H 1055 9527 50  0000 C CNN
+F 2 "" H 1050 9700 50  0001 C CNN
+F 3 "" H 1050 9700 50  0001 C CNN
+	1    1050 9700
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1050 9500 1050 9600
+Connection ~ 1050 9500
+Connection ~ 1050 9600
+Wire Wire Line
+	1050 9600 1050 9700
+Wire Wire Line
+	1200 10650 1200 10850
+Wire Wire Line
+	1700 10350 1900 10350
+$Comp
+L conn:Conn_02x02_Odd_Even P?
+U 1 1 622F96E2
+P 2100 10350
+F 0 "P?" H 2150 10589 60  0000 C CNN
+F 1 "SW" H 2150 10483 60  0000 C CNN
+F 2 "" H 2100 10350 50  0001 C CNN
+F 3 "~" H 2100 10350 50  0001 C CNN
+	1    2100 10350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 10350 2500 10350
+Wire Wire Line
+	2500 10350 2500 10450
+Wire Wire Line
+	2500 10450 2400 10450
+Wire Wire Line
+	2500 10450 2500 10850
+Wire Wire Line
+	2500 10850 1200 10850
+Connection ~ 2500 10450
+Connection ~ 1200 10850
+Wire Wire Line
+	1200 10850 1200 10950
+Wire Wire Line
+	3700 6850 2800 6850
+Wire Wire Line
+	2800 6850 2800 7000
+Text GLabel 3800 7600 3    50   Input ~ 0
+RADIO_MODE
+Wire Wire Line
+	3800 7400 3800 7600
+Text GLabel 2800 7600 3    50   Input ~ 0
+MASTER
+Text GLabel 2900 7600 3    50   Input ~ 0
+SLAVE
+Text GLabel 3700 7600 3    50   Input ~ 0
+CABLE_MODE
+Wire Wire Line
+	3700 7400 3700 7600
+Wire Wire Line
+	2900 7400 2900 7600
+Wire Wire Line
+	2800 7400 2800 7600
 $EndSCHEMATC
