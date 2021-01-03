@@ -4,4 +4,5 @@
   (lib (name MB504L)(type Legacy)(uri ${KIPRJMOD}/MB504L.lib)(options "")(descr ""))
   (lib (name RCTX-rescue)(type Legacy)(uri ${KIPRJMOD}/RCTX-rescue.lib)(options "")(descr ""))
   (lib (name Kinetic)(type Legacy)(uri ${KIPRJMOD}/Kinetic.lib)(options "")(descr ""))
+  (lib (name RCTX_ERF32FG12-rescue)(type Legacy)(uri ${KIPRJMOD}/RCTX_ERF32FG12-rescue.lib)(options "")(descr ""))
 )
