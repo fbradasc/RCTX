@@ -3,4 +3,7 @@
   (lib (name MAX6969)(type Legacy)(uri ${KIPRJMOD}/MAX6969.lib)(options "")(descr ""))
   (lib (name MB504L)(type Legacy)(uri ${KIPRJMOD}/MB504L.lib)(options "")(descr ""))
   (lib (name RCTX-rescue)(type Legacy)(uri ${KIPRJMOD}/RCTX-rescue.lib)(options "")(descr ""))
+  (lib (name Kinetic)(type Legacy)(uri ${KIPRJMOD}/Kinetic.lib)(options "")(descr ""))
+  (lib (name RCTX_ERF32MG12-rescue)(type Legacy)(uri ${KIPRJMOD}/RCTX_ERF32MG12-rescue.lib)(options "")(descr ""))
+  (lib (name RCTX_XCVR-rescue)(type Legacy)(uri ${KIPRJMOD}/RCTX_XCVR-rescue.lib)(options "")(descr ""))
 )

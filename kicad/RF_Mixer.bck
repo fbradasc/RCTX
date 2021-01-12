@@ -12,12 +12,6 @@ K mixer rf
 F https://www.minicircuits.com/pdfs/ADE-6.pdf
 $ENDCMP
 #
-$CMP ADE-6
-D Mixer, +7 dBm LO, 0.05 to 250 MHz, CD542
-K mixer rf
-F https://www.minicircuits.com/pdfs/ADE-6.pdf
-$ENDCMP
-#
 $CMP ADEX-10
 D Mixer, +7 dBm LO, 10 to 1000 MHz, CD542
 K mixer rf
