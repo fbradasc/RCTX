@@ -6,4 +6,5 @@
   (lib (name Kinetic)(type Legacy)(uri ${KIPRJMOD}/Kinetic.lib)(options "")(descr ""))
   (lib (name RCTX_ERF32MG12-rescue)(type Legacy)(uri ${KIPRJMOD}/RCTX_ERF32MG12-rescue.lib)(options "")(descr ""))
   (lib (name RCTX_XCVR-rescue)(type Legacy)(uri ${KIPRJMOD}/RCTX_XCVR-rescue.lib)(options "")(descr ""))
+  (lib (name PIC_USB_BRIDGE)(type Legacy)(uri ${KIPRJMOD}/PIC_USB_BRIDGE.lib)(options "")(descr ""))
 )
