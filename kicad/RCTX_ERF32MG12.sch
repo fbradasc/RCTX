@@ -19,12 +19,6 @@ U 5036250D
 F0 "Analogs" 60
 F1 "RCTX_JA.sch" 60
 $EndSheet
-$Sheet
-S 15050 10200 900  150 
-U 4C8BDE0A
-F0 "Analogs Alt" 60
-F1 "RCTX_MP.sch" 60
-$EndSheet
 Wire Wire Line
 	1450 3300 1350 3300
 Wire Wire Line
@@ -1452,14 +1446,14 @@ Wire Wire Line
 	5400 3300 5400 3200
 Wire Wire Line
 	5300 3300 5300 3200
-Text GLabel 5400 6100 3    50   Input ~ 0
-TDI
+Text GLabel 5400 6100 3    50   Output ~ 0
+BUS_RESETn
 Text GLabel 5300 6100 3    50   Output ~ 0
-SWO-TDO
+SWO
 Text GLabel 5200 6100 3    50   BiDi ~ 0
-SWDIO-TMS
+SWDIO
 Text GLabel 5100 6100 3    50   Input ~ 0
-SWCLK-TCK
+SWCLK
 Text GLabel 6100 3200 1    50   Input ~ 0
 SW_DATA_D
 Text GLabel 5900 3200 1    50   Input ~ 0
@@ -1971,16 +1965,16 @@ Wire Notes Line
 Wire Notes Line
 	7850 3500 12450 3500
 Wire Notes Line
-	2250 8050 16050 8050
+	2250 8000 16050 8000
 Wire Notes Line
-	10700 8050 10700 11200
+	10700 8000 10700 11200
 Text Notes 7900 600  0    50   ~ 0
 I2C to SPI bridge for SD Card and Nokia 5110 display
 Text Notes 12500 600  0    50   ~ 0
 I2C driver for status LEDs
-Text Notes 2300 8150 0    50   ~ 0
+Text Notes 2300 8100 0    50   ~ 0
 Main power source
-Text Notes 10800 8150 0    50   ~ 0
+Text Notes 10750 8100 0    50   ~ 0
 RX and TX frontend power
 Text Notes 2300 600  0    50   ~ 0
 MCU
@@ -3395,9 +3389,9 @@ Wire Wire Line
 	11450 7150 11550 7150
 Connection ~ 13450 6750
 Wire Notes Line
-	5850 8050 5850 11200
-Text Notes 5900 8150 0    50   ~ 0
-USB interface
+	5850 8000 5850 11200
+Text Notes 5900 8100 0    50   ~ 0
+USB programming (SWD/ICSP), communication (UART) and SD card (I2C) interface
 $Comp
 L regul:LM1117-5.0 U?
 U 1 1 63C0F227
@@ -4095,297 +4089,6 @@ Wire Wire Line
 	4000 1100 4100 1100
 Wire Wire Line
 	4000 1300 4100 1300
-$Comp
-L conn:USB_OTG J?
-U 1 1 601A20A0
-P 6150 9550
-F 0 "J?" H 6100 10050 50  0000 L CNN
-F 1 "USB_OTG" H 6000 9950 50  0000 L CNN
-F 2 "" H 6300 9500 50  0001 C CNN
-F 3 "" H 6300 9500 50  0001 C CNN
-	1    6150 9550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 603BB3A2
-P 6050 10900
-AR Path="/5038E44C/5FCACB2A/603BB3A2" Ref="#PWR?"  Part="1" 
-AR Path="/603BB3A2" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 6050 10650 50  0001 C CNN
-F 1 "GND" H 6055 10727 50  0000 C CNN
-F 2 "" H 6050 10900 50  0001 C CNN
-F 3 "" H 6050 10900 50  0001 C CNN
-	1    6050 10900
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 9950 6050 10900
-Wire Wire Line
-	6150 9950 6150 10400
-Text GLabel 10300 9250 2    50   Input ~ 0
-USB_TX
-Text GLabel 10300 9450 2    50   Output ~ 0
-USB_RX
-Text GLabel 9500 8650 1    50   Output ~ 0
-SWCLK-TCK
-Text GLabel 9600 8650 1    50   BiDi ~ 0
-SWDIO-TMS
-Text GLabel 9700 8650 1    50   Input ~ 0
-SWO-TDO
-Text GLabel 9800 8650 1    50   Output ~ 0
-TDI
-Text GLabel 8600 9150 0    50   Output ~ 0
-SOC_RESETn
-Text GLabel 10300 9550 2    50   BiDi ~ 0
-SDA
-Text GLabel 10300 9350 2    50   BiDi ~ 0
-SCL
-Text GLabel 8600 9250 0    50   Output ~ 0
-BUS_RESETn
-$Comp
-L PIC_USB_BRIDGE:PIC16(L)F1459-I_ML U?
-U 1 1 64D9BE69
-P 9600 9350
-F 0 "U?" V 9600 9300 50  0000 L CNN
-F 1 "PIC16(L)F1459-I_ML" V 9050 9750 50  0000 L CNN
-F 2 "" H 9650 9750 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/41639A.pdf" H 9650 9750 50  0001 C CNN
-	1    9600 9350
-	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	10200 9250 10300 9250
-Wire Wire Line
-	10200 9350 10300 9350
-Wire Wire Line
-	10200 9450 10300 9450
-Wire Wire Line
-	10200 9550 10300 9550
-$Comp
-L device:C C?
-U 1 1 665196E3
-P 8750 10650
-AR Path="/5038E44C/5FCACB2A/665196E3" Ref="C?"  Part="1" 
-AR Path="/665196E3" Ref="C?"  Part="1" 
-F 0 "C?" H 8800 10750 50  0000 L CNN
-F 1 "33p" H 8800 10550 50  0000 L CNN
-F 2 "" H 8788 10500 50  0001 C CNN
-F 3 "" H 8750 10650 50  0001 C CNN
-	1    8750 10650
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 6671DE55
-P 8750 10900
-F 0 "#PWR?" H 8750 10650 50  0001 C CNN
-F 1 "GND" H 8755 10727 50  0000 C CNN
-F 2 "" H 8750 10900 50  0001 C CNN
-F 3 "" H 8750 10900 50  0001 C CNN
-	1    8750 10900
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	9500 9950 9500 10150
-Wire Wire Line
-	9000 9350 8750 9350
-Wire Wire Line
-	8750 10800 8750 10900
-$Comp
-L power:GND #PWR?
-U 1 1 66A27D52
-P 8900 10900
-F 0 "#PWR?" H 8900 10650 50  0001 C CNN
-F 1 "GND" H 8905 10727 50  0000 C CNN
-F 2 "" H 8900 10900 50  0001 C CNN
-F 3 "" H 8900 10900 50  0001 C CNN
-	1    8900 10900
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	9000 9450 8900 9450
-Wire Wire Line
-	8900 9450 8900 10900
-Wire Wire Line
-	9400 9950 9400 10050
-Wire Wire Line
-	9400 10050 9050 10050
-Wire Wire Line
-	9500 10150 8750 10150
-Wire Wire Line
-	8750 9350 8750 10150
-Connection ~ 8750 10150
-Wire Wire Line
-	8750 10150 8750 10500
-Wire Wire Line
-	9050 9650 9050 10050
-Connection ~ 8750 9350
-Wire Wire Line
-	9400 8650 9400 8750
-$Comp
-L power:GND #PWR?
-U 1 1 6A3172DB
-P 7800 10900
-F 0 "#PWR?" H 7800 10650 50  0001 C CNN
-F 1 "GND" H 7805 10727 50  0000 C CNN
-F 2 "" H 7800 10900 50  0001 C CNN
-F 3 "" H 7800 10900 50  0001 C CNN
-	1    7800 10900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7800 10600 7800 10900
-$Comp
-L RCTX-rescue:SW_Push-switches SW?
-U 1 1 609FFAA0
-P 7800 10400
-F 0 "SW?" V 7950 10600 50  0000 R CNN
-F 1 "RESET" V 7800 10800 50  0000 R CNN
-F 2 "" H 7800 10600 50  0001 C CNN
-F 3 "" H 7800 10600 50  0001 C CNN
-	1    7800 10400
-	0    1    -1   0   
-$EndComp
-Wire Wire Line
-	9700 8750 9700 8650
-Wire Wire Line
-	9600 8750 9600 8650
-Wire Wire Line
-	9500 8750 9500 8650
-Wire Wire Line
-	9800 8650 9800 8750
-Wire Wire Line
-	9000 9150 8600 9150
-Wire Wire Line
-	9000 9250 8600 9250
-Text GLabel 10300 9150 2    50   Input ~ 0
-INTn
-Wire Wire Line
-	10200 9150 10300 9150
-Wire Wire Line
-	9050 9650 6450 9650
-Text Notes 6500 9650 0    50   ~ 0
-LVPCLK
-Text Notes 6500 9550 0    50   ~ 0
-LVPDAT
-Text Notes 6500 10400 0    50   ~ 0
-LVPVDD
-NoConn ~ 9800 9950
-Wire Wire Line
-	6150 10400 6850 10400
-Wire Wire Line
-	7800 9950 7800 10200
-Wire Wire Line
-	6450 9550 9000 9550
-Text GLabel 7350 8550 1    50   UnSpc ~ 0
-+3.3V
-Wire Wire Line
-	6950 9350 6850 9350
-Wire Wire Line
-	6850 9350 6850 8950
-Connection ~ 6850 10400
-$Comp
-L power:GND #PWR?
-U 1 1 601C1744
-P 6850 10900
-AR Path="/5038E44C/5FCACB2A/601C1744" Ref="#PWR?"  Part="1" 
-AR Path="/601C1744" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 6850 10650 50  0001 C CNN
-F 1 "GND" H 6855 10727 50  0000 C CNN
-F 2 "" H 6850 10900 50  0001 C CNN
-F 3 "" H 6850 10900 50  0001 C CNN
-	1    6850 10900
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	6850 10800 6850 10900
-$Comp
-L device:R R?
-U 1 1 601BF8E8
-P 6850 10650
-F 0 "R?" H 6920 10696 50  0000 L CNN
-F 1 "100k" H 6920 10605 50  0000 L CNN
-F 2 "" V 6780 10650 50  0001 C CNN
-F 3 "" H 6850 10650 50  0001 C CNN
-	1    6850 10650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6850 10400 6850 10500
-Wire Wire Line
-	7350 9150 7350 9350
-Wire Wire Line
-	7250 9350 7350 9350
-Wire Wire Line
-	7050 8950 6850 8950
-$Comp
-L device:Q_PMOS_DGS Q?
-U 1 1 62B44347
-P 7250 8950
-F 0 "Q?" V 7600 8950 50  0000 C CNN
-F 1 "Q_PMOS_DGS" V 7500 8950 50  0000 C CNN
-F 2 "" H 7450 9050 50  0001 C CNN
-F 3 "" H 7250 8950 50  0001 C CNN
-	1    7250 8950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7350 8550 7350 8750
-$Comp
-L device:D_Schottky D?
-U 1 1 63989C49
-P 7100 9350
-F 0 "D?" H 7050 9250 50  0000 L CNN
-F 1 "D_Schottky" H 6900 9450 50  0000 L CNN
-F 2 "" H 7100 9350 50  0001 C CNN
-F 3 "" H 7100 9350 50  0001 C CNN
-	1    7100 9350
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	7050 10400 6850 10400
-$Comp
-L device:Q_NMOS_DGS Q?
-U 1 1 63D12865
-P 7250 10400
-F 0 "Q?" V 7600 10350 50  0000 L CNN
-F 1 "Q_NMOS_DGS" V 7500 10150 50  0000 L CNN
-F 2 "" H 7450 10500 50  0001 C CNN
-F 3 "" H 7250 10400 50  0001 C CNN
-	1    7250 10400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 641AC2AD
-P 7350 10900
-F 0 "#PWR?" H 7350 10650 50  0001 C CNN
-F 1 "GND" H 7355 10727 50  0000 C CNN
-F 2 "" H 7350 10900 50  0001 C CNN
-F 3 "" H 7350 10900 50  0001 C CNN
-	1    7350 10900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7350 10600 7350 10900
-Wire Wire Line
-	7800 9950 7350 9950
-Wire Wire Line
-	7350 9950 7350 10200
-Connection ~ 7350 9350
-Wire Wire Line
-	7350 9350 8750 9350
-Wire Wire Line
-	6850 10400 6850 9350
-Connection ~ 6850 9350
-Wire Wire Line
-	7800 9950 7800 8650
-Wire Wire Line
-	7800 8650 9400 8650
-Connection ~ 7800 9950
-NoConn ~ 9700 9950
-NoConn ~ 9600 9950
 Wire Wire Line
 	4000 8750 4000 10400
 Wire Wire Line
@@ -4394,4 +4097,259 @@ Wire Wire Line
 	2800 10400 4000 10400
 Connection ~ 2800 10400
 Connection ~ 4000 10400
+Wire Wire Line
+	7850 8900 7950 8900
+Wire Wire Line
+	8350 8200 8350 8500
+Wire Wire Line
+	8650 8500 8650 8200
+Wire Wire Line
+	8650 8200 8350 8200
+Connection ~ 8350 8200
+Wire Wire Line
+	8550 8500 8550 8300
+Wire Wire Line
+	8550 8300 7850 8300
+Wire Wire Line
+	7850 8300 7850 8900
+$Comp
+L device:C C?
+U 1 1 60548551
+P 7050 8400
+AR Path="/5038E44C/5FCACB2A/60548551" Ref="C?"  Part="1" 
+AR Path="/60548551" Ref="C?"  Part="1" 
+F 0 "C?" V 6900 8350 50  0000 L CNN
+F 1 "33p" V 7200 8350 50  0000 L CNN
+F 2 "" H 7088 8250 50  0001 C CNN
+F 3 "" H 7050 8400 50  0001 C CNN
+	1    7050 8400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8450 8500 8450 8400
+Wire Wire Line
+	8450 8400 7200 8400
+Wire Wire Line
+	6900 8400 6750 8400
+$Comp
+L PIC_USB_BRIDGE:PIC16(L)F1459-I_ML U?
+U 1 1 602297A3
+P 8550 9100
+F 0 "U?" V 8550 9050 50  0000 L CNN
+F 1 "PIC16(L)F1459-I_ML" V 8050 8050 50  0000 L CNN
+F 2 "" H 8600 9500 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/41639A.pdf" H 8600 9500 50  0001 C CNN
+	1    8550 9100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8350 9700 8350 9850
+Wire Wire Line
+	7950 9000 6750 9000
+Wire Wire Line
+	7850 8900 7850 9650
+Wire Wire Line
+	7850 9650 8150 9650
+Connection ~ 7850 8900
+Wire Wire Line
+	7750 8200 7750 9750
+Wire Wire Line
+	7750 9750 8050 9750
+Wire Wire Line
+	8350 8200 7750 8200
+NoConn ~ 7950 9200
+NoConn ~ 7950 9300
+Wire Wire Line
+	7950 9100 7350 9100
+$Comp
+L RCTX-rescue:SW_Push-switches SW?
+U 1 1 6356CF11
+P 7050 9850
+F 0 "SW?" H 7100 10100 50  0000 R CNN
+F 1 "RESET" H 7150 10000 50  0000 R CNN
+F 2 "" H 7050 10050 50  0001 C CNN
+F 3 "" H 7050 10050 50  0001 C CNN
+	1    7050 9850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 9850 8350 9850
+Connection ~ 8350 9850
+Wire Wire Line
+	6850 9850 6750 9850
+NoConn ~ 7950 10450
+Wire Wire Line
+	8150 9650 8150 10450
+Wire Wire Line
+	8050 9750 8050 10450
+Wire Wire Line
+	8350 9850 8350 10450
+$Comp
+L conn:USB_OTG J?
+U 1 1 6022D07E
+P 8150 10750
+F 0 "J?" V 7900 10450 50  0000 L CNN
+F 1 "USB_OTG" V 7900 10700 50  0000 L CNN
+F 2 "" H 8300 10700 50  0001 C CNN
+F 3 "" H 8300 10700 50  0001 C CNN
+	1    8150 10750
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	6900 10750 6750 10750
+$Comp
+L device:R R?
+U 1 1 62A4398D
+P 7050 10750
+F 0 "R?" V 7250 10700 50  0000 L CNN
+F 1 "100k" V 7150 10650 50  0000 L CNN
+F 2 "" V 6980 10750 50  0001 C CNN
+F 3 "" H 7050 10750 50  0001 C CNN
+	1    7050 10750
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	7350 10750 7200 10750
+Connection ~ 7650 10750
+Wire Wire Line
+	7750 10750 7650 10750
+Connection ~ 7350 10750
+Wire Wire Line
+	7650 10750 7350 10750
+Wire Wire Line
+	7350 10750 7350 10650
+$Comp
+L device:D_Schottky D?
+U 1 1 6288F320
+P 7350 10500
+F 0 "D?" V 7200 10550 50  0000 L CNN
+F 1 "D_Schottky" H 7150 10400 50  0000 L CNN
+F 2 "" H 7350 10500 50  0001 C CNN
+F 3 "" H 7350 10500 50  0001 C CNN
+	1    7350 10500
+	0    -1   1    0   
+$EndComp
+Text GLabel 9250 10200 2    50   UnSpc ~ 0
++3.3V
+Wire Wire Line
+	6900 10200 6750 10200
+Wire Wire Line
+	7350 10200 7350 9100
+Connection ~ 7350 10200
+$Comp
+L device:C C?
+U 1 1 6288F329
+P 7050 10200
+AR Path="/5038E44C/5FCACB2A/6288F329" Ref="C?"  Part="1" 
+AR Path="/6288F329" Ref="C?"  Part="1" 
+F 0 "C?" V 6900 10150 50  0000 L CNN
+F 1 "33p" V 7200 10150 50  0000 L CNN
+F 2 "" H 7088 10050 50  0001 C CNN
+F 3 "" H 7050 10200 50  0001 C CNN
+	1    7050 10200
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	7350 10350 7350 10200
+Wire Wire Line
+	7350 10200 7200 10200
+Wire Wire Line
+	7450 10200 7350 10200
+Wire Wire Line
+	7650 10500 7650 10750
+Wire Wire Line
+	9250 10200 7850 10200
+$Comp
+L device:Q_PMOS_DGS Q?
+U 1 1 6288F319
+P 7650 10300
+F 0 "Q?" V 7600 10450 50  0000 C CNN
+F 1 "Q_PMOS_DGS" V 7900 10300 50  0000 C CNN
+F 2 "" H 7850 10400 50  0001 C CNN
+F 3 "" H 7650 10300 50  0001 C CNN
+	1    7650 10300
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 64A966EF
+P 6750 10950
+F 0 "#PWR?" H 6750 10700 50  0001 C CNN
+F 1 "GND" H 6755 10777 50  0000 C CNN
+F 2 "" H 6750 10950 50  0001 C CNN
+F 3 "" H 6750 10950 50  0001 C CNN
+	1    6750 10950
+	-1   0    0    -1  
+$EndComp
+Text GLabel 9250 9200 2    50   Input ~ 0
+USB_TX
+Text GLabel 9250 9000 2    50   Output ~ 0
+USB_RX
+Text GLabel 9250 8900 2    50   BiDi ~ 0
+SDA
+Text GLabel 9250 9100 2    50   BiDi ~ 0
+SCL
+Wire Wire Line
+	9150 9200 9250 9200
+Wire Wire Line
+	9150 9100 9250 9100
+Wire Wire Line
+	9150 9000 9250 9000
+Wire Wire Line
+	9150 8900 9250 8900
+Text GLabel 9250 9300 2    50   Input ~ 0
+INTn
+Wire Wire Line
+	9150 9300 9250 9300
+Text GLabel 9250 10100 2    50   Output ~ 0
+SWCLK
+Text GLabel 9250 10000 2    50   BiDi ~ 0
+SWDIO
+Text GLabel 9250 9900 2    50   Input ~ 0
+SWO
+Wire Wire Line
+	8450 9700 8450 10100
+Wire Wire Line
+	9250 10100 8450 10100
+Wire Wire Line
+	8550 9700 8550 10000
+Wire Wire Line
+	9250 10000 8550 10000
+Wire Wire Line
+	8650 9700 8650 9900
+Wire Wire Line
+	9250 9900 8650 9900
+Text GLabel 9250 9800 2    50   Output ~ 0
+SOC_RESETn
+Wire Wire Line
+	8750 9700 8750 9800
+Wire Wire Line
+	9250 9800 8750 9800
+Text GLabel 9250 8400 2    50   Output ~ 0
+BUS_RESETn
+Wire Wire Line
+	8750 8500 8750 8400
+Wire Wire Line
+	8750 8400 9250 8400
+Wire Wire Line
+	6750 10850 7750 10850
+Wire Wire Line
+	6750 8400 6750 9000
+Connection ~ 6750 9000
+Wire Wire Line
+	6750 9000 6750 9850
+Connection ~ 6750 9850
+Wire Wire Line
+	6750 9850 6750 10200
+Connection ~ 6750 10200
+Wire Wire Line
+	6750 10200 6750 10750
+Connection ~ 6750 10750
+Wire Wire Line
+	6750 10750 6750 10850
+Wire Wire Line
+	6750 10850 6750 10950
+Connection ~ 6750 10850
+Text Notes 8600 10900 0    50   ~ 0
+ICSP to USB_OTG cable wiring: ICSPVPP -> VBUS \n                                ICSPVDD -> GND  \n                                ICSPDAT -> D+ \n                                ICSPCLK -> D- 
 $EndSCHEMATC
