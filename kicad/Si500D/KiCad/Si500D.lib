@@ -25,4 +25,50 @@ X VDD 6 500 100 200 L 50 50 0 0 P
 ENDDRAW
 ENDDEF
 #
+# Si510D
+#
+DEF Si510D Y 0 30 Y Y 1 F N
+F0 "Y" 0 200 50 H V C CNN
+F1 "Si510D" 0 -100 50 H V C CNN
+F2 "Si510D" 350 200 50 H I L CNN
+F3 "https://www.silabs.com/documents/public/data-sheets/si510-11.pdf" 350 100 50 H I L CNN
+F4 "Standard Clock Oscillators" 350 0 50 H I L CNN "Description"
+F5 "0.9" 350 -100 50 H I L CNN "Height"
+F6 "Silicon Labs" 350 -200 50 H I L CNN "Manufacturer_Name"
+F7 "Si510D" 350 -300 50 H I L CNN "Manufacturer_Part_Number"
+F8 "N/A" 1750 -700 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.com/Search/Refine.aspx?Keyword=N%2FA" 1750 -800 50 H I L CNN "Mouser Price/Stock"
+DRAW
+P 6 0 1 6 -200 150 200 150 200 -50 0 -50 -200 -50 -200 150 N
+X OE 1 -400 100 200 R 50 50 0 0 P
+X GND 2 -400 0 200 R 50 50 0 0 P
+X OUT 3 400 0 200 L 50 50 0 0 P
+X VDD 4 400 100 200 L 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+# Si514
+#
+DEF Si514 Y 0 30 Y Y 1 F N
+F0 "Y" -50 250 50 H V L CNN
+F1 "Si514" -100 -250 50 H V L CNN
+F2 "Si500D" 350 200 50 H I L CNN
+F3 "https://www.mouser.com/datasheet/2/368/Si500D-1397771.pdf" 350 100 50 H I L CNN
+F4 "Standard Clock Oscillators" 350 0 50 H I L CNN "Description"
+F5 "0.9" 350 -100 50 H I L CNN "Height"
+F6 "Silicon Labs" 350 -200 50 H I L CNN "Manufacturer_Name"
+F7 "Si500D" 350 -300 50 H I L CNN "Manufacturer_Part_Number"
+F8 "N/A" 1750 -700 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.com/Search/Refine.aspx?Keyword=N%2FA" 1750 -800 50 H I L CNN "Mouser Price/Stock"
+DRAW
+P 5 0 1 6 -300 200 300 200 300 -200 -300 -200 -300 200 N
+X SDA 1 -500 100 200 R 50 50 0 0 B
+X SCL 2 -500 0 200 R 50 50 0 0 I C
+X GND 3 -500 -100 200 R 50 50 0 0 P
+X CLK+ 4 500 -100 200 L 50 50 0 0 P
+X CLK- 5 500 0 200 L 50 50 0 0 P
+X VDD 6 500 100 200 L 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
 #End Library

@@ -349,9 +349,9 @@ F 3 "" H 9250 1050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9250 1050 9250 1150
-Text GLabel 8450 2300 0    50   Input ~ 0
+Text GLabel 9150 7500 0    50   Input ~ 0
 SCL
-Text GLabel 8450 2200 0    50   BiDi ~ 0
+Text GLabel 9150 7400 0    50   BiDi ~ 0
 SDA
 Text GLabel 8450 2400 0    50   Output ~ 0
 INTn
@@ -361,9 +361,9 @@ Connection ~ 9250 1150
 Wire Wire Line
 	9250 1150 9250 2000
 Wire Wire Line
-	8450 2200 8550 2200
+	9150 7400 9250 7400
 Wire Wire Line
-	8450 2300 8550 2300
+	9150 7500 9250 7500
 Wire Wire Line
 	8450 2400 8550 2400
 Wire Wire Line
@@ -855,12 +855,12 @@ Connection ~ 2050 7850
 $Comp
 L power:GND #PWR?
 U 1 1 63FC83CE
-P 2050 5700
-F 0 "#PWR?" H 2050 5450 50  0001 C CNN
-F 1 "GND" H 2055 5527 50  0000 C CNN
-F 2 "" H 2050 5700 50  0001 C CNN
-F 3 "" H 2050 5700 50  0001 C CNN
-	1    2050 5700
+P 2050 6100
+F 0 "#PWR?" H 2050 5850 50  0001 C CNN
+F 1 "GND" H 2055 5927 50  0000 C CNN
+F 2 "" H 2050 6100 50  0001 C CNN
+F 3 "" H 2050 6100 50  0001 C CNN
+	1    2050 6100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1950,14 +1950,14 @@ Text GLabel 12600 8800 2    50   UnSpc ~ 0
 RF_TX_VCC
 Text Notes 500  600  0    50   ~ 0
 I/O connectors
-Text GLabel 1350 5600 0    50   Output ~ 0
+Text GLabel 1350 6000 0    50   Output ~ 0
 RF_MODE
 Wire Wire Line
 	1350 8750 1450 8750
-Text GLabel 1350 5500 0    50   Output ~ 0
-DSC
+Text GLabel 1350 5800 0    50   Output ~ 0
+DSC_MODE
 Text GLabel 1350 8750 0    50   Input ~ 0
-DSC
+DSC_MODE
 Wire Wire Line
 	1450 8450 1350 8450
 Wire Notes Line
@@ -2054,64 +2054,38 @@ F 3 "" H 8800 5050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9350 7400 9250 7400
-Text GLabel 9250 7400 0    50   Input ~ 0
-RF_MODE
+	9150 7600 9150 7700
 Wire Wire Line
-	9250 7600 9250 7700
-Wire Wire Line
-	9350 7600 9250 7600
+	9250 7600 9150 7600
 $Comp
 L power:GND #PWR?
 U 1 1 6AAAE55A
-P 9250 7700
+P 9150 7700
 AR Path="/5038E44C/5FCACB2A/6AAAE55A" Ref="#PWR?"  Part="1" 
 AR Path="/5038E44C/5FCACBA1/6AAAE55A" Ref="#PWR?"  Part="1" 
 AR Path="/6AAAE55A" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 9250 7450 50  0001 C CNN
-F 1 "GND" H 9255 7527 50  0000 C CNN
-F 2 "" H 9250 7700 50  0001 C CNN
-F 3 "" H 9250 7700 50  0001 C CNN
-	1    9250 7700
+F 0 "#PWR?" H 9150 7450 50  0001 C CNN
+F 1 "GND" H 9155 7527 50  0000 C CNN
+F 2 "" H 9150 7700 50  0001 C CNN
+F 3 "" H 9150 7700 50  0001 C CNN
+	1    9150 7700
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	10450 7400 10450 7300
+	10350 7400 10350 7300
 $Comp
 L power:+3.3V #PWR?
 U 1 1 6A64C35F
-P 10450 7300
+P 10350 7300
 AR Path="/5038E44C/5FCACB2A/6A64C35F" Ref="#PWR?"  Part="1" 
 AR Path="/5038E44C/5FCACBA1/6A64C35F" Ref="#PWR?"  Part="1" 
 AR Path="/6A64C35F" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 10450 7150 50  0001 C CNN
-F 1 "+3.3V" V 10450 7550 50  0000 C CNN
-F 2 "" H 10450 7300 50  0001 C CNN
-F 3 "" H 10450 7300 50  0001 C CNN
-	1    10450 7300
+F 0 "#PWR?" H 10350 7150 50  0001 C CNN
+F 1 "+3.3V" V 10350 7550 50  0000 C CNN
+F 2 "" H 10350 7300 50  0001 C CNN
+F 3 "" H 10350 7300 50  0001 C CNN
+	1    10350 7300
 	-1   0    0    -1  
-$EndComp
-$Comp
-L Si500D:Si500D Y?
-U 1 1 6A64C359
-P 9850 7500
-AR Path="/5038E44C/5FCACB2A/6A64C359" Ref="Y?"  Part="1" 
-AR Path="/5038E44C/5FCACBA1/6A64C359" Ref="Y?"  Part="1" 
-AR Path="/6A64C359" Ref="Y?"  Part="1" 
-F 0 "Y?" H 9850 7750 50  0000 C CNN
-F 1 "Si500DFAD110M000 / Si511NCB110M000C" H 10300 7250 50  0000 C CNN
-F 2 "Si500D" H 11600 7600 50  0001 L CNN
-F 3 "https://www.mouser.com/datasheet/2/368/Si500D-1397771.pdf" H 11600 7500 50  0001 L CNN
-F 4 "Standard Clock Oscillators" H 11600 7400 50  0001 L CNN "Description"
-F 5 "0.9" H 11600 7300 50  0001 L CNN "Height"
-F 6 "Silicon Labs" H 11600 7200 50  0001 L CNN "Manufacturer_Name"
-F 7 "Si500D" H 11600 7100 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "" H 11600 7000 50  0001 L CNN "Arrow Part Number"
-F 9 "" H 11600 6900 50  0001 L CNN "Arrow Price/Stock"
-F 10 "N/A" H 11600 6800 50  0001 L CNN "Mouser Part Number"
-F 11 "https://www.mouser.com/Search/Refine.aspx?Keyword=N%2FA" H 11600 6700 50  0001 L CNN "Mouser Price/Stock"
-	1    9850 7500
-	1    0    0    -1  
 $EndComp
 $Comp
 L RF_Mixer:ADE-1+ U?
@@ -2128,11 +2102,9 @@ F 3 "https://www.minicircuits.com/pdfs/ADE-6.pdf" H 10975 5825 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	10350 7400 10450 7400
+	10250 7400 10350 7400
 Wire Wire Line
-	10350 7600 10900 7600
-Wire Wire Line
-	10350 7500 10700 7500
+	10250 7600 10700 7600
 $Comp
 L device:C C?
 U 1 1 613710AB
@@ -2673,9 +2645,7 @@ Wire Wire Line
 	10050 4300 10400 4300
 Connection ~ 10050 4300
 Wire Wire Line
-	10700 6650 10700 7500
-Wire Wire Line
-	10900 6650 10900 7600
+	10900 6650 10900 6750
 $Comp
 L device:L_Core_Iron L?
 U 1 1 67B075ED
@@ -3969,19 +3939,6 @@ Wire Wire Line
 Text GLabel 4350 4450 0    50   Output ~ 0
 RF_BAND_SEL
 Connection ~ 8550 5350
-$Comp
-L conn:Conn_02x09_Odd_Even P?
-U 1 1 606ED288
-P 1650 5200
-AR Path="/5FF689BA/606ED288" Ref="P?"  Part="1" 
-AR Path="/606ED288" Ref="P?"  Part="1" 
-F 0 "P?" H 1700 5817 50  0000 C CNN
-F 1 "SWITCHES" H 1700 5726 50  0000 C CNN
-F 2 "" H 1650 5200 50  0001 C CNN
-F 3 "~" H 1650 5200 50  0001 C CNN
-	1    1650 5200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2050 5600 2050 5700
 Wire Wire Line
@@ -4347,4 +4304,108 @@ Text GLabel 9250 8400 2    50   Output ~ 0
 BUS_RESETn
 Text GLabel 9250 9300 2    50   Input ~ 0
 INTn
+$Comp
+L power:GND #PWR?
+U 1 1 60688697
+P 10900 6750
+AR Path="/5038E44C/5FCACB2A/60688697" Ref="#PWR?"  Part="1" 
+AR Path="/60688697" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 10900 6500 50  0001 C CNN
+F 1 "GND" H 10905 6577 50  0000 C CNN
+F 2 "" H 10900 6750 50  0001 C CNN
+F 3 "" H 10900 6750 50  0001 C CNN
+	1    10900 6750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L conn:Conn_02x14_Odd_Even J?
+U 1 1 611A5A34
+P 1650 5300
+AR Path="/5FF689BA/611A5A34" Ref="J?"  Part="1" 
+AR Path="/611A5A34" Ref="J?"  Part="1" 
+F 0 "J?" H 1700 6117 50  0000 C CNN
+F 1 "SWITCHES" H 1700 6026 50  0000 C CNN
+F 2 "" H 1650 5300 50  0001 C CNN
+F 3 "~" H 1650 5300 50  0001 C CNN
+	1    1650 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 5700 2050 5700
+Connection ~ 2050 5700
+Wire Wire Line
+	2050 5700 2050 5800
+Wire Wire Line
+	1950 5800 2050 5800
+Connection ~ 2050 5800
+Wire Wire Line
+	2050 5800 2050 5900
+Wire Wire Line
+	1950 5900 2050 5900
+Connection ~ 2050 5900
+Wire Wire Line
+	2050 5900 2050 6000
+Wire Wire Line
+	1950 6000 2050 6000
+Connection ~ 2050 6000
+Wire Wire Line
+	2050 6000 2050 6100
+Wire Wire Line
+	1950 4700 2050 4700
+Wire Wire Line
+	2050 4700 2050 4800
+Connection ~ 2050 4800
+Text GLabel 1350 4700 0    50   UnSpc ~ 0
++3.3V
+Wire Wire Line
+	1450 4700 1350 4700
+Wire Wire Line
+	1450 5800 1350 5800
+Wire Wire Line
+	1450 6000 1350 6000
+Text GLabel 1350 5500 0    50   UnSpc ~ 0
+TBD_L_1_MODE
+Text GLabel 1350 5600 0    50   UnSpc ~ 0
+TBD_L_2_MODE
+Text GLabel 1350 5700 0    50   UnSpc ~ 0
+TBD_L_3_MODE
+Text GLabel 1350 5900 0    50   UnSpc ~ 0
+TBD_R_1_MODE
+Wire Wire Line
+	1450 5700 1350 5700
+Wire Wire Line
+	1450 5900 1350 5900
+$Comp
+L device:R R?
+U 1 1 61931B40
+P 10700 7100
+F 0 "R?" H 10631 7054 50  0000 R CNN
+F 1 "10" H 10631 7145 50  0000 R CNN
+F 2 "" V 10630 7100 50  0001 C CNN
+F 3 "" H 10700 7100 50  0001 C CNN
+	1    10700 7100
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	10700 6950 10700 6650
+Wire Wire Line
+	10700 7250 10700 7600
+$Comp
+L Si500D:Si514 Y?
+U 1 1 61E25D16
+P 9750 7500
+F 0 "Y?" H 9750 7750 50  0000 C CNN
+F 1 "514CCAXXXXXXCAG" H 9750 7250 50  0000 C CNN
+F 2 "Si500D" H 10100 7700 50  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/368/Si500D-1397771.pdf" H 10100 7600 50  0001 L CNN
+F 4 "Standard Clock Oscillators" H 10100 7500 50  0001 L CNN "Description"
+F 5 "0.9" H 10100 7400 50  0001 L CNN "Height"
+F 6 "Silicon Labs" H 10100 7300 50  0001 L CNN "Manufacturer_Name"
+F 7 "Si500D" H 10100 7200 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "N/A" H 11500 6800 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=N%2FA" H 11500 6700 50  0001 L CNN "Mouser Price/Stock"
+	1    9750 7500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 10250 7500
 $EndSCHEMATC
