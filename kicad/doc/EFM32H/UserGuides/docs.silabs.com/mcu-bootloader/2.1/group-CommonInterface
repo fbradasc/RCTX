@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160330710-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-160330710-1');
+</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <meta name="google" value="notranslate">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#444547">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="create-date" content="06/08/2022">
+<meta name="content-type" content="Software API documentation">
+<meta name="software-development-kits" content="32 bit MCU SDK">
+<meta name="product-line" content="Microcontrollers">
+<meta name="product-category" content="32-bit MCUs">
+<meta name="product-family" content="Gecko">
+<meta name="product-hierarchy" content="Microcontrollers,Microcontrollers|32-bit MCUs,Microcontrollers|32-bit MCUs|Gecko">
+<meta name="docs-hierarchy" content="Documents,Documents|MCU Bootloader,Documents|MCU Bootloader|v2.1,Documents|MCU Bootloader|Latest">
+    <title>Common Application InterfaceApplication Interface - v2.1 - Gecko Bootloader API Documentation Silicon Labs</title>
+    <link rel="stylesheet" href="https://docs.silabs.com/assets/styles.css">
+    <script src="https://assets.adobedtm.com/0144d06d02c2/2c54aaf3cc70/launch-565181acbc03.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="search-bar">
+        <input class='search-input' placeholder="search" />
+        <input class='search-button' type='button'/>
+      </div>
+      <div class="menu-icon"></div>
+      <div class="container">
+        <a href='https://docs.silabs.com/'>docs.silabs.com</a>
+      </div>
+    </nav>
+    <nav class="menu nocontent">
+      <div class="top">
+        <a href='https://silabs.com' class="logo"></a>
+        <a href='https://docs.silabs.com/' class="home">docs.silabs.com</a>
+        <div class="search-bar">
+          <input class='search-input' placeholder="search" />
+          <input class='search-button' type='button'/>
+          <div class="search-site">
+            <h5>Search in:</h5>
+            <div class="search-site-selector"><span class="root" data-level='0'>docs</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <h3 id="gecko-bootloader-api-reference">Gecko Bootloader API Reference</h3><ul>
+<li><a href="index.html">Gecko Bootloader</a></li><li><a href="modules">API Documentation</a><ul>
+<li><a href="group-Interface">Application Interface</a><ul>
+<li><a href="group-ParserInterface">Application Parser Interface</a><ul>
+<li><a href="structBootloaderParserCallbacks-t">BootloaderParserCallbacks_t</a></li></ul>
+</li><li><a href="group-ApplicationProperties">Application Properties</a><ul>
+<li><a href="structApplicationData">ApplicationData</a></li><li><a href="structApplicationCertificate">ApplicationCertificate</a></li><li><a href="structApplicationProperties-t">ApplicationProperties_t</a></li></ul>
+</li><li><a href="group-StorageInterface">Application Storage Interface</a><ul>
+<li><a href="structBootloaderStorageSlot-t">BootloaderStorageSlot_t</a></li><li><a href="structBootloaderStorageImplementationInformation-t">BootloaderStorageImplementationInformation_t</a></li><li><a href="structBootloaderStorageInformation-t">BootloaderStorageInformation_t</a></li><li><a href="structBootloaderEraseStatus-t">BootloaderEraseStatus_t</a></li><li><a href="structBootloaderStorageFunctions">BootloaderStorageFunctions</a></li></ul>
+</li><li><a href="group-CommonInterface">Common Application Interface</a><ul>
+<li><a href="group-ResetInterface">Reset Information</a><ul>
+<li><a href="structBootloaderResetCause-t">BootloaderResetCause_t</a></li></ul>
+</li><li><a href="structBareBootTable-t">BareBootTable_t</a></li><li><a href="structBootloaderInformation-t">BootloaderInformation_t</a></li><li><a href="structBootloaderHeader-t">BootloaderHeader_t</a></li><li><a href="structFirstBootloaderTable-t">FirstBootloaderTable_t</a></li><li><a href="structMainBootloaderTable-t">MainBootloaderTable_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Core">Bootloader Core</a><ul>
+<li><a href="group-Bootload">Bootload</a></li><li><a href="group-Flash">Flash</a></li><li><a href="group-Reset">Reset</a></li><li><a href="group-TrustZone">TrustZone</a></li><li><a href="group-Upgrade">Upgrade</a></li></ul>
+</li><li><a href="group-Components">Components</a><ul>
+<li><a href="group-Communication">Communication</a><ul>
+<li><a href="group-CommunicationUtils">Utils</a><ul>
+<li><a href="group-Xmodem">XMODEM Parser</a><ul>
+<li><a href="group-Commands">Commands</a></li><li><a href="structXmodemPacket-t">XmodemPacket_t</a></li></ul>
+</li></ul>
+</li></ul>
+</li><li><a href="group-Debug">Debug</a></li><li><a href="group-Decompressor">Decompressor</a><ul>
+<li><a href="group-Lz4Decompressor">LZ4 Decompressor</a><ul>
+<li><a href="structLz4Context-t">Lz4Context_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-GpioActivation">GPIO Activation</a><ul>
+<li><a href="group-ButtonGPIO">Button GPIO</a></li><li><a href="group-EZSPGPIO">EZSP GPIO</a></li></ul>
+</li><li><a href="group-ImageParser">Image Parser</a><ul>
+<li><a href="group-GblParser">GBL Parser</a><ul>
+<li><a href="group-CustomTags">Custom GBL Tags</a><ul>
+<li><a href="group-Lz4ProgTag">LZ4 Programming Tag</a><ul>
+<li><a href="structLz4ParserContext-t">Lz4ParserContext_t</a></li></ul>
+</li><li><a href="group-LzmaProgTag">LZMA Programming Tag</a></li><li><a href="structGblCustomTag-t">GblCustomTag_t</a></li></ul>
+</li><li><a href="group-GblParserFormat">GBL Format</a><ul>
+<li><a href="structGblTagHeader-t">GblTagHeader_t</a></li><li><a href="structGblHeader-t">GblHeader_t</a></li><li><a href="structVersionDependency-t">VersionDependency_t</a></li><li><a href="structGblApplication-t">GblApplication_t</a></li><li><a href="structGblBootloader-t">GblBootloader_t</a></li><li><a href="structGblSeUpgrade-t">GblSeUpgrade_t</a></li><li><a href="structGblMetadata-t">GblMetadata_t</a></li><li><a href="structGblProg-t">GblProg_t</a></li><li><a href="structGblEnd-t">GblEnd_t</a></li><li><a href="structGblEncryptionInitAesCcm-t">GblEncryptionInitAesCcm_t</a></li><li><a href="structGblEncryptionData-t">GblEncryptionData_t</a></li><li><a href="structGblCertificateEcdsaP256-t">GblCertificateEcdsaP256_t</a></li><li><a href="structGblSignatureEcdsaP256-t">GblSignatureEcdsaP256_t</a></li></ul>
+</li><li><a href="structImageProperties-t">ImageProperties_t</a></li><li><a href="structParserContext-t">ParserContext_t</a></li><li><a href="structGblInputBuffer-t">GblInputBuffer_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Security">Security</a><ul>
+<li><a href="group-AES">AES</a><ul>
+<li><a href="structAesContext">AesContext</a></li><li><a href="structAesCtrContext">AesCtrContext</a></li></ul>
+</li><li><a href="group-CRC16">CRC16</a></li><li><a href="group-CRC32">CRC32</a></li><li><a href="group-Decryption">Decryption</a><ul>
+<li><a href="unionDecryptContext-t">DecryptContext_t</a></li><li><a href="unionAuthContext-t">AuthContext_t</a></li></ul>
+</li><li><a href="group-ECDSA">ECDSA</a><ul>
+<li><a href="group-ECC">ECC Library</a><ul>
+<li><a href="structECC-Point-t">ECC_Point_t</a></li><li><a href="structECC-EcdsaSignature-t">ECC_EcdsaSignature_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-SHA256">SHA256</a><ul>
+<li><a href="structbtl-sha256-context">btl_sha256_context</a></li></ul>
+</li><li><a href="group-SHA-256">SHA_256</a><ul>
+<li><a href="unionSha256Context">Sha256Context</a></li></ul>
+</li><li><a href="group-Tokens">Tokens</a></li></ul>
+</li><li><a href="group-Storage">Storage</a><ul>
+<li><a href="group-BootloadInfo">Bootload Info</a><ul>
+<li><a href="structBootloadInfo-t">BootloadInfo_t</a></li></ul>
+</li><li><a href="group-SpiflashConfigs">SPI Flash Configurations</a></li><li><a href="group-SpiflashConfigsSfdp">SPI Flash Configurations using SFDP</a></li><li><a href="structBootloaderStorageLayout-t">BootloaderStorageLayout_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Driver">Driver</a><ul>
+<li><a href="group-Delay">Delay</a></li><li><a href="group-Spi">SPI</a></li><li><a href="group-Spi-peripheral">SPI Peripheral</a></li><li><a href="group-UART">UART</a></li></ul>
+</li><li><a href="group-ErrorCodes">Error Codes</a><ul>
+<li><a href="group-BootloadError">Bootloading Error Codes</a></li><li><a href="group-CommunicationError">Communication Component Error Codes</a></li><li><a href="group-CompressionError">Compression Error Codes</a></li><li><a href="group-ErrorBases">Error Code Base Values</a></li><li><a href="group-ParserError">Image Parser Error Codes</a></li><li><a href="group-InitError">Initialization Error Codes</a></li><li><a href="group-ParseErrpr">Parse Error Codes</a></li><li><a href="group-SpiPeripheralError">SPI Peripheral Driver Error Codes</a></li><li><a href="group-SecurityError">Security Error Codes</a></li><li><a href="group-StorageError">Storage Driver Error Codes</a></li><li><a href="group-UartError">UART Driver Error Codes</a></li><li><a href="group-XmodemError">XMODEM Error Codes</a></li></ul>
+</li></ul>
+</li><li><a href="_version_history">Version History</a></li></ul>
+<h3 id="more-documentation"><a href="https://www.silabs.com/support/resources.ct-application-notes?query=%22gecko%20bootloader%22">More Documentation</a></h3>
+      </div>
+      <div id="split-bar"></div>
+    </nav>
+    <div class="overlay"></div>
+    <main class="content">
+      <article>
+        <p class="banner">You are viewing documentation for version: <em>2.1</em> | <a href="https://docs.silabs.com/mcu-bootloader/latest/version-history">Version History</a></p><div class="header">
+  
+  <div class="headertitle">
+  <h1 class="title">Common Application InterfaceApplication Interface</h1></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Description</h2>
+<p>Generic application interface available on all versions of the bootloader, regardless of the available components. </p>
+<dl class="section note"><dt>Note</dt><dd>These Bootloader APIs are not reentrant and should be wrapped in critical section where needed. </dd></dl>
+<table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem"><td class="memItemRight" valign="bottom"><a href="group-ResetInterface" class="" >Reset Information</a></td></tr>
+<tr class="memdesc"><td class="mdescRight">Passing information when resetting into and out of the bootloader. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table><table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structBareBootTable-t" class="el" >BareBootTable_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bare boot table. Can be mapped on top of vector table to access contents.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structBootloaderInformation-t" class="el" >BootloaderInformation_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Information about the current bootloader.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structBootloaderHeader-t" class="el" >BootloaderHeader_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Common header for bootloader tables.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structFirstBootloaderTable-t" class="el" >FirstBootloaderTable_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Address table for the First Stage Bootloader.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structMainBootloaderTable-t" class="el" >MainBootloaderTable_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Address table for the Main Bootloader.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table><table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac703e2c2db6905a0cd43596731ad8f1e"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#gac703e2c2db6905a0cd43596731ad8f1e" class="el" >BOOTLOADER_VERSION_MAJOR_SHIFT</a>&nbsp;&nbsp;&nbsp;(24U)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader version major version shift value. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0796986dfa229bb0bacd61af799f2895"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga0796986dfa229bb0bacd61af799f2895" class="el" >BOOTLOADER_VERSION_MINOR_SHIFT</a>&nbsp;&nbsp;&nbsp;(16U)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader version minor version shift value. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga2e9b27f809e2f8536c65f04b83a20fee"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga2e9b27f809e2f8536c65f04b83a20fee" class="el" >BOOTLOADER_VERSION_MAJOR_MASK</a>&nbsp;&nbsp;&nbsp;(0xFF000000U)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader version major version mask. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga863c71bfc1eb03f76963646ac48a96c8"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga863c71bfc1eb03f76963646ac48a96c8" class="el" >BOOTLOADER_VERSION_MINOR_MASK</a>&nbsp;&nbsp;&nbsp;(0x00FF0000U)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader version minor version mask. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafd9d598334a397c77f16839e10708ef6"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#gafd9d598334a397c77f16839e10708ef6" class="el" >BOOTLOADER_CAPABILITY_ENFORCE_UPGRADE_SIGNATURE</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 0)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader enforces signed application upgrade images. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga326e4b629d5759fc4d866fa2b8569c05"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga326e4b629d5759fc4d866fa2b8569c05" class="el" >BOOTLOADER_CAPABILITY_ENFORCE_UPGRADE_ENCRYPTION</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 1)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader enforces encrypted application upgrade images. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga994674cb52b865d7f4b263255e3f9b35"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga994674cb52b865d7f4b263255e3f9b35" class="el" >BOOTLOADER_CAPABILITY_ENFORCE_SECURE_BOOT</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 2)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader enforces signature verification of the application image before every boot. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac838a652229ad038001d92ae7dee945d"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#gac838a652229ad038001d92ae7dee945d" class="el" >BOOTLOADER_CAPABILITY_BOOTLOADER_UPGRADE</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 4)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader has the capability of being upgraded. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa4185e2d18fcd9bb1472cdec4d924f07"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#gaa4185e2d18fcd9bb1472cdec4d924f07" class="el" >BOOTLOADER_CAPABILITY_GBL</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 5)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader has the capability of parsing GBL files. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf277b00e91179ca80b20700948102bdd"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#gaf277b00e91179ca80b20700948102bdd" class="el" >BOOTLOADER_CAPABILITY_GBL_SIGNATURE</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 6)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader has the capability of parsing signed GBL files. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga8f333b7479cbd6df25e91716c56cdf79"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga8f333b7479cbd6df25e91716c56cdf79" class="el" >BOOTLOADER_CAPABILITY_GBL_ENCRYPTION</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 7)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader has the capability of parsing encrypted GBL files. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga71263f51a14b519439b69f04ff4e5472"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga71263f51a14b519439b69f04ff4e5472" class="el" >BOOTLOADER_CAPABILITY_ENFORCE_CERTIFICATE_SECURE_BOOT</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 8)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader enforces signature verification of the application image before every boot using certificate. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga5feb50b6defee668420c9e5c56206d97"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga5feb50b6defee668420c9e5c56206d97" class="el" >BOOTLOADER_CAPABILITY_ROLLBACK_PROTECTION</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 9)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader has the capability of application rollback protection. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga2e5628e39eae4b4152c5106bb8284c52"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga2e5628e39eae4b4152c5106bb8284c52" class="el" >BOOTLOADER_CAPABILITY_PERIPHERAL_LIST</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 10)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader has the capability to check the peripherals in use. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga23fd85788bda58ea6e4f28eab4b74539"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga23fd85788bda58ea6e4f28eab4b74539" class="el" >BOOTLOADER_CAPABILITY_STORAGE</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 16)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader has the capability of storing data in an internal or external storage medium. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga8399dd23ea8f5e3232359386c37f4c63"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga8399dd23ea8f5e3232359386c37f4c63" class="el" >BOOTLOADER_CAPABILITY_COMMUNICATION</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 20)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader has the capability of communicating with host processors using a communication interface. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga264cbf37f524c70a4e6824cbf0095ccb"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga264cbf37f524c70a4e6824cbf0095ccb" class="el" >BOOTLOADER_MAGIC_FIRST_STAGE</a>&nbsp;&nbsp;&nbsp;(0xB00710ADUL)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Magic word indicating first stage bootloader table. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga8c1a1c805a33a61501fb14b5f8f2c2e3"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga8c1a1c805a33a61501fb14b5f8f2c2e3" class="el" >BOOTLOADER_MAGIC_MAIN</a>&nbsp;&nbsp;&nbsp;(0x5ECDB007UL)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Magic word indicating main bootloader table. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#gad388d4d1c5656d47cd70dde2d3bce6f2" class="el" >firstBootloaderTable</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Pointer to first stage bootloader table.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga7729c13bf7a5f98b29280a836b3d1a84" class="el" >mainBootloaderTable</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Pointer to main bootloader table.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table><table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga8c6b9a36c4c310e50b0b3511cccbe078" class="el" >BootloaderType_t</a> { <br>
+&nbsp;&nbsp;<a href="group-CommonInterface#gga8c6b9a36c4c310e50b0b3511cccbe078a345ca4adb7227d8a9ff98c0919bb5492" class="el" >NO_BOOTLOADER</a> = 0, 
+<br>
+&nbsp;&nbsp;<a href="group-CommonInterface#gga8c6b9a36c4c310e50b0b3511cccbe078ad8935a7f43596d88d93a7a5a15ed6a20" class="el" >SL_BOOTLOADER</a> = 1
+<br>
+ }</td></tr><tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader interface APIs are trust zone aware.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+
+</tbody></table><table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga36c02adad76bd72c8564cae1418cdbad" class="el" >bootloader_getInfo</a> (<a href="structBootloaderInformation-t" class="el" >BootloaderInformation_t</a> *info)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga3c66502510a5302eb25149df070d898b" class="el" >bootloader_init</a> (void)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga645ab019546fe7d05e4f9599919a5363" class="el" >bootloader_deinit</a> (void)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga100dba06fa6561f27e924e6eb56cfa47" class="el" >bootloader_rebootAndInstall</a> (void)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga11ebd318571b961b6266ebd8beffa767" class="el" >bootloader_verifyApplication</a> (uint32_t startAddress)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga59fc1d986819ec437b0436533257109f" class="el" >bootloader_secureBootEnforced</a> (void)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga0428f45ecf941a4e4dd8895849dfc39f" class="el" >bootloader_getUpgradeLocation</a> (uint32_t *location)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">uint32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#gaf4f532f05f1641eda7c214f14c296a03" class="el" >bootloader_remainingApplicationUpgrades</a> (void)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a href="structBootloaderResetCause-t" class="el" >BootloaderResetCause_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga4ede7d07204f06de7f58dacfb97eb3c1" class="el" >bootloader_getResetReason</a> (void)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE bool&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#ga768ee9365144f611226078ee02addff3" class="el" >bootloader_pointerToFirstStageValid</a> (const void *ptr)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE bool&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-CommonInterface#gae678770e5ac8d48ee4caeb7d6bcb0b2c" class="el" >bootloader_pointerValid</a> (const void *ptr)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="gad388d4d1c5656d47cd70dde2d3bce6f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">#define firstBootloaderTable</td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(*(<a href="structFirstBootloaderTable-t" class="code" >FirstBootloaderTable_t</a> **) \</div>
+<div class="line">                                           (BTL_FIRST_BOOTLOADER_TABLE_BASE))</div>
+<div class="ttc" id="structFirstBootloaderTable__t_html"><div class="ttname"><a href="structFirstBootloaderTable-t" >FirstBootloaderTable_t</a></div><div class="ttdoc">Address table for the First Stage Bootloader. </div><div class="ttdef"><b>Definition:</b> <code>btl_interface.h:125</code></div></div>
+</div><!-- fragment -->
+<p>Pointer to first stage bootloader table. </p>
+
+<p>Definition at line <code>417</code> of file <code>btl_interface.h</code>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga7729c13bf7a5f98b29280a836b3d1a84"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">#define mainBootloaderTable</td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(*(<a href="structMainBootloaderTable-t" class="code" >MainBootloaderTable_t</a> **) \</div>
+<div class="line">                                           (BTL_MAIN_BOOTLOADER_TABLE_BASE))</div>
+<div class="ttc" id="structMainBootloaderTable__t_html"><div class="ttname"><a href="structMainBootloaderTable-t" >MainBootloaderTable_t</a></div><div class="ttdoc">Address table for the Main Bootloader. </div><div class="ttdef"><b>Definition:</b> <code>btl_interface.h:135</code></div></div>
+</div><!-- fragment -->
+<p>Pointer to main bootloader table. </p>
+
+<p>Definition at line <code>421</code> of file <code>btl_interface.h</code>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="ga8c6b9a36c4c310e50b0b3511cccbe078"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">enum <a href="group-CommonInterface#ga8c6b9a36c4c310e50b0b3511cccbe078" class="el" >BootloaderType_t</a></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Bootloader interface APIs are trust zone aware. </p>
+<p>Type of bootloader </p>
+<table class="fieldtable">
+<tbody><tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga8c6b9a36c4c310e50b0b3511cccbe078a345ca4adb7227d8a9ff98c0919bb5492"></a>NO_BOOTLOADER&nbsp;</td><td class="fielddoc">
+<p>No bootloader present. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga8c6b9a36c4c310e50b0b3511cccbe078ad8935a7f43596d88d93a7a5a15ed6a20"></a>SL_BOOTLOADER&nbsp;</td><td class="fielddoc">
+<p>Bootloader is a Silicon Labs bootloader. </p>
+</td></tr>
+</tbody></table>
+
+<p>Definition at line <code>97</code> of file <code>btl_interface.h</code>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga36c02adad76bd72c8564cae1418cdbad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void bootloader_getInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a href="structBootloaderInformation-t" class="el" >BootloaderInformation_t</a> *&nbsp;</td>
+          <td class="paramname"><code>info</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Get information about the bootloader on this device.</p>
+<p>The returned information is fetched from the main bootloader information table.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[out]</td><td class="paramname"><code>info</code></td><td>Pointer to the bootloader information struct. </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga3c66502510a5302eb25149df070d898b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_init </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"><code></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Initialize components of the bootloader so the app can use the interface. This typically includes initializing serial peripherals for communication with external SPI flashes, and so on.</p>
+<dl class="section return"><dt>Returns</dt><dd>Error code. <a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> on success, else error code in <a href="group-ErrorBases#ga2eb810411540551694610ea4b84225e3" class="el" >BOOTLOADER_ERROR_INIT_BASE</a> range. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga645ab019546fe7d05e4f9599919a5363"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_deinit </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"><code></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>De-initialize components of the bootloader that were previously initialized. This typically includes powering down external SPI flashes and de-initializing the serial peripheral used for communication with the external flash.</p>
+<dl class="section return"><dt>Returns</dt><dd>Error code. <a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> on success, else error code in <a href="group-ErrorBases#ga2eb810411540551694610ea4b84225e3" class="el" >BOOTLOADER_ERROR_INIT_BASE</a> range. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga100dba06fa6561f27e924e6eb56cfa47"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void bootloader_rebootAndInstall </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"><code></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Reboot into the bootloader to perform an install.</p>
+<p>If there is a storage component and a slot is marked for bootload, install the image in that slot after verifying it.</p>
+<p>If a communication component is present, open the communication channel and receive an image to be installed. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga11ebd318571b961b6266ebd8beffa767"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">bool bootloader_verifyApplication </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>startAddress</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Verify the application image stored in the Flash memory starting at the address startAddress.</p>
+<p>If the secure boot is enforced, the function will only return true if the cryptographic signature of the application is valid. Otherwise, the application is verified according to the signature type defined in the <a href="structApplicationProperties-t" class="el"  title="Application Properties struct. ">ApplicationProperties_t</a> structure embedded in the application. Silicon Labs wireless stacks include a declaration of this structure. However, applications not using a full wireless stack may need to instantiate the structure.</p>
+<p>Examples of results when the secure boot is not enforced:</p><ul>
+<li>App has no signature: Valid if initial stack pointer and program counter have reasonable values.</li>
+<li>App has CRC checksum: Valid if checksum is valid.</li>
+<li>App has ECDSA signature: Valid if ECDSA signature is valid.</li>
+</ul>
+<p>When secure boot is enforced, only ECDSA signed applications with a valid signature are considered valid.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>startAddress</code></td><td>Starting address of the application.</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the application is valid, else false. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga59fc1d986819ec437b0436533257109f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">bool bootloader_secureBootEnforced </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"><code></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Check whether signature verification on the application image in internal flash is enforced before every boot.</p>
+<dl class="section return"><dt>Returns</dt><dd>True if signature verification is enforced, else false. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga0428f45ecf941a4e4dd8895849dfc39f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">bool bootloader_getUpgradeLocation </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *&nbsp;</td>
+          <td class="paramname"><code>location</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Get base address of the bootloader upgrade image.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[out]</td><td class="paramname"><code>location</code></td><td>the base address of bootloader upgrade image.</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the location was found. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf4f532f05f1641eda7c214f14c296a03"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">uint32_t bootloader_remainingApplicationUpgrades </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"><code></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Count the total remaining number of application upgrades.</p>
+<dl class="section return"><dt>Returns</dt><dd>remaining number of application upgrades. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4ede7d07204f06de7f58dacfb97eb3c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname"><a href="structBootloaderResetCause-t" class="el" >BootloaderResetCause_t</a> bootloader_getResetReason </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"><code></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Get reset cause of the bootloader.</p>
+<dl class="section return"><dt>Returns</dt><dd>Reset cause of the bootloader. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga768ee9365144f611226078ee02addff3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">__STATIC_INLINE bool bootloader_pointerToFirstStageValid </td>
+          <td>(</td>
+          <td class="paramtype">const void *&nbsp;</td>
+          <td class="paramname"><code>ptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Check if a pointer is valid and if it points to the bootloader first stage.</p>
+<p>This function checks pointers to bootloader jump tables.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>ptr</code></td><td>The pointer to check</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the pointer points to the bootloader first stage, false if not. </dd></dl>
+
+<p>Definition at line <code>612</code> of file <code>btl_interface.h</code>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gae678770e5ac8d48ee4caeb7d6bcb0b2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">__STATIC_INLINE bool bootloader_pointerValid </td>
+          <td>(</td>
+          <td class="paramtype">const void *&nbsp;</td>
+          <td class="paramname"><code>ptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Check if a pointer is valid and if it points to the bootloader main stage.</p>
+<p>This function checks pointers to bootloader jump tables.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>ptr</code></td><td>The pointer to check</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the pointer points into the bootloader main stage, false if not. </dd></dl>
+
+<p>Definition at line <code>649</code> of file <code>btl_interface.h</code>.</p>
+
+</div>
+</div>
+</div>
+      </article>
+    </main>
+    <script type="text/javascript" src="https://docs.silabs.com/assets/script.js"></script>
+    <script type='text/javascript'>
+      var tldr = '/mcu-bootloader/2.1/';
+      var _map = '';
+    </script>
+        <script type="text/javascript">
+       try {
+        _satellite.pageBottom();
+       } catch(err) {
+        console.log("Adobe DTM (Analytics) _satellite has not been loaded. Is there any chance you're using an AdBlocker?");
+       }
+    </script>
+  </body>
+</html>

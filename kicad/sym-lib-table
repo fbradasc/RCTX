@@ -9,4 +9,5 @@
   (lib (name "RCTX_XCVR-rescue")(type "Legacy")(uri "${KIPRJMOD}/RCTX_XCVR-rescue.lib")(options "")(descr ""))
   (lib (name "PIC_USB_BRIDGE")(type "Legacy")(uri "${KIPRJMOD}/PIC_USB_BRIDGE.lib")(options "")(descr ""))
   (lib (name "nokia_5110-3310_lcd")(type "Legacy")(uri "${KIPRJMOD}/nokia_5110-3310_lcd.lib")(options "")(descr ""))
+  (lib (name "EFM32HG310-QFN32")(type "KiCad")(uri "${KIPRJMOD}/EFM32HG310-QFN32.kicad_sym")(options "")(descr ""))
 )

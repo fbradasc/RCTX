@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160330710-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-160330710-1');
+</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <meta name="google" value="notranslate">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#444547">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="create-date" content="06/08/2022">
+<meta name="content-type" content="Software API documentation">
+<meta name="software-development-kits" content="32 bit MCU SDK">
+<meta name="product-line" content="Microcontrollers">
+<meta name="product-category" content="32-bit MCUs">
+<meta name="product-family" content="Gecko">
+<meta name="product-hierarchy" content="Microcontrollers,Microcontrollers|32-bit MCUs,Microcontrollers|32-bit MCUs|Gecko">
+<meta name="docs-hierarchy" content="Documents,Documents|MCU Bootloader,Documents|MCU Bootloader|v2.1,Documents|MCU Bootloader|Latest">
+    <title>UARTDriver - v2.1 - Gecko Bootloader API Documentation Silicon Labs</title>
+    <link rel="stylesheet" href="https://docs.silabs.com/assets/styles.css">
+    <script src="https://assets.adobedtm.com/0144d06d02c2/2c54aaf3cc70/launch-565181acbc03.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="search-bar">
+        <input class='search-input' placeholder="search" />
+        <input class='search-button' type='button'/>
+      </div>
+      <div class="menu-icon"></div>
+      <div class="container">
+        <a href='https://docs.silabs.com/'>docs.silabs.com</a>
+      </div>
+    </nav>
+    <nav class="menu nocontent">
+      <div class="top">
+        <a href='https://silabs.com' class="logo"></a>
+        <a href='https://docs.silabs.com/' class="home">docs.silabs.com</a>
+        <div class="search-bar">
+          <input class='search-input' placeholder="search" />
+          <input class='search-button' type='button'/>
+          <div class="search-site">
+            <h5>Search in:</h5>
+            <div class="search-site-selector"><span class="root" data-level='0'>docs</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <h3 id="gecko-bootloader-api-reference">Gecko Bootloader API Reference</h3><ul>
+<li><a href="index.html">Gecko Bootloader</a></li><li><a href="modules">API Documentation</a><ul>
+<li><a href="group-Interface">Application Interface</a><ul>
+<li><a href="group-ParserInterface">Application Parser Interface</a><ul>
+<li><a href="structBootloaderParserCallbacks-t">BootloaderParserCallbacks_t</a></li></ul>
+</li><li><a href="group-ApplicationProperties">Application Properties</a><ul>
+<li><a href="structApplicationData">ApplicationData</a></li><li><a href="structApplicationCertificate">ApplicationCertificate</a></li><li><a href="structApplicationProperties-t">ApplicationProperties_t</a></li></ul>
+</li><li><a href="group-StorageInterface">Application Storage Interface</a><ul>
+<li><a href="structBootloaderStorageSlot-t">BootloaderStorageSlot_t</a></li><li><a href="structBootloaderStorageImplementationInformation-t">BootloaderStorageImplementationInformation_t</a></li><li><a href="structBootloaderStorageInformation-t">BootloaderStorageInformation_t</a></li><li><a href="structBootloaderEraseStatus-t">BootloaderEraseStatus_t</a></li><li><a href="structBootloaderStorageFunctions">BootloaderStorageFunctions</a></li></ul>
+</li><li><a href="group-CommonInterface">Common Application Interface</a><ul>
+<li><a href="group-ResetInterface">Reset Information</a><ul>
+<li><a href="structBootloaderResetCause-t">BootloaderResetCause_t</a></li></ul>
+</li><li><a href="structBareBootTable-t">BareBootTable_t</a></li><li><a href="structBootloaderInformation-t">BootloaderInformation_t</a></li><li><a href="structBootloaderHeader-t">BootloaderHeader_t</a></li><li><a href="structFirstBootloaderTable-t">FirstBootloaderTable_t</a></li><li><a href="structMainBootloaderTable-t">MainBootloaderTable_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Core">Bootloader Core</a><ul>
+<li><a href="group-Bootload">Bootload</a></li><li><a href="group-Flash">Flash</a></li><li><a href="group-Reset">Reset</a></li><li><a href="group-TrustZone">TrustZone</a></li><li><a href="group-Upgrade">Upgrade</a></li></ul>
+</li><li><a href="group-Components">Components</a><ul>
+<li><a href="group-Communication">Communication</a><ul>
+<li><a href="group-CommunicationUtils">Utils</a><ul>
+<li><a href="group-Xmodem">XMODEM Parser</a><ul>
+<li><a href="group-Commands">Commands</a></li><li><a href="structXmodemPacket-t">XmodemPacket_t</a></li></ul>
+</li></ul>
+</li></ul>
+</li><li><a href="group-Debug">Debug</a></li><li><a href="group-Decompressor">Decompressor</a><ul>
+<li><a href="group-Lz4Decompressor">LZ4 Decompressor</a><ul>
+<li><a href="structLz4Context-t">Lz4Context_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-GpioActivation">GPIO Activation</a><ul>
+<li><a href="group-ButtonGPIO">Button GPIO</a></li><li><a href="group-EZSPGPIO">EZSP GPIO</a></li></ul>
+</li><li><a href="group-ImageParser">Image Parser</a><ul>
+<li><a href="group-GblParser">GBL Parser</a><ul>
+<li><a href="group-CustomTags">Custom GBL Tags</a><ul>
+<li><a href="group-Lz4ProgTag">LZ4 Programming Tag</a><ul>
+<li><a href="structLz4ParserContext-t">Lz4ParserContext_t</a></li></ul>
+</li><li><a href="group-LzmaProgTag">LZMA Programming Tag</a></li><li><a href="structGblCustomTag-t">GblCustomTag_t</a></li></ul>
+</li><li><a href="group-GblParserFormat">GBL Format</a><ul>
+<li><a href="structGblTagHeader-t">GblTagHeader_t</a></li><li><a href="structGblHeader-t">GblHeader_t</a></li><li><a href="structVersionDependency-t">VersionDependency_t</a></li><li><a href="structGblApplication-t">GblApplication_t</a></li><li><a href="structGblBootloader-t">GblBootloader_t</a></li><li><a href="structGblSeUpgrade-t">GblSeUpgrade_t</a></li><li><a href="structGblMetadata-t">GblMetadata_t</a></li><li><a href="structGblProg-t">GblProg_t</a></li><li><a href="structGblEnd-t">GblEnd_t</a></li><li><a href="structGblEncryptionInitAesCcm-t">GblEncryptionInitAesCcm_t</a></li><li><a href="structGblEncryptionData-t">GblEncryptionData_t</a></li><li><a href="structGblCertificateEcdsaP256-t">GblCertificateEcdsaP256_t</a></li><li><a href="structGblSignatureEcdsaP256-t">GblSignatureEcdsaP256_t</a></li></ul>
+</li><li><a href="structImageProperties-t">ImageProperties_t</a></li><li><a href="structParserContext-t">ParserContext_t</a></li><li><a href="structGblInputBuffer-t">GblInputBuffer_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Security">Security</a><ul>
+<li><a href="group-AES">AES</a><ul>
+<li><a href="structAesContext">AesContext</a></li><li><a href="structAesCtrContext">AesCtrContext</a></li></ul>
+</li><li><a href="group-CRC16">CRC16</a></li><li><a href="group-CRC32">CRC32</a></li><li><a href="group-Decryption">Decryption</a><ul>
+<li><a href="unionDecryptContext-t">DecryptContext_t</a></li><li><a href="unionAuthContext-t">AuthContext_t</a></li></ul>
+</li><li><a href="group-ECDSA">ECDSA</a><ul>
+<li><a href="group-ECC">ECC Library</a><ul>
+<li><a href="structECC-Point-t">ECC_Point_t</a></li><li><a href="structECC-EcdsaSignature-t">ECC_EcdsaSignature_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-SHA256">SHA256</a><ul>
+<li><a href="structbtl-sha256-context">btl_sha256_context</a></li></ul>
+</li><li><a href="group-SHA-256">SHA_256</a><ul>
+<li><a href="unionSha256Context">Sha256Context</a></li></ul>
+</li><li><a href="group-Tokens">Tokens</a></li></ul>
+</li><li><a href="group-Storage">Storage</a><ul>
+<li><a href="group-BootloadInfo">Bootload Info</a><ul>
+<li><a href="structBootloadInfo-t">BootloadInfo_t</a></li></ul>
+</li><li><a href="group-SpiflashConfigs">SPI Flash Configurations</a></li><li><a href="group-SpiflashConfigsSfdp">SPI Flash Configurations using SFDP</a></li><li><a href="structBootloaderStorageLayout-t">BootloaderStorageLayout_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Driver">Driver</a><ul>
+<li><a href="group-Delay">Delay</a></li><li><a href="group-Spi">SPI</a></li><li><a href="group-Spi-peripheral">SPI Peripheral</a></li><li><a href="group-UART">UART</a></li></ul>
+</li><li><a href="group-ErrorCodes">Error Codes</a><ul>
+<li><a href="group-BootloadError">Bootloading Error Codes</a></li><li><a href="group-CommunicationError">Communication Component Error Codes</a></li><li><a href="group-CompressionError">Compression Error Codes</a></li><li><a href="group-ErrorBases">Error Code Base Values</a></li><li><a href="group-ParserError">Image Parser Error Codes</a></li><li><a href="group-InitError">Initialization Error Codes</a></li><li><a href="group-ParseErrpr">Parse Error Codes</a></li><li><a href="group-SpiPeripheralError">SPI Peripheral Driver Error Codes</a></li><li><a href="group-SecurityError">Security Error Codes</a></li><li><a href="group-StorageError">Storage Driver Error Codes</a></li><li><a href="group-UartError">UART Driver Error Codes</a></li><li><a href="group-XmodemError">XMODEM Error Codes</a></li></ul>
+</li></ul>
+</li><li><a href="_version_history">Version History</a></li></ul>
+<h3 id="more-documentation"><a href="https://www.silabs.com/support/resources.ct-application-notes?query=%22gecko%20bootloader%22">More Documentation</a></h3>
+      </div>
+      <div id="split-bar"></div>
+    </nav>
+    <div class="overlay"></div>
+    <main class="content">
+      <article>
+        <p class="banner">You are viewing documentation for version: <em>2.1</em> | <a href="https://docs.silabs.com/mcu-bootloader/latest/version-history">Version History</a></p><div class="header">
+  
+  <div class="headertitle">
+  <h1 class="title">UARTDriver</h1></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Description</h2>
+<p>Serial UART Interface Driver. </p>
+<p>Flexible UART driver implementation for communication with external devices. </p>
+<table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-UART#ga0c0ca72359ddf28dcd15900dfba19343" class="el" >uart_init</a> (void)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-UART#gabfe6a0e7894b22a739d98465d23e776b" class="el" >uart_deinit</a> (void)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-UART#ga36a8ad0de37a69d6cd5785c96dee9815" class="el" >uart_sendBuffer</a> (uint8_t *buffer, size_t length, bool blocking)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-UART#ga7ca3fdee11f497efe313896624e8ebdf" class="el" >uart_sendByte</a> (uint8_t byte)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-UART#ga7ced4b37f40cd0c92db9021ff79ea8b7" class="el" >uart_isTxIdle</a> (void)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-UART#gaad7be75722ee4cf58de3db38cd85371f" class="el" >uart_getRxAvailableBytes</a> (void)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-UART#gaac4c522083da74ab3039b4e09d02a492" class="el" >uart_receiveBuffer</a> (uint8_t *buffer, size_t requestedLength, size_t *receivedLength, bool blocking, uint32_t timeout)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-UART#gaf047cfe2700b78591ba477e26b3bc5eb" class="el" >uart_receiveByte</a> (uint8_t *byte)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-UART#gaba0a1e900db6fb46ac2901e5223878ad" class="el" >uart_receiveByteTimeout</a> (uint8_t *byte, uint32_t timeout)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-UART#ga70b3ee44b497f3802522507d421c24f1" class="el" >uart_flush</a> (bool flushTx, bool flushRx)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga0c0ca72359ddf28dcd15900dfba19343"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void uart_init </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"><code></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Initialize the configured USART peripheral for UART operation. Also sets up GPIO settings for TX, RX, and, if configured, flow control. </p>
+
+</div>
+</div>
+<a class="anchor" id="gabfe6a0e7894b22a739d98465d23e776b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void uart_deinit </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"><code></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Disable the configured USART peripheral for UART operation. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga36a8ad0de37a69d6cd5785c96dee9815"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t uart_sendBuffer </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&nbsp;</td>
+          <td class="paramname"><code>buffer, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"><code>length, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"><code>blocking&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Write a data buffer to the UART.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>buffer</code></td><td>The data buffer to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>length</code></td><td>Number of bytes in the buffer to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>blocking</code></td><td>Indicates whether this transfer can be offloaded to LDMA and return, or whether to wait on completion before returning.</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>BOOTLOADER_OK if successful, error code otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7ca3fdee11f497efe313896624e8ebdf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t uart_sendByte </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><code>byte</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Write one byte to the UART in a blocking fashion.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>byte</code></td><td>The byte to send</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>BOOTLOADER_OK if successful, error code otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7ced4b37f40cd0c92db9021ff79ea8b7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">bool uart_isTxIdle </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"><code></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Find out whether the UART can accept more data to send.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if the UART is not currently transmitting </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaad7be75722ee4cf58de3db38cd85371f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">size_t uart_getRxAvailableBytes </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"><code></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Get the number of bytes ready for reading.</p>
+<dl class="section return"><dt>Returns</dt><dd>Number of bytes in the receive buffer available for reading with <a href="group-UART#gaac4c522083da74ab3039b4e09d02a492" class="el" >uart_receiveBuffer</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaac4c522083da74ab3039b4e09d02a492"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t uart_receiveBuffer </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&nbsp;</td>
+          <td class="paramname"><code>buffer, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"><code>requestedLength, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *&nbsp;</td>
+          <td class="paramname"><code>receivedLength, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"><code>blocking, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>timeout&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Read from the UART into a data buffer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[out]</td><td class="paramname"><code>buffer</code></td><td>The data buffer to receive into </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>requestedLength</code></td><td>Number of bytes to read </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname"><code>receivedLength</code></td><td>Number of bytes read </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>blocking</code></td><td>Indicates whether to wait for requestedLength bytes to be available and read before returning, or whether to read out data currently in the buffer and return. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>timeout</code></td><td>Number of milliseconds to wait for data in blocking mode</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>BOOTLOADER_OK if successful, error code otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf047cfe2700b78591ba477e26b3bc5eb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t uart_receiveByte </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&nbsp;</td>
+          <td class="paramname"><code>byte</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Get one byte from UART in a blocking fashion.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[out]</td><td class="paramname"><code>byte</code></td><td>The byte to send</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>BOOTLOADER_OK if successful, error code otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaba0a1e900db6fb46ac2901e5223878ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t uart_receiveByteTimeout </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&nbsp;</td>
+          <td class="paramname"><code>byte, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>timeout&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Get one byte from UART in a blocking fashion.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[out]</td><td class="paramname"><code>byte</code></td><td>The byte to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>timeout</code></td><td>Maximum timeout before aborting transfer</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>BOOTLOADER_OK if successful, error code otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga70b3ee44b497f3802522507d421c24f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t uart_flush </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"><code>flushTx, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"><code>flushRx&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Flush one or both UART buffers.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>flushTx</code></td><td>Flush the transmit buffer when true </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>flushRx</code></td><td>Flush the receive buffer when true</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>BOOTLOADER_OK </dd></dl>
+
+</div>
+</div>
+</div>
+      </article>
+    </main>
+    <script type="text/javascript" src="https://docs.silabs.com/assets/script.js"></script>
+    <script type='text/javascript'>
+      var tldr = '/mcu-bootloader/2.1/';
+      var _map = '';
+    </script>
+        <script type="text/javascript">
+       try {
+        _satellite.pageBottom();
+       } catch(err) {
+        console.log("Adobe DTM (Analytics) _satellite has not been loaded. Is there any chance you're using an AdBlocker?");
+       }
+    </script>
+  </body>
+</html>
