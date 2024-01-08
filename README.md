@@ -45,13 +45,12 @@
             <-- Data.D              (data line)
 
         3 Miscellanea
-            --> Buzzer
             <-> PPM_RTX            (to transceiver module)
             <-> PPM_DSC            (to companion controller)
 
     Communication buses (6):
         4 UART
-            --> DTR
+            --> RTS
             <-- CTS
             <-- RX
             --> TX
@@ -60,13 +59,20 @@
             <-> SCL
             <-> SDA
 
-LCD and SD Card interface:
-
-    The following lines will be implemented by an I2C to SPI bridge (SC18IS602B)
-        --> SPI  SDO
-        <-- SPI  SDI
-        --> SPI  SCK
-        --> GPIO /SD_CE
-        --> GPIO /LCD_CE
-        --> GPIO LCD_D/C
-        --> GPIO LCD_RESET
+    The following lines will be implemented by an SPI extender 3 I/O -> 11 I/O:
+        1 BUZZER
+            --> GPIO BUZZER
+        3 SPI
+            --> SPI  MOSI
+            <-- SPI  MISO
+            --> SPI  SCLK
+        1 SD CARD
+            --> GPIO /SD_CE
+        4 LCD
+            --> GPIO /LCD_CE
+            --> GPIO LCD_D/C
+            --> GPIO /LCD_RESET
+            --> GPIO LCD_BL_PWM
+        2 LED
+            --> GPIO LED_LE
+            --> GPIO LED_PWM
