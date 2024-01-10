@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160330710-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-160330710-1');
+</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <meta name="google" value="notranslate">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#444547">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="create-date" content="06/08/2022">
+<meta name="content-type" content="Software API documentation">
+<meta name="software-development-kits" content="32 bit MCU SDK">
+<meta name="product-line" content="Microcontrollers">
+<meta name="product-category" content="32-bit MCUs">
+<meta name="product-family" content="Gecko">
+<meta name="product-hierarchy" content="Microcontrollers,Microcontrollers|32-bit MCUs,Microcontrollers|32-bit MCUs|Gecko">
+<meta name="docs-hierarchy" content="Documents,Documents|MCU Bootloader,Documents|MCU Bootloader|v2.1,Documents|MCU Bootloader|Latest">
+    <title>Application Parser InterfaceApplication Interface - v2.1 - Gecko Bootloader API Documentation Silicon Labs</title>
+    <link rel="stylesheet" href="https://docs.silabs.com/assets/styles.css">
+    <script src="https://assets.adobedtm.com/0144d06d02c2/2c54aaf3cc70/launch-565181acbc03.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="search-bar">
+        <input class='search-input' placeholder="search" />
+        <input class='search-button' type='button'/>
+      </div>
+      <div class="menu-icon"></div>
+      <div class="container">
+        <a href='https://docs.silabs.com/'>docs.silabs.com</a>
+      </div>
+    </nav>
+    <nav class="menu nocontent">
+      <div class="top">
+        <a href='https://silabs.com' class="logo"></a>
+        <a href='https://docs.silabs.com/' class="home">docs.silabs.com</a>
+        <div class="search-bar">
+          <input class='search-input' placeholder="search" />
+          <input class='search-button' type='button'/>
+          <div class="search-site">
+            <h5>Search in:</h5>
+            <div class="search-site-selector"><span class="root" data-level='0'>docs</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <h3 id="gecko-bootloader-api-reference">Gecko Bootloader API Reference</h3><ul>
+<li><a href="index.html">Gecko Bootloader</a></li><li><a href="modules">API Documentation</a><ul>
+<li><a href="group-Interface">Application Interface</a><ul>
+<li><a href="group-ParserInterface">Application Parser Interface</a><ul>
+<li><a href="structBootloaderParserCallbacks-t">BootloaderParserCallbacks_t</a></li></ul>
+</li><li><a href="group-ApplicationProperties">Application Properties</a><ul>
+<li><a href="structApplicationData">ApplicationData</a></li><li><a href="structApplicationCertificate">ApplicationCertificate</a></li><li><a href="structApplicationProperties-t">ApplicationProperties_t</a></li></ul>
+</li><li><a href="group-StorageInterface">Application Storage Interface</a><ul>
+<li><a href="structBootloaderStorageSlot-t">BootloaderStorageSlot_t</a></li><li><a href="structBootloaderStorageImplementationInformation-t">BootloaderStorageImplementationInformation_t</a></li><li><a href="structBootloaderStorageInformation-t">BootloaderStorageInformation_t</a></li><li><a href="structBootloaderEraseStatus-t">BootloaderEraseStatus_t</a></li><li><a href="structBootloaderStorageFunctions">BootloaderStorageFunctions</a></li></ul>
+</li><li><a href="group-CommonInterface">Common Application Interface</a><ul>
+<li><a href="group-ResetInterface">Reset Information</a><ul>
+<li><a href="structBootloaderResetCause-t">BootloaderResetCause_t</a></li></ul>
+</li><li><a href="structBareBootTable-t">BareBootTable_t</a></li><li><a href="structBootloaderInformation-t">BootloaderInformation_t</a></li><li><a href="structBootloaderHeader-t">BootloaderHeader_t</a></li><li><a href="structFirstBootloaderTable-t">FirstBootloaderTable_t</a></li><li><a href="structMainBootloaderTable-t">MainBootloaderTable_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Core">Bootloader Core</a><ul>
+<li><a href="group-Bootload">Bootload</a></li><li><a href="group-Flash">Flash</a></li><li><a href="group-Reset">Reset</a></li><li><a href="group-TrustZone">TrustZone</a></li><li><a href="group-Upgrade">Upgrade</a></li></ul>
+</li><li><a href="group-Components">Components</a><ul>
+<li><a href="group-Communication">Communication</a><ul>
+<li><a href="group-CommunicationUtils">Utils</a><ul>
+<li><a href="group-Xmodem">XMODEM Parser</a><ul>
+<li><a href="group-Commands">Commands</a></li><li><a href="structXmodemPacket-t">XmodemPacket_t</a></li></ul>
+</li></ul>
+</li></ul>
+</li><li><a href="group-Debug">Debug</a></li><li><a href="group-Decompressor">Decompressor</a><ul>
+<li><a href="group-Lz4Decompressor">LZ4 Decompressor</a><ul>
+<li><a href="structLz4Context-t">Lz4Context_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-GpioActivation">GPIO Activation</a><ul>
+<li><a href="group-ButtonGPIO">Button GPIO</a></li><li><a href="group-EZSPGPIO">EZSP GPIO</a></li></ul>
+</li><li><a href="group-ImageParser">Image Parser</a><ul>
+<li><a href="group-GblParser">GBL Parser</a><ul>
+<li><a href="group-CustomTags">Custom GBL Tags</a><ul>
+<li><a href="group-Lz4ProgTag">LZ4 Programming Tag</a><ul>
+<li><a href="structLz4ParserContext-t">Lz4ParserContext_t</a></li></ul>
+</li><li><a href="group-LzmaProgTag">LZMA Programming Tag</a></li><li><a href="structGblCustomTag-t">GblCustomTag_t</a></li></ul>
+</li><li><a href="group-GblParserFormat">GBL Format</a><ul>
+<li><a href="structGblTagHeader-t">GblTagHeader_t</a></li><li><a href="structGblHeader-t">GblHeader_t</a></li><li><a href="structVersionDependency-t">VersionDependency_t</a></li><li><a href="structGblApplication-t">GblApplication_t</a></li><li><a href="structGblBootloader-t">GblBootloader_t</a></li><li><a href="structGblSeUpgrade-t">GblSeUpgrade_t</a></li><li><a href="structGblMetadata-t">GblMetadata_t</a></li><li><a href="structGblProg-t">GblProg_t</a></li><li><a href="structGblEnd-t">GblEnd_t</a></li><li><a href="structGblEncryptionInitAesCcm-t">GblEncryptionInitAesCcm_t</a></li><li><a href="structGblEncryptionData-t">GblEncryptionData_t</a></li><li><a href="structGblCertificateEcdsaP256-t">GblCertificateEcdsaP256_t</a></li><li><a href="structGblSignatureEcdsaP256-t">GblSignatureEcdsaP256_t</a></li></ul>
+</li><li><a href="structImageProperties-t">ImageProperties_t</a></li><li><a href="structParserContext-t">ParserContext_t</a></li><li><a href="structGblInputBuffer-t">GblInputBuffer_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Security">Security</a><ul>
+<li><a href="group-AES">AES</a><ul>
+<li><a href="structAesContext">AesContext</a></li><li><a href="structAesCtrContext">AesCtrContext</a></li></ul>
+</li><li><a href="group-CRC16">CRC16</a></li><li><a href="group-CRC32">CRC32</a></li><li><a href="group-Decryption">Decryption</a><ul>
+<li><a href="unionDecryptContext-t">DecryptContext_t</a></li><li><a href="unionAuthContext-t">AuthContext_t</a></li></ul>
+</li><li><a href="group-ECDSA">ECDSA</a><ul>
+<li><a href="group-ECC">ECC Library</a><ul>
+<li><a href="structECC-Point-t">ECC_Point_t</a></li><li><a href="structECC-EcdsaSignature-t">ECC_EcdsaSignature_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-SHA256">SHA256</a><ul>
+<li><a href="structbtl-sha256-context">btl_sha256_context</a></li></ul>
+</li><li><a href="group-SHA-256">SHA_256</a><ul>
+<li><a href="unionSha256Context">Sha256Context</a></li></ul>
+</li><li><a href="group-Tokens">Tokens</a></li></ul>
+</li><li><a href="group-Storage">Storage</a><ul>
+<li><a href="group-BootloadInfo">Bootload Info</a><ul>
+<li><a href="structBootloadInfo-t">BootloadInfo_t</a></li></ul>
+</li><li><a href="group-SpiflashConfigs">SPI Flash Configurations</a></li><li><a href="group-SpiflashConfigsSfdp">SPI Flash Configurations using SFDP</a></li><li><a href="structBootloaderStorageLayout-t">BootloaderStorageLayout_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Driver">Driver</a><ul>
+<li><a href="group-Delay">Delay</a></li><li><a href="group-Spi">SPI</a></li><li><a href="group-Spi-peripheral">SPI Peripheral</a></li><li><a href="group-UART">UART</a></li></ul>
+</li><li><a href="group-ErrorCodes">Error Codes</a><ul>
+<li><a href="group-BootloadError">Bootloading Error Codes</a></li><li><a href="group-CommunicationError">Communication Component Error Codes</a></li><li><a href="group-CompressionError">Compression Error Codes</a></li><li><a href="group-ErrorBases">Error Code Base Values</a></li><li><a href="group-ParserError">Image Parser Error Codes</a></li><li><a href="group-InitError">Initialization Error Codes</a></li><li><a href="group-ParseErrpr">Parse Error Codes</a></li><li><a href="group-SpiPeripheralError">SPI Peripheral Driver Error Codes</a></li><li><a href="group-SecurityError">Security Error Codes</a></li><li><a href="group-StorageError">Storage Driver Error Codes</a></li><li><a href="group-UartError">UART Driver Error Codes</a></li><li><a href="group-XmodemError">XMODEM Error Codes</a></li></ul>
+</li></ul>
+</li><li><a href="_version_history">Version History</a></li></ul>
+<h3 id="more-documentation"><a href="https://www.silabs.com/support/resources.ct-application-notes?query=%22gecko%20bootloader%22">More Documentation</a></h3>
+      </div>
+      <div id="split-bar"></div>
+    </nav>
+    <div class="overlay"></div>
+    <main class="content">
+      <article>
+        <p class="banner">You are viewing documentation for version: <em>2.1</em> | <a href="https://docs.silabs.com/mcu-bootloader/latest/version-history">Version History</a></p><div class="header">
+  
+  <div class="headertitle">
+  <h1 class="title">Application Parser InterfaceApplication Interface</h1></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Description</h2>
+<p>Application interface for the bootloader image parser. </p>
+<p>The Parser Interface can be used to parse upgrade images from the context of the application. </p>
+<table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structBootloaderParserCallbacks-t" class="el" >BootloaderParserCallbacks_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Function pointers to parser callbacks.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table><table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">typedef void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ParserInterface#gab0f1ad6d1628b642d6574e191a60df2c" class="el" >BootloaderParserCallback_t</a>) (uint32_t address, uint8_t *data, size_t length, void *context)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga510a9c97d39ff194124c9f7f9c49edd9"></a>
+typedef struct <a href="structBootloaderParserContext" class="el" >BootloaderParserContext</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ParserInterface#ga510a9c97d39ff194124c9f7f9c49edd9" class="el" >BootloaderParserContext_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Context for the bootloader image parser routine. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table><table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ParserInterface#ga4814e5e63d7ca23977174ce7c40ef388" class="el" >bootloader_initParser</a> (<a href="group-ParserInterface#ga510a9c97d39ff194124c9f7f9c49edd9" class="el" >BootloaderParserContext_t</a> *context, size_t contextSize)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ParserInterface#ga62d401675f5f7cd2825c60957b4d43d2" class="el" >bootloader_parseBuffer</a> (<a href="group-ParserInterface#ga510a9c97d39ff194124c9f7f9c49edd9" class="el" >BootloaderParserContext_t</a> *context, <a href="structBootloaderParserCallbacks-t" class="el" >BootloaderParserCallbacks_t</a> *callbacks, uint8_t data[], size_t numBytes)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ParserInterface#ga0d65fbb9c4fb3f945996d003a790e157" class="el" >bootloader_parseImageInfo</a> (<a href="group-ParserInterface#ga510a9c97d39ff194124c9f7f9c49edd9" class="el" >BootloaderParserContext_t</a> *context, uint8_t data[], size_t numBytes, <a href="group-ApplicationProperties#ga1443b85815ddfba3617ce100647e5461" class="el" >ApplicationData_t</a> *appInfo, uint32_t *bootloaderVersion)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">uint32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ParserInterface#gaa35185d20e6b3d5a826cd1238032dcd5" class="el" >bootloader_parserContextSize</a> (void)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="gab0f1ad6d1628b642d6574e191a60df2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">typedef void(* BootloaderParserCallback_t) (uint32_t address, uint8_t *data, size_t length, void *context)</td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Bootloader parser callback</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname"><code>address</code></td><td>Address of the data </td></tr>
+    <tr><td class="paramname"><code>data</code></td><td>Raw data </td></tr>
+    <tr><td class="paramname"><code>length</code></td><td>Size in bytes of raw data. </td></tr>
+    <tr><td class="paramname"><code>context</code></td><td>A context variable defined by the implementation that is implementing this callback. </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+
+<p>Definition at line <code>48</code> of file <code>btl_interface_parser.h</code>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga4814e5e63d7ca23977174ce7c40ef388"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_initParser </td>
+          <td>(</td>
+          <td class="paramtype"><a href="group-ParserInterface#ga510a9c97d39ff194124c9f7f9c49edd9" class="el" >BootloaderParserContext_t</a> *&nbsp;</td>
+          <td class="paramname"><code>context, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"><code>contextSize&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Initialize the image parser.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>context</code></td><td>Pointer to the parser context struct. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>contextSize</code></td><td>Size of the context struct.</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>BOOTLOADER_OK if success, BOOTLOADER_ERROR_PARSE_CONTEXT if context struct is too small. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga62d401675f5f7cd2825c60957b4d43d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_parseBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a href="group-ParserInterface#ga510a9c97d39ff194124c9f7f9c49edd9" class="el" >BootloaderParserContext_t</a> *&nbsp;</td>
+          <td class="paramname"><code>context, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a href="structBootloaderParserCallbacks-t" class="el" >BootloaderParserCallbacks_t</a> *&nbsp;</td>
+          <td class="paramname"><code>callbacks, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><code>data[], </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"><code>numBytes&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Parse a buffer. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>context</code></td><td>Pointer to the parser context struct. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>callbacks</code></td><td>Callbacks to be called by the parser. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>data</code></td><td>Data to be parsed. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>numBytes</code></td><td>Size of the data buffer.</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>BOOTLOADER_ERROR_PARSE_CONTINUE if the chunk was parsed correctly, and a new chunk is expected. BOOTLOADER_ERROR_PARSE_ERROR if something went wrong while parsing. BOOTLOADER_ERROR_PARSE_SUCCESS if the entire file was successfully parsed. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga0d65fbb9c4fb3f945996d003a790e157"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_parseImageInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a href="group-ParserInterface#ga510a9c97d39ff194124c9f7f9c49edd9" class="el" >BootloaderParserContext_t</a> *&nbsp;</td>
+          <td class="paramname"><code>context, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><code>data[], </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"><code>numBytes, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a href="group-ApplicationProperties#ga1443b85815ddfba3617ce100647e5461" class="el" >ApplicationData_t</a> *&nbsp;</td>
+          <td class="paramname"><code>appInfo, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *&nbsp;</td>
+          <td class="paramname"><code>bootloaderVersion&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Parse a buffer and get application and bootloader upgrade metadata from the buffer.</p>
+<dl class="section note"><dt>Note</dt><dd><code>appInfo</code> and <code>bootloaderVersion</code> will default to zeros.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>context</code></td><td>Pointer to the parser context struct. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>data</code></td><td>Data to be parsed. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>numBytes</code></td><td>Size of the data buffer. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname"><code>appInfo</code></td><td>Pointer to <a href="group-ApplicationProperties#ga1443b85815ddfba3617ce100647e5461" class="el" >ApplicationData_t</a> struct. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname"><code>bootloaderVersion</code></td><td>Pointer to an integer representing bootloader version.</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> if metadata was filled successfully. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaa35185d20e6b3d5a826cd1238032dcd5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">uint32_t bootloader_parserContextSize </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"><code></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Find the size of the context struct <a href="structBootloaderParserContext" class="el"  title="Context used by bootloader image parser to store parser state. ">BootloaderParserContext</a> used by the bootloader image parser to store parser state.</p>
+<dl class="section return"><dt>Returns</dt><dd>size of <a href="structBootloaderParserContext" class="el"  title="Context used by bootloader image parser to store parser state. ">BootloaderParserContext</a>, returns 0 if something went wrong. </dd></dl>
+
+</div>
+</div>
+</div>
+      </article>
+    </main>
+    <script type="text/javascript" src="https://docs.silabs.com/assets/script.js"></script>
+    <script type='text/javascript'>
+      var tldr = '/mcu-bootloader/2.1/';
+      var _map = '';
+    </script>
+        <script type="text/javascript">
+       try {
+        _satellite.pageBottom();
+       } catch(err) {
+        console.log("Adobe DTM (Analytics) _satellite has not been loaded. Is there any chance you're using an AdBlocker?");
+       }
+    </script>
+  </body>
+</html>

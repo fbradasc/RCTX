@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160330710-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-160330710-1');
+</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <meta name="google" value="notranslate">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#444547">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="create-date" content="06/08/2022">
+<meta name="content-type" content="Software API documentation">
+<meta name="software-development-kits" content="32 bit MCU SDK">
+<meta name="product-line" content="Microcontrollers">
+<meta name="product-category" content="32-bit MCUs">
+<meta name="product-family" content="Gecko">
+<meta name="product-hierarchy" content="Microcontrollers,Microcontrollers|32-bit MCUs,Microcontrollers|32-bit MCUs|Gecko">
+<meta name="docs-hierarchy" content="Documents,Documents|MCU Bootloader,Documents|MCU Bootloader|v2.1,Documents|MCU Bootloader|Latest">
+    <title>MainBootloaderTable_t Struct ReferenceApplication Interface &gt; Common Application Interface - v2.1 - Gecko Bootloader API Documentation Silicon Labs</title>
+    <link rel="stylesheet" href="https://docs.silabs.com/assets/styles.css">
+    <script src="https://assets.adobedtm.com/0144d06d02c2/2c54aaf3cc70/launch-565181acbc03.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="search-bar">
+        <input class='search-input' placeholder="search" />
+        <input class='search-button' type='button'/>
+      </div>
+      <div class="menu-icon"></div>
+      <div class="container">
+        <a href='https://docs.silabs.com/'>docs.silabs.com</a>
+      </div>
+    </nav>
+    <nav class="menu nocontent">
+      <div class="top">
+        <a href='https://silabs.com' class="logo"></a>
+        <a href='https://docs.silabs.com/' class="home">docs.silabs.com</a>
+        <div class="search-bar">
+          <input class='search-input' placeholder="search" />
+          <input class='search-button' type='button'/>
+          <div class="search-site">
+            <h5>Search in:</h5>
+            <div class="search-site-selector"><span class="root" data-level='0'>docs</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <h3 id="gecko-bootloader-api-reference">Gecko Bootloader API Reference</h3><ul>
+<li><a href="index.html">Gecko Bootloader</a></li><li><a href="modules">API Documentation</a><ul>
+<li><a href="group-Interface">Application Interface</a><ul>
+<li><a href="group-ParserInterface">Application Parser Interface</a><ul>
+<li><a href="structBootloaderParserCallbacks-t">BootloaderParserCallbacks_t</a></li></ul>
+</li><li><a href="group-ApplicationProperties">Application Properties</a><ul>
+<li><a href="structApplicationData">ApplicationData</a></li><li><a href="structApplicationCertificate">ApplicationCertificate</a></li><li><a href="structApplicationProperties-t">ApplicationProperties_t</a></li></ul>
+</li><li><a href="group-StorageInterface">Application Storage Interface</a><ul>
+<li><a href="structBootloaderStorageSlot-t">BootloaderStorageSlot_t</a></li><li><a href="structBootloaderStorageImplementationInformation-t">BootloaderStorageImplementationInformation_t</a></li><li><a href="structBootloaderStorageInformation-t">BootloaderStorageInformation_t</a></li><li><a href="structBootloaderEraseStatus-t">BootloaderEraseStatus_t</a></li><li><a href="structBootloaderStorageFunctions">BootloaderStorageFunctions</a></li></ul>
+</li><li><a href="group-CommonInterface">Common Application Interface</a><ul>
+<li><a href="group-ResetInterface">Reset Information</a><ul>
+<li><a href="structBootloaderResetCause-t">BootloaderResetCause_t</a></li></ul>
+</li><li><a href="structBareBootTable-t">BareBootTable_t</a></li><li><a href="structBootloaderInformation-t">BootloaderInformation_t</a></li><li><a href="structBootloaderHeader-t">BootloaderHeader_t</a></li><li><a href="structFirstBootloaderTable-t">FirstBootloaderTable_t</a></li><li><a href="structMainBootloaderTable-t">MainBootloaderTable_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Core">Bootloader Core</a><ul>
+<li><a href="group-Bootload">Bootload</a></li><li><a href="group-Flash">Flash</a></li><li><a href="group-Reset">Reset</a></li><li><a href="group-TrustZone">TrustZone</a></li><li><a href="group-Upgrade">Upgrade</a></li></ul>
+</li><li><a href="group-Components">Components</a><ul>
+<li><a href="group-Communication">Communication</a><ul>
+<li><a href="group-CommunicationUtils">Utils</a><ul>
+<li><a href="group-Xmodem">XMODEM Parser</a><ul>
+<li><a href="group-Commands">Commands</a></li><li><a href="structXmodemPacket-t">XmodemPacket_t</a></li></ul>
+</li></ul>
+</li></ul>
+</li><li><a href="group-Debug">Debug</a></li><li><a href="group-Decompressor">Decompressor</a><ul>
+<li><a href="group-Lz4Decompressor">LZ4 Decompressor</a><ul>
+<li><a href="structLz4Context-t">Lz4Context_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-GpioActivation">GPIO Activation</a><ul>
+<li><a href="group-ButtonGPIO">Button GPIO</a></li><li><a href="group-EZSPGPIO">EZSP GPIO</a></li></ul>
+</li><li><a href="group-ImageParser">Image Parser</a><ul>
+<li><a href="group-GblParser">GBL Parser</a><ul>
+<li><a href="group-CustomTags">Custom GBL Tags</a><ul>
+<li><a href="group-Lz4ProgTag">LZ4 Programming Tag</a><ul>
+<li><a href="structLz4ParserContext-t">Lz4ParserContext_t</a></li></ul>
+</li><li><a href="group-LzmaProgTag">LZMA Programming Tag</a></li><li><a href="structGblCustomTag-t">GblCustomTag_t</a></li></ul>
+</li><li><a href="group-GblParserFormat">GBL Format</a><ul>
+<li><a href="structGblTagHeader-t">GblTagHeader_t</a></li><li><a href="structGblHeader-t">GblHeader_t</a></li><li><a href="structVersionDependency-t">VersionDependency_t</a></li><li><a href="structGblApplication-t">GblApplication_t</a></li><li><a href="structGblBootloader-t">GblBootloader_t</a></li><li><a href="structGblSeUpgrade-t">GblSeUpgrade_t</a></li><li><a href="structGblMetadata-t">GblMetadata_t</a></li><li><a href="structGblProg-t">GblProg_t</a></li><li><a href="structGblEnd-t">GblEnd_t</a></li><li><a href="structGblEncryptionInitAesCcm-t">GblEncryptionInitAesCcm_t</a></li><li><a href="structGblEncryptionData-t">GblEncryptionData_t</a></li><li><a href="structGblCertificateEcdsaP256-t">GblCertificateEcdsaP256_t</a></li><li><a href="structGblSignatureEcdsaP256-t">GblSignatureEcdsaP256_t</a></li></ul>
+</li><li><a href="structImageProperties-t">ImageProperties_t</a></li><li><a href="structParserContext-t">ParserContext_t</a></li><li><a href="structGblInputBuffer-t">GblInputBuffer_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Security">Security</a><ul>
+<li><a href="group-AES">AES</a><ul>
+<li><a href="structAesContext">AesContext</a></li><li><a href="structAesCtrContext">AesCtrContext</a></li></ul>
+</li><li><a href="group-CRC16">CRC16</a></li><li><a href="group-CRC32">CRC32</a></li><li><a href="group-Decryption">Decryption</a><ul>
+<li><a href="unionDecryptContext-t">DecryptContext_t</a></li><li><a href="unionAuthContext-t">AuthContext_t</a></li></ul>
+</li><li><a href="group-ECDSA">ECDSA</a><ul>
+<li><a href="group-ECC">ECC Library</a><ul>
+<li><a href="structECC-Point-t">ECC_Point_t</a></li><li><a href="structECC-EcdsaSignature-t">ECC_EcdsaSignature_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-SHA256">SHA256</a><ul>
+<li><a href="structbtl-sha256-context">btl_sha256_context</a></li></ul>
+</li><li><a href="group-SHA-256">SHA_256</a><ul>
+<li><a href="unionSha256Context">Sha256Context</a></li></ul>
+</li><li><a href="group-Tokens">Tokens</a></li></ul>
+</li><li><a href="group-Storage">Storage</a><ul>
+<li><a href="group-BootloadInfo">Bootload Info</a><ul>
+<li><a href="structBootloadInfo-t">BootloadInfo_t</a></li></ul>
+</li><li><a href="group-SpiflashConfigs">SPI Flash Configurations</a></li><li><a href="group-SpiflashConfigsSfdp">SPI Flash Configurations using SFDP</a></li><li><a href="structBootloaderStorageLayout-t">BootloaderStorageLayout_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Driver">Driver</a><ul>
+<li><a href="group-Delay">Delay</a></li><li><a href="group-Spi">SPI</a></li><li><a href="group-Spi-peripheral">SPI Peripheral</a></li><li><a href="group-UART">UART</a></li></ul>
+</li><li><a href="group-ErrorCodes">Error Codes</a><ul>
+<li><a href="group-BootloadError">Bootloading Error Codes</a></li><li><a href="group-CommunicationError">Communication Component Error Codes</a></li><li><a href="group-CompressionError">Compression Error Codes</a></li><li><a href="group-ErrorBases">Error Code Base Values</a></li><li><a href="group-ParserError">Image Parser Error Codes</a></li><li><a href="group-InitError">Initialization Error Codes</a></li><li><a href="group-ParseErrpr">Parse Error Codes</a></li><li><a href="group-SpiPeripheralError">SPI Peripheral Driver Error Codes</a></li><li><a href="group-SecurityError">Security Error Codes</a></li><li><a href="group-StorageError">Storage Driver Error Codes</a></li><li><a href="group-UartError">UART Driver Error Codes</a></li><li><a href="group-XmodemError">XMODEM Error Codes</a></li></ul>
+</li></ul>
+</li><li><a href="_version_history">Version History</a></li></ul>
+<h3 id="more-documentation"><a href="https://www.silabs.com/support/resources.ct-application-notes?query=%22gecko%20bootloader%22">More Documentation</a></h3>
+      </div>
+      <div id="split-bar"></div>
+    </nav>
+    <div class="overlay"></div>
+    <main class="content">
+      <article>
+        <p class="banner">You are viewing documentation for version: <em>2.1</em> | <a href="https://docs.silabs.com/mcu-bootloader/latest/version-history">Version History</a></p><div class="header">
+  
+  <div class="headertitle">
+  <h1 class="title">MainBootloaderTable_t Struct ReferenceApplication Interface &gt; Common Application Interface</h1></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Description</h2>
+<div class="textblock"><p>Address table for the Main Bootloader. </p>
+
+<p>Definition at line <code>135</code> of file <code>btl_interface.h</code>.</p>
+</div>
+<p><code>#include &lt;<code>btl_interface.h</code>&gt;</code></p>
+<table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a343fe9a0e426484556e26634c2c01a0a"></a>
+<a href="structBootloaderHeader-t" class="el" >BootloaderHeader_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a href="structMainBootloaderTable-t#a343fe9a0e426484556e26634c2c01a0a" class="el" >header</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Header of the Main Bootloader table. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a743537601f19d5c4d913cb80d0d74c7f"></a>
+uint32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="structMainBootloaderTable-t#a743537601f19d5c4d913cb80d0d74c7f" class="el" >size</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Size of the Main Bootloader. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7999ef70eb5dc2208ab070377f56b725"></a>
+<a href="structBareBootTable-t" class="el" >BareBootTable_t</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a href="structMainBootloaderTable-t#a7999ef70eb5dc2208ab070377f56b725" class="el" >startOfAppSpace</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Start address of the application. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1f61019694aea43b30681d55a723bd1"></a>
+uint32_t *&nbsp;</td><td class="memItemRight" valign="bottom"><a href="structMainBootloaderTable-t#ae1f61019694aea43b30681d55a723bd1" class="el" >endOfAppSpace</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">End address of the allocated application space. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f93bdb5b88b1494890f286d3715049b"></a>
+uint32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="structMainBootloaderTable-t#a5f93bdb5b88b1494890f286d3715049b" class="el" >capabilities</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Capabilities of the bootloader. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af81dcff32c3ea48a5ad4b199e90cac0d"></a>
+int32_t(*&nbsp;</td><td class="memItemRight" valign="bottom"><a href="structMainBootloaderTable-t#af81dcff32c3ea48a5ad4b199e90cac0d" class="el" >init</a> )(void)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize bootloader for use from application. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a332e2145a2d79d902cefacdb7992bb28"></a>
+int32_t(*&nbsp;</td><td class="memItemRight" valign="bottom"><a href="structMainBootloaderTable-t#a332e2145a2d79d902cefacdb7992bb28" class="el" >deinit</a> )(void)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Deinitialize bootloader after use from application. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a288ed03f59c8772e8ac50ff870a977"></a>
+bool(*&nbsp;</td><td class="memItemRight" valign="bottom"><a href="structMainBootloaderTable-t#a3a288ed03f59c8772e8ac50ff870a977" class="el" >verifyApplication</a> )(uint32_t startAddress)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Verify application. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f8acf36b5b116840cbbd35d01a92645"></a>
+int32_t(*&nbsp;</td><td class="memItemRight" valign="bottom"><a href="structMainBootloaderTable-t#a3f8acf36b5b116840cbbd35d01a92645" class="el" >initParser</a> )(<a href="group-ParserInterface#ga510a9c97d39ff194124c9f7f9c49edd9" class="el" >BootloaderParserContext_t</a> *context, size_t contextSize)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize parser. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64bd204ef6d0fe2c408791cec5174300"></a>
+int32_t(*&nbsp;</td><td class="memItemRight" valign="bottom"><a href="structMainBootloaderTable-t#a64bd204ef6d0fe2c408791cec5174300" class="el" >parseBuffer</a> )(<a href="group-ParserInterface#ga510a9c97d39ff194124c9f7f9c49edd9" class="el" >BootloaderParserContext_t</a> *context, const <a href="structBootloaderParserCallbacks-t" class="el" >BootloaderParserCallbacks_t</a> *callbacks, uint8_t data[], size_t numBytes)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Parse a buffer. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad528c2cd0416f2dc0dc17aa79ec8be78"></a>
+const <a href="group-StorageInterface#gaa89e144ac8860e6438fa05de6ef4339c" class="el" >BootloaderStorageFunctions_t</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a href="structMainBootloaderTable-t#ad528c2cd0416f2dc0dc17aa79ec8be78" class="el" >storage</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Function table for storage component. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c2ac4bbc50985f5e370ff4333b6161a"></a>
+int32_t(*&nbsp;</td><td class="memItemRight" valign="bottom"><a href="structMainBootloaderTable-t#a5c2ac4bbc50985f5e370ff4333b6161a" class="el" >parseImageInfo</a> )(<a href="group-ParserInterface#ga510a9c97d39ff194124c9f7f9c49edd9" class="el" >BootloaderParserContext_t</a> *context, uint8_t data[], size_t numBytes, <a href="group-ApplicationProperties#ga1443b85815ddfba3617ce100647e5461" class="el" >ApplicationData_t</a> *appInfo, uint32_t *bootloaderVersion)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Parse a buffer and get application and bootloader upgrade metadata from the buffer. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23b5404167ddbd408b6dfe268288a045"></a>
+uint32_t(*&nbsp;</td><td class="memItemRight" valign="bottom"><a href="structMainBootloaderTable-t#a23b5404167ddbd408b6dfe268288a045" class="el" >parserContextSize</a> )(void)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Size of context buffer used by bootloader image parser to store parser state. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad69cd3c39dc526c7b6991011d3ccb3a8"></a>
+uint32_t(*&nbsp;</td><td class="memItemRight" valign="bottom"><a href="structMainBootloaderTable-t#ad69cd3c39dc526c7b6991011d3ccb3a8" class="el" >remainingApplicationUpgrades</a> )(void)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Remaining number of application upgrades. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7c35f69814127bcfdafee902d85d53e"></a>
+void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a href="structMainBootloaderTable-t#ad7c35f69814127bcfdafee902d85d53e" class="el" >getPeripheralList</a> )(uint32_t *ppusatd0, uint32_t *ppusatd1)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the list of the peripheral that is used by the bootloader. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa64402a4b708fc6e858fa02d4dc39bc9"></a>
+uint32_t(*&nbsp;</td><td class="memItemRight" valign="bottom"><a href="structMainBootloaderTable-t#aa64402a4b708fc6e858fa02d4dc39bc9" class="el" >getUpgradeLocation</a> )(void)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get base address of bootloader upgrade image. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table>
+<hr>The documentation for this struct was generated from the following file:<ul>
+<li><code>btl_interface.h</code></li>
+</ul>
+</div>
+      </article>
+    </main>
+    <script type="text/javascript" src="https://docs.silabs.com/assets/script.js"></script>
+    <script type='text/javascript'>
+      var tldr = '/mcu-bootloader/2.1/';
+      var _map = '';
+    </script>
+        <script type="text/javascript">
+       try {
+        _satellite.pageBottom();
+       } catch(err) {
+        console.log("Adobe DTM (Analytics) _satellite has not been loaded. Is there any chance you're using an AdBlocker?");
+       }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160330710-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-160330710-1');
+</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <meta name="google" value="notranslate">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#444547">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="create-date" content="06/08/2022">
+<meta name="content-type" content="Software API documentation">
+<meta name="software-development-kits" content="32 bit MCU SDK">
+<meta name="product-line" content="Microcontrollers">
+<meta name="product-category" content="32-bit MCUs">
+<meta name="product-family" content="Gecko">
+<meta name="product-hierarchy" content="Microcontrollers,Microcontrollers|32-bit MCUs,Microcontrollers|32-bit MCUs|Gecko">
+<meta name="docs-hierarchy" content="Documents,Documents|MCU Bootloader,Documents|MCU Bootloader|v2.1,Documents|MCU Bootloader|Latest">
+    <title>Application Storage InterfaceApplication Interface - v2.1 - Gecko Bootloader API Documentation Silicon Labs</title>
+    <link rel="stylesheet" href="https://docs.silabs.com/assets/styles.css">
+    <script src="https://assets.adobedtm.com/0144d06d02c2/2c54aaf3cc70/launch-565181acbc03.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="search-bar">
+        <input class='search-input' placeholder="search" />
+        <input class='search-button' type='button'/>
+      </div>
+      <div class="menu-icon"></div>
+      <div class="container">
+        <a href='https://docs.silabs.com/'>docs.silabs.com</a>
+      </div>
+    </nav>
+    <nav class="menu nocontent">
+      <div class="top">
+        <a href='https://silabs.com' class="logo"></a>
+        <a href='https://docs.silabs.com/' class="home">docs.silabs.com</a>
+        <div class="search-bar">
+          <input class='search-input' placeholder="search" />
+          <input class='search-button' type='button'/>
+          <div class="search-site">
+            <h5>Search in:</h5>
+            <div class="search-site-selector"><span class="root" data-level='0'>docs</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <h3 id="gecko-bootloader-api-reference">Gecko Bootloader API Reference</h3><ul>
+<li><a href="index.html">Gecko Bootloader</a></li><li><a href="modules">API Documentation</a><ul>
+<li><a href="group-Interface">Application Interface</a><ul>
+<li><a href="group-ParserInterface">Application Parser Interface</a><ul>
+<li><a href="structBootloaderParserCallbacks-t">BootloaderParserCallbacks_t</a></li></ul>
+</li><li><a href="group-ApplicationProperties">Application Properties</a><ul>
+<li><a href="structApplicationData">ApplicationData</a></li><li><a href="structApplicationCertificate">ApplicationCertificate</a></li><li><a href="structApplicationProperties-t">ApplicationProperties_t</a></li></ul>
+</li><li><a href="group-StorageInterface">Application Storage Interface</a><ul>
+<li><a href="structBootloaderStorageSlot-t">BootloaderStorageSlot_t</a></li><li><a href="structBootloaderStorageImplementationInformation-t">BootloaderStorageImplementationInformation_t</a></li><li><a href="structBootloaderStorageInformation-t">BootloaderStorageInformation_t</a></li><li><a href="structBootloaderEraseStatus-t">BootloaderEraseStatus_t</a></li><li><a href="structBootloaderStorageFunctions">BootloaderStorageFunctions</a></li></ul>
+</li><li><a href="group-CommonInterface">Common Application Interface</a><ul>
+<li><a href="group-ResetInterface">Reset Information</a><ul>
+<li><a href="structBootloaderResetCause-t">BootloaderResetCause_t</a></li></ul>
+</li><li><a href="structBareBootTable-t">BareBootTable_t</a></li><li><a href="structBootloaderInformation-t">BootloaderInformation_t</a></li><li><a href="structBootloaderHeader-t">BootloaderHeader_t</a></li><li><a href="structFirstBootloaderTable-t">FirstBootloaderTable_t</a></li><li><a href="structMainBootloaderTable-t">MainBootloaderTable_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Core">Bootloader Core</a><ul>
+<li><a href="group-Bootload">Bootload</a></li><li><a href="group-Flash">Flash</a></li><li><a href="group-Reset">Reset</a></li><li><a href="group-TrustZone">TrustZone</a></li><li><a href="group-Upgrade">Upgrade</a></li></ul>
+</li><li><a href="group-Components">Components</a><ul>
+<li><a href="group-Communication">Communication</a><ul>
+<li><a href="group-CommunicationUtils">Utils</a><ul>
+<li><a href="group-Xmodem">XMODEM Parser</a><ul>
+<li><a href="group-Commands">Commands</a></li><li><a href="structXmodemPacket-t">XmodemPacket_t</a></li></ul>
+</li></ul>
+</li></ul>
+</li><li><a href="group-Debug">Debug</a></li><li><a href="group-Decompressor">Decompressor</a><ul>
+<li><a href="group-Lz4Decompressor">LZ4 Decompressor</a><ul>
+<li><a href="structLz4Context-t">Lz4Context_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-GpioActivation">GPIO Activation</a><ul>
+<li><a href="group-ButtonGPIO">Button GPIO</a></li><li><a href="group-EZSPGPIO">EZSP GPIO</a></li></ul>
+</li><li><a href="group-ImageParser">Image Parser</a><ul>
+<li><a href="group-GblParser">GBL Parser</a><ul>
+<li><a href="group-CustomTags">Custom GBL Tags</a><ul>
+<li><a href="group-Lz4ProgTag">LZ4 Programming Tag</a><ul>
+<li><a href="structLz4ParserContext-t">Lz4ParserContext_t</a></li></ul>
+</li><li><a href="group-LzmaProgTag">LZMA Programming Tag</a></li><li><a href="structGblCustomTag-t">GblCustomTag_t</a></li></ul>
+</li><li><a href="group-GblParserFormat">GBL Format</a><ul>
+<li><a href="structGblTagHeader-t">GblTagHeader_t</a></li><li><a href="structGblHeader-t">GblHeader_t</a></li><li><a href="structVersionDependency-t">VersionDependency_t</a></li><li><a href="structGblApplication-t">GblApplication_t</a></li><li><a href="structGblBootloader-t">GblBootloader_t</a></li><li><a href="structGblSeUpgrade-t">GblSeUpgrade_t</a></li><li><a href="structGblMetadata-t">GblMetadata_t</a></li><li><a href="structGblProg-t">GblProg_t</a></li><li><a href="structGblEnd-t">GblEnd_t</a></li><li><a href="structGblEncryptionInitAesCcm-t">GblEncryptionInitAesCcm_t</a></li><li><a href="structGblEncryptionData-t">GblEncryptionData_t</a></li><li><a href="structGblCertificateEcdsaP256-t">GblCertificateEcdsaP256_t</a></li><li><a href="structGblSignatureEcdsaP256-t">GblSignatureEcdsaP256_t</a></li></ul>
+</li><li><a href="structImageProperties-t">ImageProperties_t</a></li><li><a href="structParserContext-t">ParserContext_t</a></li><li><a href="structGblInputBuffer-t">GblInputBuffer_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Security">Security</a><ul>
+<li><a href="group-AES">AES</a><ul>
+<li><a href="structAesContext">AesContext</a></li><li><a href="structAesCtrContext">AesCtrContext</a></li></ul>
+</li><li><a href="group-CRC16">CRC16</a></li><li><a href="group-CRC32">CRC32</a></li><li><a href="group-Decryption">Decryption</a><ul>
+<li><a href="unionDecryptContext-t">DecryptContext_t</a></li><li><a href="unionAuthContext-t">AuthContext_t</a></li></ul>
+</li><li><a href="group-ECDSA">ECDSA</a><ul>
+<li><a href="group-ECC">ECC Library</a><ul>
+<li><a href="structECC-Point-t">ECC_Point_t</a></li><li><a href="structECC-EcdsaSignature-t">ECC_EcdsaSignature_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-SHA256">SHA256</a><ul>
+<li><a href="structbtl-sha256-context">btl_sha256_context</a></li></ul>
+</li><li><a href="group-SHA-256">SHA_256</a><ul>
+<li><a href="unionSha256Context">Sha256Context</a></li></ul>
+</li><li><a href="group-Tokens">Tokens</a></li></ul>
+</li><li><a href="group-Storage">Storage</a><ul>
+<li><a href="group-BootloadInfo">Bootload Info</a><ul>
+<li><a href="structBootloadInfo-t">BootloadInfo_t</a></li></ul>
+</li><li><a href="group-SpiflashConfigs">SPI Flash Configurations</a></li><li><a href="group-SpiflashConfigsSfdp">SPI Flash Configurations using SFDP</a></li><li><a href="structBootloaderStorageLayout-t">BootloaderStorageLayout_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Driver">Driver</a><ul>
+<li><a href="group-Delay">Delay</a></li><li><a href="group-Spi">SPI</a></li><li><a href="group-Spi-peripheral">SPI Peripheral</a></li><li><a href="group-UART">UART</a></li></ul>
+</li><li><a href="group-ErrorCodes">Error Codes</a><ul>
+<li><a href="group-BootloadError">Bootloading Error Codes</a></li><li><a href="group-CommunicationError">Communication Component Error Codes</a></li><li><a href="group-CompressionError">Compression Error Codes</a></li><li><a href="group-ErrorBases">Error Code Base Values</a></li><li><a href="group-ParserError">Image Parser Error Codes</a></li><li><a href="group-InitError">Initialization Error Codes</a></li><li><a href="group-ParseErrpr">Parse Error Codes</a></li><li><a href="group-SpiPeripheralError">SPI Peripheral Driver Error Codes</a></li><li><a href="group-SecurityError">Security Error Codes</a></li><li><a href="group-StorageError">Storage Driver Error Codes</a></li><li><a href="group-UartError">UART Driver Error Codes</a></li><li><a href="group-XmodemError">XMODEM Error Codes</a></li></ul>
+</li></ul>
+</li><li><a href="_version_history">Version History</a></li></ul>
+<h3 id="more-documentation"><a href="https://www.silabs.com/support/resources.ct-application-notes?query=%22gecko%20bootloader%22">More Documentation</a></h3>
+      </div>
+      <div id="split-bar"></div>
+    </nav>
+    <div class="overlay"></div>
+    <main class="content">
+      <article>
+        <p class="banner">You are viewing documentation for version: <em>2.1</em> | <a href="https://docs.silabs.com/mcu-bootloader/latest/version-history">Version History</a></p><div class="header">
+  
+  <div class="headertitle">
+  <h1 class="title">Application Storage InterfaceApplication Interface</h1></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Description</h2>
+<p>Application interface for interfacing with the bootloader storage. </p>
+<dl class="section note"><dt>Note</dt><dd>These Bootloader APIs are not reentrant and should be wrapped in critical section where needed.</dd></dl>
+<p>The Storage Interface is only available on bootloaders that declare they support <a href="group-CommonInterface#ga23fd85788bda58ea6e4f28eab4b74539" class="el" >BOOTLOADER_CAPABILITY_STORAGE</a>. </p>
+<table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structBootloaderStorageSlot-t" class="el" >BootloaderStorageSlot_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Information about a storage slot.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structBootloaderStorageImplementationInformation-t" class="el" >BootloaderStorageImplementationInformation_t</a></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structBootloaderStorageInformation-t" class="el" >BootloaderStorageInformation_t</a></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structBootloaderEraseStatus-t" class="el" >BootloaderEraseStatus_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Erase status struct.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structBootloaderStorageFunctions" class="el" >BootloaderStorageFunctions</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Storage API accessible from the application.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table><table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1775031079e1d33177fe3ac48a732336"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga1775031079e1d33177fe3ac48a732336" class="el" >BOOTLOADER_STORAGE_VERIFICATION_CONTEXT_SIZE</a>&nbsp;&nbsp;&nbsp;(384)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Context size for bootloader verification context. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1bef427efe4346330cd754c0d2e53bad"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga1bef427efe4346330cd754c0d2e53bad" class="el" >BOOTLOADER_STORAGE_INFO_VERSION</a>&nbsp;&nbsp;&nbsp;(0x30000U)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Current version of the <a href="structBootloaderStorageInformation-t" class="el" >BootloaderStorageInformation_t</a> struct. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa3ec112096e9442dff6c12b3adf7b7ca"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gaa3ec112096e9442dff6c12b3adf7b7ca" class="el" >BOOTLOADER_STORAGE_IMPL_INFO_VERSION</a>&nbsp;&nbsp;&nbsp;(0x0201U)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Current version of the <a href="structBootloaderStorageImplementationInformation-t" class="el" >BootloaderStorageImplementationInformation_t</a> struct. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1f4839ed2d057841b664d9b3a26f5246"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga1f4839ed2d057841b664d9b3a26f5246" class="el" >BOOTLOADER_STORAGE_IMPL_INFO_VERSION_MAJOR</a>&nbsp;&nbsp;&nbsp;(0x0200U)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Major version of the <a href="structBootloaderStorageImplementationInformation-t" class="el" >BootloaderStorageImplementationInformation_t</a> struct. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac2d221e19a293930ec7b2e915c21708b"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gac2d221e19a293930ec7b2e915c21708b" class="el" >BOOTLOADER_STORAGE_IMPL_INFO_VERSION_MAJOR_MASK</a>&nbsp;&nbsp;&nbsp;(0xFF00U)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Major version mask for <a href="group-StorageInterface#gaa3ec112096e9442dff6c12b3adf7b7ca" class="el" >BOOTLOADER_STORAGE_IMPL_INFO_VERSION</a>. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga329ca9f415fb1ba646d86eb67344f82a"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga329ca9f415fb1ba646d86eb67344f82a" class="el" >BOOTLOADER_STORAGE_IMPL_CAPABILITY_ERASE_SUPPORTED</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 0)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Spiflash capability indicating that it supports erase. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga2c8c8994d789e65d91aa9c5e0eea7f94"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga2c8c8994d789e65d91aa9c5e0eea7f94" class="el" >BOOTLOADER_STORAGE_IMPL_CAPABILITY_PAGE_ERASE_REQUIRED</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 1)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Spiflash capability indicating it requires full page erases before new data can be written. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1ec762d826e7358a9e099a0fec71fd09"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga1ec762d826e7358a9e099a0fec71fd09" class="el" >BOOTLOADER_STORAGE_IMPL_CAPABILITY_BLOCKING_WRITE</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 2)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Spiflash capability indicating that the write function is blocking. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab1b14dc36ecc7926f556019332c02808"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gab1b14dc36ecc7926f556019332c02808" class="el" >BOOTLOADER_STORAGE_IMPL_CAPABILITY_BLOCKING_ERASE</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 3)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Spiflash capability indicating that the erase function is blocking. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga89a23a934bc4aaf7f6ca0a05430676b4"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga89a23a934bc4aaf7f6ca0a05430676b4" class="el" >BOOTLOADER_STORAGE_ISSI_IS25LQ040B</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 0)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ISSI IS25LQ040B SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gace31901448725e2e1e03e93beb3a1bf0"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gace31901448725e2e1e03e93beb3a1bf0" class="el" >BOOTLOADER_STORAGE_ISSI_IS25LQ020B</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 1)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ISSI IS25LQ020B SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga21f4ecf3039af9a379920ddf173d67f9"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga21f4ecf3039af9a379920ddf173d67f9" class="el" >BOOTLOADER_STORAGE_ISSI_IS25LQ010B</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 2)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ISSI IS25LQ010B SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae086dcee51869265de841e5e593fd629"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gae086dcee51869265de841e5e593fd629" class="el" >BOOTLOADER_STORAGE_ISSI_IS25LQ512B</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 3)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ISSI IS25LQ512B SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac36aa2709d77629cf86c65b6cb9cdfca"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gac36aa2709d77629cf86c65b6cb9cdfca" class="el" >BOOTLOADER_STORAGE_ISSI_IS25LQ025B</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 4)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ISSI IS25LQ025B SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga74ef797dac863b9fd745f4364a399e33"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga74ef797dac863b9fd745f4364a399e33" class="el" >BOOTLOADER_STORAGE_NUMONYX_M25P16</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 5)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Numonyx M25P16 SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga65ad4a52742d6761a709e17f1512fc32"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga65ad4a52742d6761a709e17f1512fc32" class="el" >BOOTLOADER_STORAGE_NUMONYX_M25P80</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 6)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Numonyx M25P80 SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga90aa28406e5e0b11d03f17ad8a490636"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga90aa28406e5e0b11d03f17ad8a490636" class="el" >BOOTLOADER_STORAGE_NUMONYX_M25P40</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 7)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Numonyx M25P40 SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gada5780f101cd57896ae37e27e212b169"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gada5780f101cd57896ae37e27e212b169" class="el" >BOOTLOADER_STORAGE_NUMONYX_M25P20</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 8)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Numonyx M25P20 SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga9f6ece84f36078730315e90a728e5fe3"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga9f6ece84f36078730315e90a728e5fe3" class="el" >BOOTLOADER_STORAGE_ADESTO_AT25SF041</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 9)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adesto AT25SF041 SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gade5c12604d579e070ea8992ee2ccc6ec"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gade5c12604d579e070ea8992ee2ccc6ec" class="el" >BOOTLOADER_STORAGE_ATMEL_AT25DF081A</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 10)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Atmel AT25DF081A SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga4aeac11fb2feacfafc8d52cd447c0aee"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga4aeac11fb2feacfafc8d52cd447c0aee" class="el" >BOOTLOADER_STORAGE_ATMEL_AT25DF041A</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 11)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Atmel AT25DF041A SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga01071ece591f45bc7f98e9d1843c3235"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga01071ece591f45bc7f98e9d1843c3235" class="el" >BOOTLOADER_STORAGE_MACRONIX_MX25R6435F</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 12)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macronix MX25R6435F SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga5918dcd0866c489a0e7effc0ee223b03"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga5918dcd0866c489a0e7effc0ee223b03" class="el" >BOOTLOADER_STORAGE_MACRONIX_MX25R3235F</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 13)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macronix MX25R6435F SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3cdbbad3a48c7c2ea276aca6dd6943b0"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga3cdbbad3a48c7c2ea276aca6dd6943b0" class="el" >BOOTLOADER_STORAGE_MACRONIX_MX25U1635E</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 14)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macronix MX25U1635E SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1ac5702bc7975cbf146631e8478fcc5b"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga1ac5702bc7975cbf146631e8478fcc5b" class="el" >BOOTLOADER_STORAGE_MACRONIX_MX25L1606E</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 15)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macronix MX25L1606E SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga33d29c2b5f6c405f96aad815dacd8a31"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga33d29c2b5f6c405f96aad815dacd8a31" class="el" >BOOTLOADER_STORAGE_MACRONIX_MX25R8035F</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 16)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macronix MX25R8035F SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaad1e80df00cee930c8250d65ad52e9a3"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gaad1e80df00cee930c8250d65ad52e9a3" class="el" >BOOTLOADER_STORAGE_MACRONIX_MX25L8006E</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 17)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macronix MX25L8006E SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga42624d8b6553da30e0c68284d4ceb782"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga42624d8b6553da30e0c68284d4ceb782" class="el" >BOOTLOADER_STORAGE_MACRONIX_MX25L4006E</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 18)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macronix MX25L4006E SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga5f4a15d269209ef1bd77f6c5194290bc"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga5f4a15d269209ef1bd77f6c5194290bc" class="el" >BOOTLOADER_STORAGE_MACRONIX_MX25L2006E</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 19)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macronix MX25L2006E SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga38c9872afdf45ca9540c8bdaf3355d57"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga38c9872afdf45ca9540c8bdaf3355d57" class="el" >BOOTLOADER_STORAGE_WINBOND_W25Q80BV</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 20)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Winbond W25Q80BV SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7254ae04f1dd5acb778e128b26085813"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga7254ae04f1dd5acb778e128b26085813" class="el" >BOOTLOADER_STORAGE_WINBOND_W25X20BV</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 21)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Winbond W25X20BV SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga510f44f8be7623f06b904cc64e33b567"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga510f44f8be7623f06b904cc64e33b567" class="el" >BOOTLOADER_STORAGE_SPANSION_S25FL208K</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 22)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Spansion S25L208K SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab70028bd101afe76da3f36fa70dea08b"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gab70028bd101afe76da3f36fa70dea08b" class="el" >BOOTLOADER_STORAGE_INTERNAL_STORAGE</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 30)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Internal storage. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga091e19e11190fb1efa5abd29fce739f6"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga091e19e11190fb1efa5abd29fce739f6" class="el" >BOOTLOADER_STORAGE_JEDEC</a>&nbsp;&nbsp;&nbsp;(1 &lt;&lt; 31)</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">JEDEC Supported SPI Flash. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table><table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa89e144ac8860e6438fa05de6ef4339c"></a>
+typedef struct <a href="structBootloaderStorageFunctions" class="el" >BootloaderStorageFunctions</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gaa89e144ac8860e6438fa05de6ef4339c" class="el" >BootloaderStorageFunctions_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Storage API accessible from the application. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table><table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gac5a52f72db78d655840177f0e034d37c" class="el" >BootloaderStorageType_t</a> { <br>
+&nbsp;&nbsp;<a href="group-StorageInterface#ggac5a52f72db78d655840177f0e034d37caaf1113ff5007b46ad4e50ef301ed299b" class="el" >SPIFLASH</a>, 
+<br>
+&nbsp;&nbsp;<a href="group-StorageInterface#ggac5a52f72db78d655840177f0e034d37ca5e341ba74bb0afd21095eabe0f8eba9b" class="el" >INTERNAL_FLASH</a>, 
+<br>
+&nbsp;&nbsp;<a href="group-StorageInterface#ggac5a52f72db78d655840177f0e034d37caf9a807703d9b9e307e6cde5ac7a63164" class="el" >CUSTOM_STORAGE</a>
+<br>
+ }</td></tr><tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Possible storage types.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+
+</tbody></table><table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gafc4cc80fcbb0bfea595915b11a6b5828" class="el" >bootloader_getStorageInfo</a> (<a href="structBootloaderStorageInformation-t" class="el" >BootloaderStorageInformation_t</a> *info)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga08d0906c70cd68f8119b8f11319cc5ff" class="el" >bootloader_getStorageSlotInfo</a> (uint32_t slotId, <a href="structBootloaderStorageSlot-t" class="el" >BootloaderStorageSlot_t</a> *slot)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gacd7f4e8b6bba7fd8689a9a2da9511afd" class="el" >bootloader_readStorage</a> (uint32_t slotId, uint32_t offset, uint8_t *buffer, size_t length)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga86dae5018d8726a68dd826240d8f2c52" class="el" >bootloader_writeStorage</a> (uint32_t slotId, uint32_t offset, uint8_t *buffer, size_t length)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gafec82c0010c632b0c9cecc1cdf393cc2" class="el" >bootloader_eraseWriteStorage</a> (uint32_t slotId, uint32_t offset, uint8_t *buffer, size_t length)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gae14880e1483f25bd67f1b96e5345862f" class="el" >bootloader_eraseStorageSlot</a> (uint32_t slotId)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gaf73aff5099338a5ecf5d38197dfee5d3" class="el" >bootloader_initChunkedEraseStorageSlot</a> (uint32_t slotId, <a href="structBootloaderEraseStatus-t" class="el" >BootloaderEraseStatus_t</a> *eraseStat)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gaa00cc123780c7655385b8c7b6a9f6e31" class="el" >bootloader_chunkedEraseStorageSlot</a> (<a href="structBootloaderEraseStatus-t" class="el" >BootloaderEraseStatus_t</a> *eraseStat)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga8e20baecb19424efaa667248b851d991" class="el" >bootloader_setImagesToBootload</a> (int32_t *slotIds, size_t length)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gafb9569405337cf6a8bec987bf96705c7" class="el" >bootloader_getImagesToBootload</a> (int32_t *slotIds, size_t length)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga833f0a3ed32c054d48e564d2fd5082aa" class="el" >bootloader_appendImageToBootloadList</a> (int32_t slotId)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gaf4c61349c24dca22a52ba3de71ffe7ee" class="el" >bootloader_setImageToBootload</a> (int32_t slotId)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gad375581d8a53e23db490a4bc0e9a9fb2" class="el" >bootloader_initVerifyImage</a> (uint32_t slotId, void *context, size_t contextSize)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga83dbc153b4d054dfe8ccfec6a0c7adbc" class="el" >bootloader_continueVerifyImage</a> (void *context, <a href="group-ParserInterface#gab0f1ad6d1628b642d6574e191a60df2c" class="el" >BootloaderParserCallback_t</a> metadataCallback)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gaa292326b7370d02f99702ce3b17b9cfc" class="el" >bootloader_verifyImage</a> (uint32_t slotId, <a href="group-ParserInterface#gab0f1ad6d1628b642d6574e191a60df2c" class="el" >BootloaderParserCallback_t</a> metadataCallback)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga67eb1e49eeb811780051441399b0cac0" class="el" >bootloader_getImageInfo</a> (uint32_t slotId, <a href="group-ApplicationProperties#ga1443b85815ddfba3617ce100647e5461" class="el" >ApplicationData_t</a> *appInfo, uint32_t *bootloaderVersion)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga60cb9344aa4453edf0bc73f18029d389" class="el" >bootloader_storageIsBusy</a> (void)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gabbd1d9bfd1f9a87cc1599ce0354cb405" class="el" >bootloader_readRawStorage</a> (uint32_t address, uint8_t *buffer, size_t length)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gae70235e890e250a27b93c8ec00bc982e" class="el" >bootloader_writeRawStorage</a> (uint32_t address, uint8_t *buffer, size_t length)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#gab2f888bce5340da23d5febfb94f65017" class="el" >bootloader_eraseRawStorage</a> (uint32_t address, size_t length)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-StorageInterface#ga78bf5d2c543bb87052217f4708a16571" class="el" >bootloader_getAllocatedDMAChannel</a> (void)</td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="gac5a52f72db78d655840177f0e034d37c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">enum <a href="group-StorageInterface#gac5a52f72db78d655840177f0e034d37c" class="el" >BootloaderStorageType_t</a></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Possible storage types. </p>
+<table class="fieldtable">
+<tbody><tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggac5a52f72db78d655840177f0e034d37caaf1113ff5007b46ad4e50ef301ed299b"></a>SPIFLASH&nbsp;</td><td class="fielddoc">
+<p>Storage backend is a SPI flash. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggac5a52f72db78d655840177f0e034d37ca5e341ba74bb0afd21095eabe0f8eba9b"></a>INTERNAL_FLASH&nbsp;</td><td class="fielddoc">
+<p>Storage backend is internal flash. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggac5a52f72db78d655840177f0e034d37caf9a807703d9b9e307e6cde5ac7a63164"></a>CUSTOM_STORAGE&nbsp;</td><td class="fielddoc">
+<p>Storage backend is custom. </p>
+</td></tr>
+</tbody></table>
+
+<p>Definition at line <code>44</code> of file <code>btl_interface_storage.h</code>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gafc4cc80fcbb0bfea595915b11a6b5828"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void bootloader_getStorageInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a href="structBootloaderStorageInformation-t" class="el" >BootloaderStorageInformation_t</a> *&nbsp;</td>
+          <td class="paramname"><code>info</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Get information about the storage component.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[out]</td><td class="paramname"><code>info</code></td><td>Information about the storage component. </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga08d0906c70cd68f8119b8f11319cc5ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_getStorageSlotInfo </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>slotId, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a href="structBootloaderStorageSlot-t" class="el" >BootloaderStorageSlot_t</a> *&nbsp;</td>
+          <td class="paramname"><code>slot&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Get information about a storage slot.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>slotId</code></td><td>ID of the slot to get information about </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname"><code>slot</code></td><td>Information about the storage slot</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> on success, else error code in <a href="group-ErrorBases#ga6e7d9953864f32fd1a1121ffd6f1f86e" class="el" >BOOTLOADER_ERROR_STORAGE_BASE</a> range </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gacd7f4e8b6bba7fd8689a9a2da9511afd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_readStorage </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>slotId, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>offset, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&nbsp;</td>
+          <td class="paramname"><code>buffer, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"><code>length&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Read data from a storage slot.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>slotId</code></td><td>ID of the slot </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>offset</code></td><td>Offset into the slot to start reading from </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname"><code>buffer</code></td><td>Buffer to store the data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>length</code></td><td>Amount of data to read</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> on success, else error code in <a href="group-ErrorBases#ga6e7d9953864f32fd1a1121ffd6f1f86e" class="el" >BOOTLOADER_ERROR_STORAGE_BASE</a> range </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga86dae5018d8726a68dd826240d8f2c52"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_writeStorage </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>slotId, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>offset, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&nbsp;</td>
+          <td class="paramname"><code>buffer, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"><code>length&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Write data to a storage slot.</p>
+<dl class="section note"><dt>Note</dt><dd>If DMA-based MSC write is enabled on the bootloader, writing data from flash to flash is not supported on Series-1 devices.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>slotId</code></td><td>ID of the slot </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>offset</code></td><td>Offset into the slot to start writing to </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>buffer</code></td><td>Buffer to read data to write from </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>length</code></td><td>Amount of data to write</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> on success, else error code in <a href="group-ErrorBases#ga6e7d9953864f32fd1a1121ffd6f1f86e" class="el" >BOOTLOADER_ERROR_STORAGE_BASE</a> range </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gafec82c0010c632b0c9cecc1cdf393cc2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_eraseWriteStorage </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>slotId, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>offset, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&nbsp;</td>
+          <td class="paramname"><code>buffer, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"><code>length&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Erase and write data to a storage slot.</p>
+<dl class="section note"><dt>Note</dt><dd>This function automatically erases the following Flash page whenever the written data crosses a page boundary. In other words, the function can't be used to perform multiple sequential writes to the same address range unless the range starts at a page boundary. For a sequential write, the first call to this function should have a start address at a page boundary. Otherwise, the corresponding page of the starting address needs to be erased explicitly. If DMA-based MSC write is enabled on the bootloader, writing data from flash to flash is not supported on Series-1 devices.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>slotId</code></td><td>ID of the slot </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>offset</code></td><td>Offset into the slot to start writing to </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>buffer</code></td><td>Buffer to read data to write from </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>length</code></td><td>Amount of data to write</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> on success, else error code in <a href="group-ErrorBases#ga6e7d9953864f32fd1a1121ffd6f1f86e" class="el" >BOOTLOADER_ERROR_STORAGE_BASE</a> range </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae14880e1483f25bd67f1b96e5345862f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_eraseStorageSlot </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>slotId</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Erase all contents of a storage slot.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>slotId</code></td><td>ID of the slot</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> on success, else error code in <a href="group-ErrorBases#ga6e7d9953864f32fd1a1121ffd6f1f86e" class="el" >BOOTLOADER_ERROR_STORAGE_BASE</a> range </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf73aff5099338a5ecf5d38197dfee5d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_initChunkedEraseStorageSlot </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>slotId, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a href="structBootloaderEraseStatus-t" class="el" >BootloaderEraseStatus_t</a> *&nbsp;</td>
+          <td class="paramname"><code>eraseStat&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Initialize chunked erase of a storage slot.</p>
+<dl class="section note"><dt>Note</dt><dd>This function must be called before calling <a href="group-StorageInterface#gaa00cc123780c7655385b8c7b6a9f6e31" class="el" >bootloader_chunkedEraseStorageSlot</a> in a loop.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>slotId</code></td><td>ID of the slot </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>eraseStat</code></td><td>Erase status struct</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> on success, else error code in <a href="group-ErrorBases#ga6e7d9953864f32fd1a1121ffd6f1f86e" class="el" >BOOTLOADER_ERROR_STORAGE_BASE</a> range </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaa00cc123780c7655385b8c7b6a9f6e31"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_chunkedEraseStorageSlot </td>
+          <td>(</td>
+          <td class="paramtype"><a href="structBootloaderEraseStatus-t" class="el" >BootloaderEraseStatus_t</a> *&nbsp;</td>
+          <td class="paramname"><code>eraseStat</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Erase one page from a storage slot according to the struct <a href="structBootloaderEraseStatus-t" class="el"  title="Erase status struct. ">BootloaderEraseStatus_t</a>.</p>
+<dl class="section note"><dt>Note</dt><dd><a href="group-StorageInterface#gaf73aff5099338a5ecf5d38197dfee5d3" class="el" >bootloader_initChunkedEraseStorageSlot</a> must be called before calling this function, in order to prepare <a href="structBootloaderEraseStatus-t" class="el"  title="Erase status struct. ">BootloaderEraseStatus_t</a>.</dd>
+<dd>
+This can be called sequentially to, for example, erase all contents of a storage slot.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>eraseStat</code></td><td>Erase status struct</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-StorageError#gaeac81825509da898982068a540ac0688" class="el" >BOOTLOADER_ERROR_STORAGE_CONTINUE</a> if erasing a page was successful. Erase can be continued by calling this function again. <a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> if the entire slot has been erased, else error code in <a href="group-ErrorBases#ga6e7d9953864f32fd1a1121ffd6f1f86e" class="el" >BOOTLOADER_ERROR_STORAGE_BASE</a> range </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8e20baecb19424efaa667248b851d991"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_setImagesToBootload </td>
+          <td>(</td>
+          <td class="paramtype">int32_t *&nbsp;</td>
+          <td class="paramname"><code>slotIds, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"><code>length&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Set a prioritized list of images to attempt to bootload. The last call to this function determines which slot will be installed when <a href="group-CommonInterface#ga100dba06fa6561f27e924e6eb56cfa47" class="el" >bootloader_rebootAndInstall</a> is called.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>slotIds</code></td><td>Prioritized list of slot IDs to attempt to bootload. The first image to pass verification will be bootloaded. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>length</code></td><td>Length of the slotIds array</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> on success, else error code in <a href="group-ErrorBases#ga492697ebcf2e05f405a905f607332df1" class="el" >BOOTLOADER_ERROR_BOOTLOAD_BASE</a> range </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gafb9569405337cf6a8bec987bf96705c7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_getImagesToBootload </td>
+          <td>(</td>
+          <td class="paramtype">int32_t *&nbsp;</td>
+          <td class="paramname"><code>slotIds, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"><code>length&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Get the prioritized list of images the bootloader will attempt to bootload.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[out]</td><td class="paramname"><code>slotIds</code></td><td>Prioritized list of slot IDs to attempt to bootload. The first image to pass verification will be bootloaded. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>length</code></td><td>Length of the slotIds array</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> on success, else error code in <a href="group-ErrorBases#ga492697ebcf2e05f405a905f607332df1" class="el" >BOOTLOADER_ERROR_BOOTLOAD_BASE</a> range </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga833f0a3ed32c054d48e564d2fd5082aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_appendImageToBootloadList </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&nbsp;</td>
+          <td class="paramname"><code>slotId</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Append a single image to the list of images to attempt to bootload.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>slotId</code></td><td>ID of the slot to append</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> on success, else error code in <a href="group-ErrorBases#ga492697ebcf2e05f405a905f607332df1" class="el" >BOOTLOADER_ERROR_BOOTLOAD_BASE</a> range </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf4c61349c24dca22a52ba3de71ffe7ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_setImageToBootload </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&nbsp;</td>
+          <td class="paramname"><code>slotId</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Set a single image to attempt to bootload.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>slotId</code></td><td>ID of the slot</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> on success, else error code in <a href="group-ErrorBases#ga492697ebcf2e05f405a905f607332df1" class="el" >BOOTLOADER_ERROR_BOOTLOAD_BASE</a> range </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gad375581d8a53e23db490a4bc0e9a9fb2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_initVerifyImage </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>slotId, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"><code>context, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"><code>contextSize&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Initialize image verification.</p>
+<p>Initialize verification of an upgrade image stored in a bootloader storage slot.</p>
+<dl class="section note"><dt>Note</dt><dd>This function must be called before calling <a href="group-StorageInterface#ga83dbc153b4d054dfe8ccfec6a0c7adbc" class="el" >bootloader_continueVerifyImage</a> in a loop.</dd>
+<dd>
+The context pointer must point to memory allocated by the caller. The required size of this context may depend on the version of the bootloader. The required size for the bootloader associated with this version of the application interface is given by the define <a href="group-StorageInterface#ga1775031079e1d33177fe3ac48a732336" class="el" >BOOTLOADER_STORAGE_VERIFICATION_CONTEXT_SIZE</a>.</dd>
+<dd>
+Instead of calling <a href="group-StorageInterface#gad375581d8a53e23db490a4bc0e9a9fb2" class="el" >bootloader_initVerifyImage</a> followed by <a href="group-StorageInterface#ga83dbc153b4d054dfe8ccfec6a0c7adbc" class="el" >bootloader_continueVerifyImage</a>, call <a href="group-StorageInterface#gaa292326b7370d02f99702ce3b17b9cfc" class="el" >bootloader_verifyImage</a> if no time-critical tasks are needed and sufficient stack space is available for the automatically allocated context. The purpose of the init-and-continue functions is to allow the caller to service system needs during verification.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>slotId</code></td><td>ID of the slot to check. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname"><code>context</code></td><td>Pointer to memory used to hold the parser context. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>contextSize</code></td><td>Size of the context. An error is returned if the supplied context is too small.</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> if the image parser was initialized, else error code. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga83dbc153b4d054dfe8ccfec6a0c7adbc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_continueVerifyImage </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"><code>context, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a href="group-ParserInterface#gab0f1ad6d1628b642d6574e191a60df2c" class="el" >BootloaderParserCallback_t</a>&nbsp;</td>
+          <td class="paramname"><code>metadataCallback&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Continue image verification.</p>
+<p>Continue verification of an upgrade image stored in a bootloader storage slot.</p>
+<dl class="section note"><dt>Note</dt><dd>This function must be called in a loop until anything other than <a href="group-ParseErrpr#gab13b4da5c5b50b81cbd699c61b2efab7" class="el" >BOOTLOADER_ERROR_PARSE_CONTINUE</a> is returned.</dd>
+<dd>
+<a href="group-StorageInterface#gad375581d8a53e23db490a4bc0e9a9fb2" class="el" >bootloader_initVerifyImage</a> must be called before calling this function to reset the parser.</dd>
+<dd>
+Instead of calling <a href="group-StorageInterface#gad375581d8a53e23db490a4bc0e9a9fb2" class="el" >bootloader_initVerifyImage</a> followed by <a href="group-StorageInterface#ga83dbc153b4d054dfe8ccfec6a0c7adbc" class="el" >bootloader_continueVerifyImage</a>, call <a href="group-StorageInterface#gaa292326b7370d02f99702ce3b17b9cfc" class="el" >bootloader_verifyImage</a> if no time-critical tasks are needed. The purpose of the init-and-continue functions is to allow the caller to service system needs during verification.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir"></td><td class="paramname"><code>context</code></td><td>Pointer to a context structure that has been initialized by calling <a href="group-StorageInterface#gad375581d8a53e23db490a4bc0e9a9fb2" class="el" >bootloader_initVerifyImage()</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>metadataCallback</code></td><td>Function pointer, which is called when the binary metadata in the image is currently verified. Set to NULL if not required.</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ParseErrpr#gab13b4da5c5b50b81cbd699c61b2efab7" class="el" >BOOTLOADER_ERROR_PARSE_CONTINUE</a> if parsing was successful, and the parser expects more data. <a href="group-ParseErrpr#ga22675de53139d1378f7be438a06c66d4" class="el" >BOOTLOADER_ERROR_PARSE_SUCCESS</a> if the parser has successfully parsed the image and it passes verification. Else error code. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaa292326b7370d02f99702ce3b17b9cfc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_verifyImage </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>slotId, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a href="group-ParserInterface#gab0f1ad6d1628b642d6574e191a60df2c" class="el" >BootloaderParserCallback_t</a>&nbsp;</td>
+          <td class="paramname"><code>metadataCallback&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Verify that the image in the given storage slot is valid.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>slotId</code></td><td>ID of the slot to check </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>metadataCallback</code></td><td>Function pointer, which is called when binary metadata is present in the storage slot. Set to NULL if not required.</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function allocates a context structure of the size given by <a href="group-StorageInterface#ga1775031079e1d33177fe3ac48a732336" class="el" >BOOTLOADER_STORAGE_VERIFICATION_CONTEXT_SIZE</a> on the caller's stack. To manage memory and allocate the context elsewhere (on the heap, as a global variable, and so on), use <a href="group-StorageInterface#gad375581d8a53e23db490a4bc0e9a9fb2" class="el" >bootloader_initVerifyImage</a> and <a href="group-StorageInterface#ga83dbc153b4d054dfe8ccfec6a0c7adbc" class="el" >bootloader_continueVerifyImage</a> functions instead.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> if the image is valid, else error code. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga67eb1e49eeb811780051441399b0cac0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_getImageInfo </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>slotId, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a href="group-ApplicationProperties#ga1443b85815ddfba3617ce100647e5461" class="el" >ApplicationData_t</a> *&nbsp;</td>
+          <td class="paramname"><code>appInfo, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *&nbsp;</td>
+          <td class="paramname"><code>bootloaderVersion&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Get application and bootloader upgrade metadata from the storage slot.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>slotId</code></td><td>ID of the slot to check </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname"><code>appInfo</code></td><td>Pointer to <a href="group-ApplicationProperties#ga1443b85815ddfba3617ce100647e5461" class="el" >ApplicationData_t</a> struct </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname"><code>bootloaderVersion</code></td><td>Pointer to an integer representing bootloader version</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> if metadata was filled successfully </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga60cb9344aa4453edf0bc73f18029d389"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">bool bootloader_storageIsBusy </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"><code></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Check whether the bootloader storage is busy.</p>
+<dl class="section return"><dt>Returns</dt><dd>True if the storage is busy </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gabbd1d9bfd1f9a87cc1599ce0354cb405"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_readRawStorage </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>address, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&nbsp;</td>
+          <td class="paramname"><code>buffer, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"><code>length&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Read raw data from storage.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>address</code></td><td>Address to start reading from </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname"><code>buffer</code></td><td>Buffer to store the data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>length</code></td><td>Amount of data to read</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> on success, else error code in <a href="group-ErrorBases#ga6e7d9953864f32fd1a1121ffd6f1f86e" class="el" >BOOTLOADER_ERROR_STORAGE_BASE</a> range </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae70235e890e250a27b93c8ec00bc982e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_writeRawStorage </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>address, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&nbsp;</td>
+          <td class="paramname"><code>buffer, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"><code>length&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Write data to storage.</p>
+<dl class="section note"><dt>Note</dt><dd>If DMA-based MSC write is enabled on the bootloader, writing data from flash to flash is not supported on Series-1 devices.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>address</code></td><td>Address to start writing to </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>buffer</code></td><td>Buffer to read data to write from </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>length</code></td><td>Amount of data to write</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> on success, else error code in <a href="group-ErrorBases#ga6e7d9953864f32fd1a1121ffd6f1f86e" class="el" >BOOTLOADER_ERROR_STORAGE_BASE</a> range </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab2f888bce5340da23d5febfb94f65017"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_eraseRawStorage </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><code>address, </code></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"><code>length&nbsp;</code></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Erase data from storage.</p>
+<dl class="section note"><dt>Note</dt><dd>Erasing storage must adhere to the limitations of the underlying storage medium, such as requiring full page erases. Use <a href="group-StorageInterface#gafc4cc80fcbb0bfea595915b11a6b5828" class="el" >bootloader_getStorageInfo</a> to learn about the limitations of the configured storage medium.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramdir">[in]</td><td class="paramname"><code>address</code></td><td>Address to start erasing from </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><code>length</code></td><td>Length of data to erase</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a href="group-ErrorCodes#gaf5e631186d857be458f4bdb824db1884" class="el" >BOOTLOADER_OK</a> on success, else error code in <a href="group-ErrorBases#ga6e7d9953864f32fd1a1121ffd6f1f86e" class="el" >BOOTLOADER_ERROR_STORAGE_BASE</a> range </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga78bf5d2c543bb87052217f4708a16571"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int32_t bootloader_getAllocatedDMAChannel </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"><code></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+<p>Get allocated DMA channel for MSC write.</p>
+<dl class="section return"><dt>Returns</dt><dd>A positive number channel. -1 if DMA-based MSC write is not enabled. Otherwise, the error code BOOTLOADER_ERROR_INIT_STORAGE. </dd></dl>
+
+</div>
+</div>
+</div>
+      </article>
+    </main>
+    <script type="text/javascript" src="https://docs.silabs.com/assets/script.js"></script>
+    <script type='text/javascript'>
+      var tldr = '/mcu-bootloader/2.1/';
+      var _map = '';
+    </script>
+        <script type="text/javascript">
+       try {
+        _satellite.pageBottom();
+       } catch(err) {
+        console.log("Adobe DTM (Analytics) _satellite has not been loaded. Is there any chance you're using an AdBlocker?");
+       }
+    </script>
+  </body>
+</html>

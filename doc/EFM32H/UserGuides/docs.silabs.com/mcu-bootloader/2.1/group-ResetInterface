@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160330710-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-160330710-1');
+</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <meta name="google" value="notranslate">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#444547">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="create-date" content="06/08/2022">
+<meta name="content-type" content="Software API documentation">
+<meta name="software-development-kits" content="32 bit MCU SDK">
+<meta name="product-line" content="Microcontrollers">
+<meta name="product-category" content="32-bit MCUs">
+<meta name="product-family" content="Gecko">
+<meta name="product-hierarchy" content="Microcontrollers,Microcontrollers|32-bit MCUs,Microcontrollers|32-bit MCUs|Gecko">
+<meta name="docs-hierarchy" content="Documents,Documents|MCU Bootloader,Documents|MCU Bootloader|v2.1,Documents|MCU Bootloader|Latest">
+    <title>Reset InformationApplication Interface &gt; Common Application Interface - v2.1 - Gecko Bootloader API Documentation Silicon Labs</title>
+    <link rel="stylesheet" href="https://docs.silabs.com/assets/styles.css">
+    <script src="https://assets.adobedtm.com/0144d06d02c2/2c54aaf3cc70/launch-565181acbc03.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="search-bar">
+        <input class='search-input' placeholder="search" />
+        <input class='search-button' type='button'/>
+      </div>
+      <div class="menu-icon"></div>
+      <div class="container">
+        <a href='https://docs.silabs.com/'>docs.silabs.com</a>
+      </div>
+    </nav>
+    <nav class="menu nocontent">
+      <div class="top">
+        <a href='https://silabs.com' class="logo"></a>
+        <a href='https://docs.silabs.com/' class="home">docs.silabs.com</a>
+        <div class="search-bar">
+          <input class='search-input' placeholder="search" />
+          <input class='search-button' type='button'/>
+          <div class="search-site">
+            <h5>Search in:</h5>
+            <div class="search-site-selector"><span class="root" data-level='0'>docs</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <h3 id="gecko-bootloader-api-reference">Gecko Bootloader API Reference</h3><ul>
+<li><a href="index.html">Gecko Bootloader</a></li><li><a href="modules">API Documentation</a><ul>
+<li><a href="group-Interface">Application Interface</a><ul>
+<li><a href="group-ParserInterface">Application Parser Interface</a><ul>
+<li><a href="structBootloaderParserCallbacks-t">BootloaderParserCallbacks_t</a></li></ul>
+</li><li><a href="group-ApplicationProperties">Application Properties</a><ul>
+<li><a href="structApplicationData">ApplicationData</a></li><li><a href="structApplicationCertificate">ApplicationCertificate</a></li><li><a href="structApplicationProperties-t">ApplicationProperties_t</a></li></ul>
+</li><li><a href="group-StorageInterface">Application Storage Interface</a><ul>
+<li><a href="structBootloaderStorageSlot-t">BootloaderStorageSlot_t</a></li><li><a href="structBootloaderStorageImplementationInformation-t">BootloaderStorageImplementationInformation_t</a></li><li><a href="structBootloaderStorageInformation-t">BootloaderStorageInformation_t</a></li><li><a href="structBootloaderEraseStatus-t">BootloaderEraseStatus_t</a></li><li><a href="structBootloaderStorageFunctions">BootloaderStorageFunctions</a></li></ul>
+</li><li><a href="group-CommonInterface">Common Application Interface</a><ul>
+<li><a href="group-ResetInterface">Reset Information</a><ul>
+<li><a href="structBootloaderResetCause-t">BootloaderResetCause_t</a></li></ul>
+</li><li><a href="structBareBootTable-t">BareBootTable_t</a></li><li><a href="structBootloaderInformation-t">BootloaderInformation_t</a></li><li><a href="structBootloaderHeader-t">BootloaderHeader_t</a></li><li><a href="structFirstBootloaderTable-t">FirstBootloaderTable_t</a></li><li><a href="structMainBootloaderTable-t">MainBootloaderTable_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Core">Bootloader Core</a><ul>
+<li><a href="group-Bootload">Bootload</a></li><li><a href="group-Flash">Flash</a></li><li><a href="group-Reset">Reset</a></li><li><a href="group-TrustZone">TrustZone</a></li><li><a href="group-Upgrade">Upgrade</a></li></ul>
+</li><li><a href="group-Components">Components</a><ul>
+<li><a href="group-Communication">Communication</a><ul>
+<li><a href="group-CommunicationUtils">Utils</a><ul>
+<li><a href="group-Xmodem">XMODEM Parser</a><ul>
+<li><a href="group-Commands">Commands</a></li><li><a href="structXmodemPacket-t">XmodemPacket_t</a></li></ul>
+</li></ul>
+</li></ul>
+</li><li><a href="group-Debug">Debug</a></li><li><a href="group-Decompressor">Decompressor</a><ul>
+<li><a href="group-Lz4Decompressor">LZ4 Decompressor</a><ul>
+<li><a href="structLz4Context-t">Lz4Context_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-GpioActivation">GPIO Activation</a><ul>
+<li><a href="group-ButtonGPIO">Button GPIO</a></li><li><a href="group-EZSPGPIO">EZSP GPIO</a></li></ul>
+</li><li><a href="group-ImageParser">Image Parser</a><ul>
+<li><a href="group-GblParser">GBL Parser</a><ul>
+<li><a href="group-CustomTags">Custom GBL Tags</a><ul>
+<li><a href="group-Lz4ProgTag">LZ4 Programming Tag</a><ul>
+<li><a href="structLz4ParserContext-t">Lz4ParserContext_t</a></li></ul>
+</li><li><a href="group-LzmaProgTag">LZMA Programming Tag</a></li><li><a href="structGblCustomTag-t">GblCustomTag_t</a></li></ul>
+</li><li><a href="group-GblParserFormat">GBL Format</a><ul>
+<li><a href="structGblTagHeader-t">GblTagHeader_t</a></li><li><a href="structGblHeader-t">GblHeader_t</a></li><li><a href="structVersionDependency-t">VersionDependency_t</a></li><li><a href="structGblApplication-t">GblApplication_t</a></li><li><a href="structGblBootloader-t">GblBootloader_t</a></li><li><a href="structGblSeUpgrade-t">GblSeUpgrade_t</a></li><li><a href="structGblMetadata-t">GblMetadata_t</a></li><li><a href="structGblProg-t">GblProg_t</a></li><li><a href="structGblEnd-t">GblEnd_t</a></li><li><a href="structGblEncryptionInitAesCcm-t">GblEncryptionInitAesCcm_t</a></li><li><a href="structGblEncryptionData-t">GblEncryptionData_t</a></li><li><a href="structGblCertificateEcdsaP256-t">GblCertificateEcdsaP256_t</a></li><li><a href="structGblSignatureEcdsaP256-t">GblSignatureEcdsaP256_t</a></li></ul>
+</li><li><a href="structImageProperties-t">ImageProperties_t</a></li><li><a href="structParserContext-t">ParserContext_t</a></li><li><a href="structGblInputBuffer-t">GblInputBuffer_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Security">Security</a><ul>
+<li><a href="group-AES">AES</a><ul>
+<li><a href="structAesContext">AesContext</a></li><li><a href="structAesCtrContext">AesCtrContext</a></li></ul>
+</li><li><a href="group-CRC16">CRC16</a></li><li><a href="group-CRC32">CRC32</a></li><li><a href="group-Decryption">Decryption</a><ul>
+<li><a href="unionDecryptContext-t">DecryptContext_t</a></li><li><a href="unionAuthContext-t">AuthContext_t</a></li></ul>
+</li><li><a href="group-ECDSA">ECDSA</a><ul>
+<li><a href="group-ECC">ECC Library</a><ul>
+<li><a href="structECC-Point-t">ECC_Point_t</a></li><li><a href="structECC-EcdsaSignature-t">ECC_EcdsaSignature_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-SHA256">SHA256</a><ul>
+<li><a href="structbtl-sha256-context">btl_sha256_context</a></li></ul>
+</li><li><a href="group-SHA-256">SHA_256</a><ul>
+<li><a href="unionSha256Context">Sha256Context</a></li></ul>
+</li><li><a href="group-Tokens">Tokens</a></li></ul>
+</li><li><a href="group-Storage">Storage</a><ul>
+<li><a href="group-BootloadInfo">Bootload Info</a><ul>
+<li><a href="structBootloadInfo-t">BootloadInfo_t</a></li></ul>
+</li><li><a href="group-SpiflashConfigs">SPI Flash Configurations</a></li><li><a href="group-SpiflashConfigsSfdp">SPI Flash Configurations using SFDP</a></li><li><a href="structBootloaderStorageLayout-t">BootloaderStorageLayout_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Driver">Driver</a><ul>
+<li><a href="group-Delay">Delay</a></li><li><a href="group-Spi">SPI</a></li><li><a href="group-Spi-peripheral">SPI Peripheral</a></li><li><a href="group-UART">UART</a></li></ul>
+</li><li><a href="group-ErrorCodes">Error Codes</a><ul>
+<li><a href="group-BootloadError">Bootloading Error Codes</a></li><li><a href="group-CommunicationError">Communication Component Error Codes</a></li><li><a href="group-CompressionError">Compression Error Codes</a></li><li><a href="group-ErrorBases">Error Code Base Values</a></li><li><a href="group-ParserError">Image Parser Error Codes</a></li><li><a href="group-InitError">Initialization Error Codes</a></li><li><a href="group-ParseErrpr">Parse Error Codes</a></li><li><a href="group-SpiPeripheralError">SPI Peripheral Driver Error Codes</a></li><li><a href="group-SecurityError">Security Error Codes</a></li><li><a href="group-StorageError">Storage Driver Error Codes</a></li><li><a href="group-UartError">UART Driver Error Codes</a></li><li><a href="group-XmodemError">XMODEM Error Codes</a></li></ul>
+</li></ul>
+</li><li><a href="_version_history">Version History</a></li></ul>
+<h3 id="more-documentation"><a href="https://www.silabs.com/support/resources.ct-application-notes?query=%22gecko%20bootloader%22">More Documentation</a></h3>
+      </div>
+      <div id="split-bar"></div>
+    </nav>
+    <div class="overlay"></div>
+    <main class="content">
+      <article>
+        <p class="banner">You are viewing documentation for version: <em>2.1</em> | <a href="https://docs.silabs.com/mcu-bootloader/latest/version-history">Version History</a></p><div class="header">
+  
+  <div class="headertitle">
+  <h1 class="title">Reset InformationApplication Interface &gt; Common Application Interface</h1></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Description</h2>
+<p>Passing information when resetting into and out of the bootloader. </p>
+<p>To signal the bootloader to run, the application needs to write the <a href="structBootloaderResetCause-t" class="el" >BootloaderResetCause_t</a> structure to the first address of RAM, setting <a href="structBootloaderResetCause-t#aac57ac2c0e54e40326ff270606c6dabe" class="el" >BootloaderResetCause_t::reason</a> to <a href="group-ResetInterface#gabc4494d72257aaf51c1396f603f319e1" class="el" >BOOTLOADER_RESET_REASON_BOOTLOAD</a>.</p>
+<p>The reset cause is only valid if <a href="structBootloaderResetCause-t#a288c42d1b3f4a3665385e250c462e21d" class="el" >BootloaderResetCause_t::signature</a> is set to <a href="group-ResetInterface#ga085879e70eda4b8e8d38a5ae029722c8" class="el" >BOOTLOADER_RESET_SIGNATURE_VALID</a>. </p><div class="fragment"><div class="line"><a href="structBootloaderResetCause-t" class="code" >BootloaderResetCause_t</a> resetCause = {</div>
+<div class="line">  .<a href="structBootloaderResetCause-t#aac57ac2c0e54e40326ff270606c6dabe" class="code" >reason</a> = <a href="group-ResetInterface#gabc4494d72257aaf51c1396f603f319e1" class="code" >BOOTLOADER_RESET_REASON_BOOTLOAD</a>,</div>
+<div class="line">  .signature = <a href="group-ResetInterface#ga085879e70eda4b8e8d38a5ae029722c8" class="code" >BOOTLOADER_RESET_SIGNATURE_VALID</a></div>
+<div class="line">} </div>
+</div><!-- fragment --><p>When the bootloader reboots back into the app, it sets the reset reason to <a href="group-ResetInterface#ga659a398b7b55e8423c36ec8abe28608b" class="el" >BOOTLOADER_RESET_REASON_GO</a> if the bootload succeeded, or <a href="group-ResetInterface#ga1e7a57441c1988220c95dc88f563d65f" class="el" >BOOTLOADER_RESET_REASON_BADIMAGE</a> if the bootload failed due to errors when parsing the upgrade image.</p>
+<dl class="section note"><dt>Note</dt><dd>The reset information is automatically filled out before reset if the <a href="group-CommonInterface#ga100dba06fa6561f27e924e6eb56cfa47" class="el" >bootloader_rebootAndInstall</a> function is called. </dd></dl>
+<table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structBootloaderResetCause-t" class="el" >BootloaderResetCause_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Reset cause of the bootloader.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table><table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gabd9584cf55d7474c4068ba007f9f6f96"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ResetInterface#gabd9584cf55d7474c4068ba007f9f6f96" class="el" >BOOTLOADER_RESET_REASON_UNKNOWN</a>&nbsp;&nbsp;&nbsp;0x0200u</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Unknown bootloader cause (should never occur) <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga659a398b7b55e8423c36ec8abe28608b"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ResetInterface#ga659a398b7b55e8423c36ec8abe28608b" class="el" >BOOTLOADER_RESET_REASON_GO</a>&nbsp;&nbsp;&nbsp;0x0201u</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader caused reset telling app to run. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gabc4494d72257aaf51c1396f603f319e1"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ResetInterface#gabc4494d72257aaf51c1396f603f319e1" class="el" >BOOTLOADER_RESET_REASON_BOOTLOAD</a>&nbsp;&nbsp;&nbsp;0x0202u</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Application requested that bootloader runs. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1e7a57441c1988220c95dc88f563d65f"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ResetInterface#ga1e7a57441c1988220c95dc88f563d65f" class="el" >BOOTLOADER_RESET_REASON_BADIMAGE</a>&nbsp;&nbsp;&nbsp;0x0203u</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader detected bad external upgrade image. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga85ee1e3f7dea19e2802968854194be63"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ResetInterface#ga85ee1e3f7dea19e2802968854194be63" class="el" >BOOTLOADER_RESET_REASON_FATAL</a>&nbsp;&nbsp;&nbsp;0x0204u</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fatal Error or assert in bootloader. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae0e9264fb3f14fa742168679193c6de8"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ResetInterface#gae0e9264fb3f14fa742168679193c6de8" class="el" >BOOTLOADER_RESET_REASON_FORCE</a>&nbsp;&nbsp;&nbsp;0x0205u</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Forced bootloader activation. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3f25fce4580cc4c397780941f9dbdd31"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ResetInterface#ga3f25fce4580cc4c397780941f9dbdd31" class="el" >BOOTLOADER_RESET_REASON_OTAVALID</a>&nbsp;&nbsp;&nbsp;0x0206u</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">OTA Bootloader mode activation. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa4f8b6beb0a0a31e3a02c05a34e5c59b"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ResetInterface#gaa4f8b6beb0a0a31e3a02c05a34e5c59b" class="el" >BOOTLOADER_RESET_REASON_DEEPSLEEP</a>&nbsp;&nbsp;&nbsp;0x0207u</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader initiated deep sleep. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaae3fa8faa0d690cedda07826ff3a218d"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ResetInterface#gaae3fa8faa0d690cedda07826ff3a218d" class="el" >BOOTLOADER_RESET_REASON_BADAPP</a>&nbsp;&nbsp;&nbsp;0x0208u</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Application verification failed. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga09d30d488eec2a1e18411f475e813690"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ResetInterface#ga09d30d488eec2a1e18411f475e813690" class="el" >BOOTLOADER_RESET_REASON_UPGRADE</a>&nbsp;&nbsp;&nbsp;0x0209u</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader requested that first stage upgrades main bootloader. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga61c921e221a373d8315ffc66e5762c25"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ResetInterface#ga61c921e221a373d8315ffc66e5762c25" class="el" >BOOTLOADER_RESET_REASON_TIMEOUT</a>&nbsp;&nbsp;&nbsp;0x020Au</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bootloader timed out waiting for upgrade image. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3dd55cf992389b00a80cd3668a010984"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ResetInterface#ga3dd55cf992389b00a80cd3668a010984" class="el" >BOOTLOADER_RESET_REASON_FAULT</a>&nbsp;&nbsp;&nbsp;0x020Bu</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Soft-reset was forced to handle a fault. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga6936a27311847e66f71f99e623d138df"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ResetInterface#ga6936a27311847e66f71f99e623d138df" class="el" >BOOTLOADER_RESET_REASON_TZ_FAULT</a>&nbsp;&nbsp;&nbsp;0x020Cu</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Soft-reset was forced to handle a security fault. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga085879e70eda4b8e8d38a5ae029722c8"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ResetInterface#ga085879e70eda4b8e8d38a5ae029722c8" class="el" >BOOTLOADER_RESET_SIGNATURE_VALID</a>&nbsp;&nbsp;&nbsp;0xF00Fu</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Reset signature is valid. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga4420f5e766e1ae6f15fe4772e1eae96b"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-ResetInterface#ga4420f5e766e1ae6f15fe4772e1eae96b" class="el" >BOOTLOADER_RESET_SIGNATURE_INVALID</a>&nbsp;&nbsp;&nbsp;0xC33Cu</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Reset signature is invalid. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table>
+</div>
+      </article>
+    </main>
+    <script type="text/javascript" src="https://docs.silabs.com/assets/script.js"></script>
+    <script type='text/javascript'>
+      var tldr = '/mcu-bootloader/2.1/';
+      var _map = '';
+    </script>
+        <script type="text/javascript">
+       try {
+        _satellite.pageBottom();
+       } catch(err) {
+        console.log("Adobe DTM (Analytics) _satellite has not been loaded. Is there any chance you're using an AdBlocker?");
+       }
+    </script>
+  </body>
+</html>

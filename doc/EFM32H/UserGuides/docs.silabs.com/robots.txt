@@ -1,0 +1,10 @@
+# Hello Robot,
+# How are your bits today?
+# Do you dream of electric sheep? Or ionic goats?
+
+User-agent: *
+
+Disallow: /resources/
+Disallow: *.pdf
+
+Sitemap: https://docs.silabs.com/sitemap.xml

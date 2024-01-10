@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160330710-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-160330710-1');
+</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <meta name="google" value="notranslate">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#444547">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="create-date" content="06/08/2022">
+<meta name="content-type" content="Software API documentation">
+<meta name="software-development-kits" content="32 bit MCU SDK">
+<meta name="product-line" content="Microcontrollers">
+<meta name="product-category" content="32-bit MCUs">
+<meta name="product-family" content="Gecko">
+<meta name="product-hierarchy" content="Microcontrollers,Microcontrollers|32-bit MCUs,Microcontrollers|32-bit MCUs|Gecko">
+<meta name="docs-hierarchy" content="Documents,Documents|MCU Bootloader,Documents|MCU Bootloader|v2.1,Documents|MCU Bootloader|Latest">
+    <title>GBL FormatComponents &gt; Image Parser &gt; GBL Parser - v2.1 - Gecko Bootloader API Documentation Silicon Labs</title>
+    <link rel="stylesheet" href="https://docs.silabs.com/assets/styles.css">
+    <script src="https://assets.adobedtm.com/0144d06d02c2/2c54aaf3cc70/launch-565181acbc03.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="search-bar">
+        <input class='search-input' placeholder="search" />
+        <input class='search-button' type='button'/>
+      </div>
+      <div class="menu-icon"></div>
+      <div class="container">
+        <a href='https://docs.silabs.com/'>docs.silabs.com</a>
+      </div>
+    </nav>
+    <nav class="menu nocontent">
+      <div class="top">
+        <a href='https://silabs.com' class="logo"></a>
+        <a href='https://docs.silabs.com/' class="home">docs.silabs.com</a>
+        <div class="search-bar">
+          <input class='search-input' placeholder="search" />
+          <input class='search-button' type='button'/>
+          <div class="search-site">
+            <h5>Search in:</h5>
+            <div class="search-site-selector"><span class="root" data-level='0'>docs</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <h3 id="gecko-bootloader-api-reference">Gecko Bootloader API Reference</h3><ul>
+<li><a href="index.html">Gecko Bootloader</a></li><li><a href="modules">API Documentation</a><ul>
+<li><a href="group-Interface">Application Interface</a><ul>
+<li><a href="group-ParserInterface">Application Parser Interface</a><ul>
+<li><a href="structBootloaderParserCallbacks-t">BootloaderParserCallbacks_t</a></li></ul>
+</li><li><a href="group-ApplicationProperties">Application Properties</a><ul>
+<li><a href="structApplicationData">ApplicationData</a></li><li><a href="structApplicationCertificate">ApplicationCertificate</a></li><li><a href="structApplicationProperties-t">ApplicationProperties_t</a></li></ul>
+</li><li><a href="group-StorageInterface">Application Storage Interface</a><ul>
+<li><a href="structBootloaderStorageSlot-t">BootloaderStorageSlot_t</a></li><li><a href="structBootloaderStorageImplementationInformation-t">BootloaderStorageImplementationInformation_t</a></li><li><a href="structBootloaderStorageInformation-t">BootloaderStorageInformation_t</a></li><li><a href="structBootloaderEraseStatus-t">BootloaderEraseStatus_t</a></li><li><a href="structBootloaderStorageFunctions">BootloaderStorageFunctions</a></li></ul>
+</li><li><a href="group-CommonInterface">Common Application Interface</a><ul>
+<li><a href="group-ResetInterface">Reset Information</a><ul>
+<li><a href="structBootloaderResetCause-t">BootloaderResetCause_t</a></li></ul>
+</li><li><a href="structBareBootTable-t">BareBootTable_t</a></li><li><a href="structBootloaderInformation-t">BootloaderInformation_t</a></li><li><a href="structBootloaderHeader-t">BootloaderHeader_t</a></li><li><a href="structFirstBootloaderTable-t">FirstBootloaderTable_t</a></li><li><a href="structMainBootloaderTable-t">MainBootloaderTable_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Core">Bootloader Core</a><ul>
+<li><a href="group-Bootload">Bootload</a></li><li><a href="group-Flash">Flash</a></li><li><a href="group-Reset">Reset</a></li><li><a href="group-TrustZone">TrustZone</a></li><li><a href="group-Upgrade">Upgrade</a></li></ul>
+</li><li><a href="group-Components">Components</a><ul>
+<li><a href="group-Communication">Communication</a><ul>
+<li><a href="group-CommunicationUtils">Utils</a><ul>
+<li><a href="group-Xmodem">XMODEM Parser</a><ul>
+<li><a href="group-Commands">Commands</a></li><li><a href="structXmodemPacket-t">XmodemPacket_t</a></li></ul>
+</li></ul>
+</li></ul>
+</li><li><a href="group-Debug">Debug</a></li><li><a href="group-Decompressor">Decompressor</a><ul>
+<li><a href="group-Lz4Decompressor">LZ4 Decompressor</a><ul>
+<li><a href="structLz4Context-t">Lz4Context_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-GpioActivation">GPIO Activation</a><ul>
+<li><a href="group-ButtonGPIO">Button GPIO</a></li><li><a href="group-EZSPGPIO">EZSP GPIO</a></li></ul>
+</li><li><a href="group-ImageParser">Image Parser</a><ul>
+<li><a href="group-GblParser">GBL Parser</a><ul>
+<li><a href="group-CustomTags">Custom GBL Tags</a><ul>
+<li><a href="group-Lz4ProgTag">LZ4 Programming Tag</a><ul>
+<li><a href="structLz4ParserContext-t">Lz4ParserContext_t</a></li></ul>
+</li><li><a href="group-LzmaProgTag">LZMA Programming Tag</a></li><li><a href="structGblCustomTag-t">GblCustomTag_t</a></li></ul>
+</li><li><a href="group-GblParserFormat">GBL Format</a><ul>
+<li><a href="structGblTagHeader-t">GblTagHeader_t</a></li><li><a href="structGblHeader-t">GblHeader_t</a></li><li><a href="structVersionDependency-t">VersionDependency_t</a></li><li><a href="structGblApplication-t">GblApplication_t</a></li><li><a href="structGblBootloader-t">GblBootloader_t</a></li><li><a href="structGblSeUpgrade-t">GblSeUpgrade_t</a></li><li><a href="structGblMetadata-t">GblMetadata_t</a></li><li><a href="structGblProg-t">GblProg_t</a></li><li><a href="structGblEnd-t">GblEnd_t</a></li><li><a href="structGblEncryptionInitAesCcm-t">GblEncryptionInitAesCcm_t</a></li><li><a href="structGblEncryptionData-t">GblEncryptionData_t</a></li><li><a href="structGblCertificateEcdsaP256-t">GblCertificateEcdsaP256_t</a></li><li><a href="structGblSignatureEcdsaP256-t">GblSignatureEcdsaP256_t</a></li></ul>
+</li><li><a href="structImageProperties-t">ImageProperties_t</a></li><li><a href="structParserContext-t">ParserContext_t</a></li><li><a href="structGblInputBuffer-t">GblInputBuffer_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Security">Security</a><ul>
+<li><a href="group-AES">AES</a><ul>
+<li><a href="structAesContext">AesContext</a></li><li><a href="structAesCtrContext">AesCtrContext</a></li></ul>
+</li><li><a href="group-CRC16">CRC16</a></li><li><a href="group-CRC32">CRC32</a></li><li><a href="group-Decryption">Decryption</a><ul>
+<li><a href="unionDecryptContext-t">DecryptContext_t</a></li><li><a href="unionAuthContext-t">AuthContext_t</a></li></ul>
+</li><li><a href="group-ECDSA">ECDSA</a><ul>
+<li><a href="group-ECC">ECC Library</a><ul>
+<li><a href="structECC-Point-t">ECC_Point_t</a></li><li><a href="structECC-EcdsaSignature-t">ECC_EcdsaSignature_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-SHA256">SHA256</a><ul>
+<li><a href="structbtl-sha256-context">btl_sha256_context</a></li></ul>
+</li><li><a href="group-SHA-256">SHA_256</a><ul>
+<li><a href="unionSha256Context">Sha256Context</a></li></ul>
+</li><li><a href="group-Tokens">Tokens</a></li></ul>
+</li><li><a href="group-Storage">Storage</a><ul>
+<li><a href="group-BootloadInfo">Bootload Info</a><ul>
+<li><a href="structBootloadInfo-t">BootloadInfo_t</a></li></ul>
+</li><li><a href="group-SpiflashConfigs">SPI Flash Configurations</a></li><li><a href="group-SpiflashConfigsSfdp">SPI Flash Configurations using SFDP</a></li><li><a href="structBootloaderStorageLayout-t">BootloaderStorageLayout_t</a></li></ul>
+</li></ul>
+</li><li><a href="group-Driver">Driver</a><ul>
+<li><a href="group-Delay">Delay</a></li><li><a href="group-Spi">SPI</a></li><li><a href="group-Spi-peripheral">SPI Peripheral</a></li><li><a href="group-UART">UART</a></li></ul>
+</li><li><a href="group-ErrorCodes">Error Codes</a><ul>
+<li><a href="group-BootloadError">Bootloading Error Codes</a></li><li><a href="group-CommunicationError">Communication Component Error Codes</a></li><li><a href="group-CompressionError">Compression Error Codes</a></li><li><a href="group-ErrorBases">Error Code Base Values</a></li><li><a href="group-ParserError">Image Parser Error Codes</a></li><li><a href="group-InitError">Initialization Error Codes</a></li><li><a href="group-ParseErrpr">Parse Error Codes</a></li><li><a href="group-SpiPeripheralError">SPI Peripheral Driver Error Codes</a></li><li><a href="group-SecurityError">Security Error Codes</a></li><li><a href="group-StorageError">Storage Driver Error Codes</a></li><li><a href="group-UartError">UART Driver Error Codes</a></li><li><a href="group-XmodemError">XMODEM Error Codes</a></li></ul>
+</li></ul>
+</li><li><a href="_version_history">Version History</a></li></ul>
+<h3 id="more-documentation"><a href="https://www.silabs.com/support/resources.ct-application-notes?query=%22gecko%20bootloader%22">More Documentation</a></h3>
+      </div>
+      <div id="split-bar"></div>
+    </nav>
+    <div class="overlay"></div>
+    <main class="content">
+      <article>
+        <p class="banner">You are viewing documentation for version: <em>2.1</em> | <a href="https://docs.silabs.com/mcu-bootloader/latest/version-history">Version History</a></p><div class="header">
+  
+  <div class="headertitle">
+  <h1 class="title">GBL FormatComponents &gt; Image Parser &gt; GBL Parser</h1></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Description</h2>
+<table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structGblTagHeader-t" class="el" >GblTagHeader_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL tag header. Must be the first element in all GBL tags.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structGblHeader-t" class="el" >GblHeader_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL header tag type.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structVersionDependency-t" class="el" >VersionDependency_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL version dependency tag type.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structGblApplication-t" class="el" >GblApplication_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL application tag type.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structGblBootloader-t" class="el" >GblBootloader_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL bootloader tag type.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structGblSeUpgrade-t" class="el" >GblSeUpgrade_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL SE upgrade tag type.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structGblMetadata-t" class="el" >GblMetadata_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL metadata tag type.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structGblProg-t" class="el" >GblProg_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL flash program tag type.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structGblEnd-t" class="el" >GblEnd_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL end tag type.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structGblEncryptionInitAesCcm-t" class="el" >GblEncryptionInitAesCcm_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL encryption init tag type. Used with AES-CCM encryption.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structGblEncryptionData-t" class="el" >GblEncryptionData_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL encryption data tag type.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structGblCertificateEcdsaP256-t" class="el" >GblCertificateEcdsaP256_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL certificate chain for signing.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a href="structGblSignatureEcdsaP256-t" class="el" >GblSignatureEcdsaP256_t</a></td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL ECDSA secp256r1 signature tag type.  <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table><table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac37e8121da20bcc05a0af1069fbe5663"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#gac37e8121da20bcc05a0af1069fbe5663" class="el" >GBL_IMAGE_MAGIC_WORD</a>&nbsp;&nbsp;&nbsp;0xE35050E3UL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Magic word indicating GBL image. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga54b4bcf06cf69467bb783bc083cc32ba"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga54b4bcf06cf69467bb783bc083cc32ba" class="el" >GBL_COMPATIBILITY_MAJOR_VERSION</a>&nbsp;&nbsp;&nbsp;0x03000000UL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Major version of the GBL spec. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga9e9575dd38f49a8dd93e3dc4ba3f5598"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga9e9575dd38f49a8dd93e3dc4ba3f5598" class="el" >GBL_TAG_ID_HEADER_V3</a>&nbsp;&nbsp;&nbsp;0x03A617EBUL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tag ID for the GBL header tag. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga90f3aeef0812e97828cb01f497c80d36"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga90f3aeef0812e97828cb01f497c80d36" class="el" >GBL_TAG_ID_BOOTLOADER</a>&nbsp;&nbsp;&nbsp;0xF50909F5UL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tag ID for the GBL bootloader tag. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga8de9b34a1728ce64f4a5dc78b53b39f5"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga8de9b34a1728ce64f4a5dc78b53b39f5" class="el" >GBL_TAG_ID_APPLICATION</a>&nbsp;&nbsp;&nbsp;0xF40A0AF4UL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tag ID for the GBL application info tag. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga4f5781998d3b511a806e3eeed88aa585"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga4f5781998d3b511a806e3eeed88aa585" class="el" >GBL_TAG_ID_METADATA</a>&nbsp;&nbsp;&nbsp;0xF60808F6UL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tag ID for the GBL metadata tag. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa10a525ccbbcaef91c664beb9cbe3c9b"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#gaa10a525ccbbcaef91c664beb9cbe3c9b" class="el" >GBL_TAG_ID_PROG</a>&nbsp;&nbsp;&nbsp;0xFE0101FEUL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tag ID for the GBL flash program tag. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga490bb377c59279582dd301774a27b3e1"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga490bb377c59279582dd301774a27b3e1" class="el" >GBL_TAG_ID_ERASEPROG</a>&nbsp;&nbsp;&nbsp;0xFD0303FDUL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tag ID for the GBL flash erase&amp;program tag. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga46608720383ccd517d1a409f86c9ec29"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga46608720383ccd517d1a409f86c9ec29" class="el" >GBL_TAG_ID_END</a>&nbsp;&nbsp;&nbsp;0xFC0404FCUL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tag ID for the GBL end tag. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga903d01d670106925bab146f696961057"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga903d01d670106925bab146f696961057" class="el" >GBL_TAG_ID_SE_UPGRADE</a>&nbsp;&nbsp;&nbsp;0x5EA617EBUL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tag ID for the SE upgrade tag. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga07c5ec46269571ccfe74c0225271ce38"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga07c5ec46269571ccfe74c0225271ce38" class="el" >GBL_TAG_ID_VERSION_DEPENDENCY</a>&nbsp;&nbsp;&nbsp;0x76A617EBUL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tag ID for the version dependency tag. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga716283c3517c698b05a2c9d4e0d8ee1e"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga716283c3517c698b05a2c9d4e0d8ee1e" class="el" >GBL_TAG_ID_ENC_HEADER</a>&nbsp;&nbsp;&nbsp;0xFB0505FBUL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tag ID for the GBL encryption header tag. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga25c36486c60e1adb270c9066b6b127c2"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga25c36486c60e1adb270c9066b6b127c2" class="el" >GBL_TAG_ID_ENC_INIT</a>&nbsp;&nbsp;&nbsp;0xFA0606FAUL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tag ID for the GBL encryption init tag. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3e82b3fc97ec9621825f22b571bca77e"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga3e82b3fc97ec9621825f22b571bca77e" class="el" >GBL_TAG_ID_ENC_GBL_DATA</a>&nbsp;&nbsp;&nbsp;0xF90707F9UL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tag ID for the GBL encryption data tag. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3da05e51b0c0821c24393e2e981ea241"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga3da05e51b0c0821c24393e2e981ea241" class="el" >GBL_TAG_ID_SIGNATURE_ECDSA_P256</a>&nbsp;&nbsp;&nbsp;0xF70A0AF7UL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tag ID for the GBL ECDSA secp256r1 signature tag. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae1bc996bc5759b91e264c8c54a4264c5"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#gae1bc996bc5759b91e264c8c54a4264c5" class="el" >GBL_TAG_ID_CERTIFICATE_ECDSA_P256</a>&nbsp;&nbsp;&nbsp;0xF30B0BF3UL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tag ID for the GBL ECDSA certfificate tag. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga48346a0a4008b836dc28df2d7649bc6f"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga48346a0a4008b836dc28df2d7649bc6f" class="el" >GBL_TYPE_NONE</a>&nbsp;&nbsp;&nbsp;0x00000000UL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL type: Standard GBL. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaeef1f26a2b08ed52087ec8d4e20f426b"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#gaeef1f26a2b08ed52087ec8d4e20f426b" class="el" >GBL_TYPE_ENCRYPTION_AESCCM</a>&nbsp;&nbsp;&nbsp;0x00000001UL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL type: AES-CCM encrypted GBL. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga70fde77817cc2fe6cc47f80e7fdd73ed"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga70fde77817cc2fe6cc47f80e7fdd73ed" class="el" >GBL_TYPE_SIGNATURE_ECDSA</a>&nbsp;&nbsp;&nbsp;0x00000100UL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL type: ECDSA P256-signed GBL. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7df552fde60a6aa5d07020482e008b04"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga7df552fde60a6aa5d07020482e008b04" class="el" >GBL_VERSION_DEPENDENCY_TYPE_APPLICATION</a>&nbsp;&nbsp;&nbsp;0x01U</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Image Type : Application Image. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae41206f1fe7aae6a341ad57b93f36aed"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#gae41206f1fe7aae6a341ad57b93f36aed" class="el" >GBL_VERSION_DEPENDENCY_TYPE_BOOTLOADER</a>&nbsp;&nbsp;&nbsp;0x02U</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Image Type : Bootloader Image. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa757598e2276121ba9e0c7cffed66f35"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#gaa757598e2276121ba9e0c7cffed66f35" class="el" >GBL_VERSION_DEPENDENCY_TYPE_SE</a>&nbsp;&nbsp;&nbsp;0x03U</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Image Type : Secure Engine Image. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga10985d0112b77e1213935110edbe6217"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga10985d0112b77e1213935110edbe6217" class="el" >GBL_VERSION_DEPENDENCY_OPERATOR_MASK</a>&nbsp;&nbsp;&nbsp;0x0FU</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operator encoding : Operator Mask. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga481449b3e7a193b60d11846da0e48de2"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga481449b3e7a193b60d11846da0e48de2" class="el" >GBL_VERSION_DEPENDENCY_OPERATOR_SHIFT</a>&nbsp;&nbsp;&nbsp;0x00U</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operator encoding : Operator Shift. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga4e645c25c5767ce5eab76364b2a8091a"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga4e645c25c5767ce5eab76364b2a8091a" class="el" >GBL_VERSION_DEPENDENCY_OPERATOR_TYPE_MASK</a>&nbsp;&nbsp;&nbsp;0x0EU</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operator encoding : Operator Type Mask. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga4801a0309ae2c060e4e52f090a93885e"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga4801a0309ae2c060e4e52f090a93885e" class="el" >GBL_VERSION_DEPENDENCY_OPERATOR_NEGATOR_BIT_MASK</a>&nbsp;&nbsp;&nbsp;0x01U</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operator encoding : Negator Bit mask. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga5ed80430b313d0085bd63c6c98e3cc40"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga5ed80430b313d0085bd63c6c98e3cc40" class="el" >GBL_VERSION_DEPENDENCY_OPERATOR_LT</a>&nbsp;&nbsp;&nbsp;0x00U</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL Version Dependency Operator LT. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga9092dbd2ae4ffd908a5b82012dfa13f4"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga9092dbd2ae4ffd908a5b82012dfa13f4" class="el" >GBL_VERSION_DEPENDENCY_OPERATOR_LEQ</a>&nbsp;&nbsp;&nbsp;0x02U</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL Version Dependency Operator LEQ. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac8037bb29762545fb42ee2fe055e9896"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#gac8037bb29762545fb42ee2fe055e9896" class="el" >GBL_VERSION_DEPENDENCY_OPERATOR_EQ</a>&nbsp;&nbsp;&nbsp;0x04U</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL Version Dependency Operator EQ. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab3cafadc29031c8008e4a103e18c2275"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#gab3cafadc29031c8008e4a103e18c2275" class="el" >GBL_VERSION_DEPENDENCY_OPERATOR_GEQ</a>&nbsp;&nbsp;&nbsp;0x06U</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL Version Dependency Operator GEQ. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga9b88f831a462f27108db2401109b9786"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga9b88f831a462f27108db2401109b9786" class="el" >GBL_VERSION_DEPENDENCY_OPERATOR_GT</a>&nbsp;&nbsp;&nbsp;0x08U</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GBL Version Dependency Operator GT. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0901e63360af5e88d3584342c727e0a8"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga0901e63360af5e88d3584342c727e0a8" class="el" >GBL_VERSION_DEPENDENCY_CONNECTIVE_MASK</a>&nbsp;&nbsp;&nbsp;0xF0U</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Connective encoding : Connective Encoding Mask. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga84b9e60ef46a6ff65cf9fa6ab83c955b"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga84b9e60ef46a6ff65cf9fa6ab83c955b" class="el" >GBL_VERSION_DEPENDENCY_CONNECTIVE_SHIFT</a>&nbsp;&nbsp;&nbsp;0x04U</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Connective encoding : Encoding Shift. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga901bd4fa3fcdb1e522d68d4a0552b3da"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga901bd4fa3fcdb1e522d68d4a0552b3da" class="el" >GBL_VERSION_DEPENDENCY_CONNECTIVE_TYPE_MASK</a>&nbsp;&nbsp;&nbsp;0x0EU</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Connective encoding : Encoding Type Mask. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga426f2e1a369dbca674c087c4ed40377b"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga426f2e1a369dbca674c087c4ed40377b" class="el" >GBL_VERSION_DEPENDENCY_CONNECTIVE_NEGATOR_BIT_MASK</a>&nbsp;&nbsp;&nbsp;0x01U</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Connective encoding : Negator Bit Mask. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga6f473decd5c564e8eb13266542cbc7fb"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga6f473decd5c564e8eb13266542cbc7fb" class="el" >GBL_VERSION_DEPENDENCY_CONNECTIVE_AND</a>&nbsp;&nbsp;&nbsp;0x00U</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Connective AND Mask. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0a0846f3fb845b759d9cf6033790faaf"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga0a0846f3fb845b759d9cf6033790faaf" class="el" >GBL_VERSION_DEPENDENCY_CONNECTIVE_OR</a>&nbsp;&nbsp;&nbsp;0x02U</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Connective OR Mask. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0ffedd45f53dfb1ddfcec169dfcc9910"></a>
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a href="group-GblParserFormat#ga0ffedd45f53dfb1ddfcec169dfcc9910" class="el" >GBL_VERSION_DEPENDENCY_SE_VERSION_MASK</a>&nbsp;&nbsp;&nbsp;0x00FFFFFFUL</td></tr>
+<tr class="memdesc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">SE version mask for ignoring the compatibility byte when comparing versions. <br></td></tr>
+<tr class="separator"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table>
+</div>
+      </article>
+    </main>
+    <script type="text/javascript" src="https://docs.silabs.com/assets/script.js"></script>
+    <script type='text/javascript'>
+      var tldr = '/mcu-bootloader/2.1/';
+      var _map = '';
+    </script>
+        <script type="text/javascript">
+       try {
+        _satellite.pageBottom();
+       } catch(err) {
+        console.log("Adobe DTM (Analytics) _satellite has not been loaded. Is there any chance you're using an AdBlocker?");
+       }
+    </script>
+  </body>
+</html>
