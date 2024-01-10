@@ -1,78 +1,119 @@
-# RCTX
+# RCTX - Multi-band R/C System
 
-37 I/O lines: 18 analog + 19 digital
+**Multi-band** because it's designed to work in the following **R/C** frequencies bands:
 
-    Analog inputs (18):
-        2 Left stick
-            <-- Horizontal
-            <-- Vertical
+| Frequency | MHz/GHz | Supported               |
+| :-------: | :-----: | :---------------------: |
+| 13        |     MHz |                       y |
+| 27        |     MHz |                       y |
+| 30        |     MHz |                       y |
+| 35        |     MHz |                       y |
+| 40        |     MHz |                       y |
+| 50-55     |     MHz |                       y |
+| 70-75     |     MHz |                       y |
+| 433       |     MHz |                       y |
+| 440       |     MHz |                       y |
+| 460       |     MHz |                       y |
+| 866       |     MHz | with an external module |
+| 900       |     MHz | with an external module |
+| 2.4       |     GHz |                       y |
 
-        2 Right stick
-            <-- Horizontal
-            <-- Vertical
+**System** because it's composed by two components:
+- the **Encoder** (the remote command)
+- the **Decoder** (the receiver)
 
-        12 Rotary controls
-            <-- Rotary.01
-            <-- Rotary.02
-            <-- Rotary.03
-            <-- Rotary.04
-            <-- Rotary.05
-            <-- Rotary.06
-            <-- Rotary.07
-            <-- Rotary.08
-            <-- Rotary.09
-            <-- Rotary.10
-            <-- Rotary.11
-            <-- Rotary.12
+## Common hardware description
+Both components are designed around the Silicon Labs' **EFR32MG12** (_Multi-Protocol Wireless SoC_).
 
-        2 Multi switches (16 On/Mom/Off + 8 push buttons) digital to analog encoded
-            <-- Left side           (8 On/Mom/Off + 4 push buttons)
-            <-- Right side          (8 On/Mom/Off + 4 push buttons)
+The **EFR32MG12** is equipped with both a _2.4 GHz_ transceiver and a _Sub-GHz_ transceiver tunable as low as _110 MHz_.
 
-    GPIOs (13):
-        2 Push buttons
-            <-- Left
-            <-- Right
+To go as low as 13 MHz the Sub-GHz transceiver is configured to work in the _110-350 MHz_ wideband and coupled with the Mini Cicruits' **ADE-1+** (_bidirectional double balanched diode mixer_) with a _LO_ frequency of _110 MHz_, as for the following frequency conversion scheme:
+```
+ 10- 80 -(+110)-> 120-190 band pass
+430-460 -(-110)-> 320-350 band pass
 
-        8 Selectors (3 Hex switches + 2 double 3 pos switches)
-            --> Scan.RX_ID          (common for Hex switch)
-            --> Scan.RX_SUB_ID      (common for Hex switch)
-            --> Scan.SW_RF_BAND     (common for Hex switch)
-            --> Scan.SW_SELECTOR    (common for 2 double 3 pos switches)
-            <-- Data.A              (data line)
-            <-- Data.B              (data line)
-            <-- Data.C              (data line)
-            <-- Data.D              (data line)
+    10       80           430     460
+     +--...--+             +--...--+
+    /         \           /         \        [ Antennas ]
+   /           \         /           \
+--+             +--...--+             +--
 
-        3 Miscellanea
-            <-> PPM_RTX            (to transceiver module)
-            <-> PPM_DSC            (to companion controller)
+                    ^
+                    |
+                    v
+             110 ->(X)                       [ ADE-1+ ]
+                    ^
+                    |
+                    v
+    120     190           320     350
+     +--...--+             +--...--+
+    /         \           /         \        [ EFR32MG12 Sub-GHz transceiver ]
+   /           \         /           \
+--+             +--...--+             +--
+```
 
-    Communication buses (6):
-        4 UART
-            --> RTS
-            <-- CTS
-            <-- RX
-            --> TX
+#### Half and full duplex modes
+Each **EFR32MG12** transceiver works in ***half duplex*** mode but using both at the same time a ***full duplex*** link between the **Encoder** and the **Decoder** can be established.
 
-        2 I2C
-            <-> SCL
-            <-> SDA
+For example, the **Encoder** transmits the commands to the **Decoder** via the *Sub-GHz* channel and at the same time the **Decoder** transmits the telemetry to the **Encoder** on the *2.4 GHz* channel:
+| Data | direction | Channel |
+| :--: | :--: | :--: |
+| _Commands_ | Encoder **-->** Decoder | _Sub-GHz_ |
+| _Telemetry_ | Encoder **<--** Decoder | _2.4 GHz_ |
 
-    The following lines will be implemented by an SPI extender 3 I/O -> 11 I/O:
-        1 BUZZER
-            --> GPIO BUZZER
-        3 SPI
-            --> SPI  MOSI
-            <-- SPI  MISO
-            --> SPI  SCLK
-        1 SD CARD
-            --> GPIO /SD_CE
-        4 LCD
-            --> GPIO /LCD_CE
-            --> GPIO LCD_D/C
-            --> GPIO /LCD_RESET
-            --> GPIO LCD_BL_PWM
-        2 LED
-            --> GPIO LED_LE
-            --> GPIO LED_PWM
+#### Utilities
+
+Both components are designed to have the following utilities:
+| connector | functionality |
+| :-- | :-- |
+| micro USB | logs and/or control from the PC |
+| SD card | firmware upgrade, logs, configurations and telemetry storage |
+| buzzer | acoustic feedback |
+| Nokia 5110 display | GUI and data visualization |
+| serial-interfaced LED driver (MAX6969 or MAX6971) | optical feedback for digital controls |
+
+These utilities are built around the _Silicon Labs'_ **EFM32HG310** microcontroller which acts as an UART bridge to the SD card, Nokia 5110 display, LEDs and buzzer from the **EFR32MG12** point of view and as a CMSIS-DAP, TTY and MSD (SD Card) USB adapter from the PC point of view.
+```
+[EFR32MG12] <--(SPI)--> [EFM32HG310] <--(USB)--> [PC]
+                             ^
+                             |
+                           (SPI)
+                             |
+                             v
+             ,----------+----+----+---------.
+             ^          |         |         |
+             |          |         |         |
+             v          v         v         v
+         [SD Card]  [BUZZER]  [display]  [LEDs]
+```
+
+## Encoder
+
+The **Encoder**'s role is to transform the status of the following controls, switches and selectors into commands:
+
+| Control               | Count | Type    | Note                   |
+| :-------------------- | :---: | :------ | :--------------------- |
+| Lever sticks          |     4 | analog  |                        |
+| Rotary controls       |    12 | analog  |                        |
+| On/Mom/Off Switches   |    32 | analog  | converted from digital |
+| Push buttons          |     8 | analog  | converted from digital |
+| Push buttons          |     2 | digital |                        |
+| Hex selectors         |     3 | digital |                        |
+| double 3 pos switches |     2 | digital |                        |
+
+The commands are then incapsulated in a *protocol* and sent via a transmission channel to:
+
+| Destination               | Channel            |
+| :------------------------ | :----------------: |
+| a **Decoder**             | Radio or ***TBD*** cable |
+| a radio controlled device | Radio              |
+| another **Encoder**       | DSC cable          |
+| a cable controlled device | I2C or UART cable  |
+
+## Decoder
+
+The **Decoder**'s main role is to produce a stream of signals on the CRSF bus to control the actuators attached to such communication bus.
+
+To achieve this task the **Decoder** merges the data coming from the sensors attached to its I2C bus with the commands trasmitted by the **Encoder** (either via radio or via ***TBD*** cable.
+
+The **Decoder**, if configured, then compresses the sensors data and the signals produced in a format suitable to be stored on the SD card and to be transmitted back to the **Encoder** as ***telemetry*** data.
