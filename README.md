@@ -200,12 +200,12 @@ This HEX selector is used to set the RF band on which the **Decoder** can be tun
 #### ***RX ID***, ***RX SUB ID*** HEX selectors and ***RX SUB ID EN*** DIP switch
 
 - **RX SUB ID EN** in position ***1*** *(open)*
-<br>
+
     - The **Decoder**'s address is specified only by **RX ID** thus it's ***one of 16***.
     - Up to ***15*** additional sub units can be attached to the *CRSF bus* and addressed by the **Decoder**'s firmware.
     - The sub unit with **RX SUB ID** = ***0*** is the **Decoder** itself.
-<br>
+
 - **RX SUB ID EN** in position ***2*** *(closed)*
-<br>
+
     - The **Decoder**'s address is specified by both **RX ID** and **RX SUB ID** thus it's ***one of 256***.
     - In this configuration no additional sub units can be addressed by the **Decoder**'s firmware.
