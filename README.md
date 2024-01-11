@@ -89,7 +89,7 @@ These utilities are built around the _Silicon Labs'_ **EFM32HG310** microcontrol
 
 ## Encoder
 
-The **Encoder**'s role is to transform the status of the following controls, switches and selectors into commands:
+The **Encoder**'s role is to transform the status of the following controls, switches and buttons into commands to be trasmitted to a **Decoder** or R/C receiver:
 
 | Control               | Count | Type    | Note                   |
 | :-------------------- | :---: | :------ | :--------------------- |
@@ -98,22 +98,114 @@ The **Encoder**'s role is to transform the status of the following controls, swi
 | On/Mom/Off Switches   |    32 | analog  | converted from digital |
 | Push buttons          |     8 | analog  | converted from digital |
 | Push buttons          |     2 | digital |                        |
-| Hex selectors         |     3 | digital |                        |
-| double 3 pos switches |     2 | digital |                        |
 
 The commands are then incapsulated in a *protocol* and sent via a transmission channel to:
 
 | Destination               | Channel            |
 | :------------------------ | :----------------: |
 | a **Decoder**             | Radio or ***TBD*** cable |
-| a radio controlled device | Radio              |
+| a generic R/C receiver    | Radio              |
 | another **Encoder**       | DSC cable          |
 | a cable controlled device | I2C or UART cable  |
 
+### ***Encoder*** configuration controls
+
+The **Encoder**'s behaviour is controlled by a couple of DP3T (dual pole 3 pos) slide switches and 3 HEX selectors.
+
+#### ***Encoder***'s output selection DP3T slide switch
+
+This slide switch is used to select where the **Encoder**'s commands are sent:
+
+| slide pos | on DSC cable | via radio | on serial cable |
+| :-------: | :----------: | :-------: | :-------------: |
+| side 1    | X            |           |                 |
+| center    |              |           | X               |
+| side 2    |              | X         |                 |
+
+#### Configurable DP3T slide switch - **TBD**
+
+This slide switch behaviour can be configured by the user - **TBD**
+
+#### ***RF BAND SEL*** HEX selector
+
+This HEX selector is used to set the RF band on which the **Encoder** can be tuned for commands transmission and telemetry reception:
+
+| HEX pos | RF band       | MHz | GHz | Sub-GHz transceiver | GHz transceiver |
+| :-----: | :------------ | :-: | :-: | :-----------------: | :-------------: |
+|    0    | 13.560        |  X  |     |   ON: half-duplex   |       (1)       |
+|    1    | 26.815-27.995 |  X  |     |   ON: half duplex   |       (1)       |
+|    2    | 29.720-30.350 |  X  |     |   ON: half duplex   |       (1)       |
+|    3    | 34.945-36.600 |  X  |     |   ON: half duplex   |       (1)       |
+|    4    | 40.510-41.200 |  X  |     |   ON: half duplex   |       (1)       |
+|    5    | 49.830-50.980 |  X  |     |   ON: half duplex   |       (1)       |
+|    6    | 53.100-54.550 |  X  |     |   ON: half duplex   |       (1)       |
+|    7    | 70.140        |  X  |     |   ON: half duplex   |       (1)       |
+|    8    | 72.010        |  X  |     |   ON: half duplex   |       (1)       |
+|    9    | 75.410        |  X  |     |   ON: half duplex   |       (1)       |
+|    A    | 433.250       |  X  |     |   ON: half duplex   |       (1)       |
+|    B    | 434.025       |  X  |     |   ON: half duplex   |       (1)       |
+|    C    | 439.700       |  X  |     |   ON: half duplex   |       (1)       |
+|    D    | 458.500       |  X  |     |   ON: half duplex   |       (1)       |
+|    E    | 459.500       |  X  |     |   ON: half duplex   |       (1)       |
+|    F    | 2.4           |     |  X  |        OFF          | ON: half duplex |
+
+(1): Can be configured to be **ON: half duplex** for **Decoder**s which send on the 2.4 GHz band the *telemetry* back to the **Encoder**
+
+#### ***RX ID*** and ***RX SUB ID*** HEX selectors
+
+The **Encoder**'s custom trasmission protocol is composed by commands packets which can be addressed to up to 256 recipients.
+
+This means that on a given frequncy, and bound to the **Encoder** at the same time, can be tuned:
+
+- Up to 16 (**RX ID**) **Decoder**s each one with up to 15 (**RX SUB ID**) aditional addressable sub modules
+- Up to 256 (**RX ID**:**RX SUB ID**) **Decoder**s with no sub modules
+
 ## Decoder
 
-The **Decoder**'s main role is to produce a stream of signals on the CRSF bus to control the actuators attached to such communication bus.
+The **Decoder**'s main role is to produce a stream of signals on the *CRSF (Crossfire) bus* to control the actuators attached to such communication bus.
 
 To achieve this task the **Decoder** merges the data coming from the sensors attached to its I2C bus with the commands trasmitted by the **Encoder** (either via radio or via ***TBD*** cable.
 
 The **Decoder**, if configured, then compresses the sensors data and the signals produced in a format suitable to be stored on the SD card and to be transmitted back to the **Encoder** as ***telemetry*** data.
+
+### Decoder configuration controls
+
+The **Decoder**'s behaviour is controlled by 3 HEX selectors and a DIP switch.
+
+#### ***RF BAND SEL*** HEX selector
+
+This HEX selector is used to set the RF band on which the **Decoder** can be tuned for commands reception and telemetry transmission:
+
+| HEX pos | RF band       | MHz | GHz | Sub-GHz transceiver | GHz transceiver |
+| :-----: | :------------ | :-: | :-: | :-----------------: | :-------------: |
+|    0    | 13.560        |  X  |     |   ON: half-duplex   |       (1)       |
+|    1    | 26.815-27.995 |  X  |     |   ON: half duplex   |       (1)       |
+|    2    | 29.720-30.350 |  X  |     |   ON: half duplex   |       (1)       |
+|    3    | 34.945-36.600 |  X  |     |   ON: half duplex   |       (1)       |
+|    4    | 40.510-41.200 |  X  |     |   ON: half duplex   |       (1)       |
+|    5    | 49.830-50.980 |  X  |     |   ON: half duplex   |       (1)       |
+|    6    | 53.100-54.550 |  X  |     |   ON: half duplex   |       (1)       |
+|    7    | 70.140        |  X  |     |   ON: half duplex   |       (1)       |
+|    8    | 72.010        |  X  |     |   ON: half duplex   |       (1)       |
+|    9    | 75.410        |  X  |     |   ON: half duplex   |       (1)       |
+|    A    | 433.250       |  X  |     |   ON: half duplex   |       (1)       |
+|    B    | 434.025       |  X  |     |   ON: half duplex   |       (1)       |
+|    C    | 439.700       |  X  |     |   ON: half duplex   |       (1)       |
+|    D    | 458.500       |  X  |     |   ON: half duplex   |       (1)       |
+|    E    | 459.500       |  X  |     |   ON: half duplex   |       (1)       |
+|    F    | 2.4           |     |  X  |        OFF          | ON: half duplex |
+
+(1): Can be configured to be **ON: half duplex** for **Decoder**s which send on the 2.4 GHz band the *telemetry* back to the **Encoder**.
+
+#### ***RX ID***, ***RX SUB ID*** HEX selectors and ***RX SUB ID EN*** DIP switch
+
+- **RX SUB ID EN** in position ***1*** *(open)*
+<br>
+    - The **Decoder**'s address is specified only by **RX ID** thus it's ***one of 16***.
+    - Up to ***15*** additional sub units can be attached to the *CRSF bus* and addressed by the **Decoder**'s firmware.
+    - The sub unit with **RX SUB ID** = ***0*** is the **Decoder** itself.
+<br>
+- **RX SUB ID EN** in position ***2*** *(closed)*
+<br>
+    - The **Decoder**'s address is specified by both **RX ID** and **RX SUB ID** thus it's ***one of 256***.
+    - In this configuration no additional sub units can be addressed by the **Decoder**'s firmware.
