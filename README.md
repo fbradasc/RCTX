@@ -160,6 +160,27 @@ This means that on a given frequncy, and bound to the **Encoder** at the same ti
 - Up to 16 (**RX ID**) **Decoder**s each one with up to 15 (**RX SUB ID**) aditional addressable sub modules
 - Up to 256 (**RX ID**:**RX SUB ID**) **Decoder**s with no sub modules
 
+#### Robbe/Futaba F14 radio with RCTX mods
+
+![Robbe/Futaba F14 radio with RCTX mods](doc/F14_RCTX.jpg)
+
+|#|Description|Reference on the picture|
+|:-:|:-|:-|
+|10|micro push buttons|**1** to **8**, **PL** and **PR**|
+|16|*Mom-OFF-Mom* switches|**M1** to **M16**|
+|2|*DP3T* slide switches|**SL** and **SR**|
+|2|R/C sticks|**LEFT STICK** and **RIGHT STICK**|
+|12|rotary controls|**R1** to **R12**|
+|1|amperometer|**battery level indicator**|
+|36|LEDs|on the side and above the **battery level indicator**|
+|1|display|**Nokia 5110 display**|
+|1|USB connector|**mini USB**|
+|1|DB9 connector|flash programming and debug connections|
+|1|DB15 connector|on the bottom side of the radio, expansion port with **UART**, **I2C**, **DSC** and tranceivers' mode connections|
+|1|micro SD slot|**Kingston micro SD Card adapter**|
+|3|hexadecimal encoders|**RX *ID***, **RX *SUB ID*** and ***RF* BAND SEL**|
+|1|power switch|**ON/OFF**|
+
 ## Decoder
 
 The **Decoder**'s main role is to produce a stream of signals on the *CRSF (Crossfire) bus* to control the actuators attached to such communication bus.
