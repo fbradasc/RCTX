@@ -193,7 +193,7 @@ The **Decoder**, if configured, then compresses the sensors data and the signals
 
 The **Decoder**'s behaviour is controlled by 3 HEX selectors and a DIP switch.
 
-#### ***RX ID*** and ***RX DUB ID*** HEX selectors
+#### ***RX ID*** and ***RX SUB ID*** HEX selectors
 
 These HEX selectors are used to set the **Decoder**'s address.
 Only the commands addressed to its own address (**RX ID** and **RX SUB ID** positions) are processed.
