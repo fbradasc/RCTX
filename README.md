@@ -193,6 +193,11 @@ The **Decoder**, if configured, then compresses the sensors data and the signals
 
 The **Decoder**'s behaviour is controlled by 3 HEX selectors and a DIP switch.
 
+#### ***RX ID*** and ***RX DUB ID*** HEX selectors
+
+These HEX selectors are used to set the **Decoder**'s address.
+Only the commands addressed to its own address (**RX ID** and **RX SUB ID** positions) are processed.
+
 #### ***RF BAND SEL*** HEX selector
 
 This HEX selector is used to set the RF band on which the **Decoder** can be tuned for commands reception and telemetry transmission:
@@ -218,15 +223,22 @@ This HEX selector is used to set the RF band on which the **Decoder** can be tun
 
 (1): Can be configured to be **ON: half duplex** for **Decoder**s which send on the 2.4 GHz band the *telemetry* back to the **Encoder**.
 
-#### ***RX ID***, ***RX SUB ID*** HEX selectors and ***RX SUB ID EN*** DIP switch
+#### ***RX RADIO EN*** DIP switch
 
-- **RX SUB ID EN** in position ***1*** *(open)*
+This DIP switch is used to set the ***Decoder***'s source for incoming commands:
 
-    - The **Decoder**'s address is specified only by **RX ID** thus it's ***one of 16***.
-    - Up to ***15*** additional sub units can be attached to the *CRSF bus* and addressed by the **Decoder**'s firmware.
-    - The sub unit with **RX SUB ID** = ***0*** is the **Decoder** itself.
+- **RX RADIO EN** in position ***1*** *(open)*
 
-- **RX SUB ID EN** in position ***2*** *(closed)*
+    The **Decoder** listens for commands signal on the **DSC_BUS** bus:
+    - Turns OFF the radio transceiver.
+    - Commands signal can only be received from the ***DSC_BUS***.
+    - Telemetry data can only be send to the ***DSC_BUS***.
 
-    - The **Decoder**'s address is specified by both **RX ID** and **RX SUB ID** thus it's ***one of 256***.
-    - In this configuration no additional sub units can be addressed by the **Decoder**'s firmware.
+- **RX RADIO EN** in position ***2*** *(closed)*
+
+    The **Decoder** listens for commands coming from the radio:
+    - Turns ON the radio tranceivers.
+    - Commands signal can only be received from the radio transceiver.
+    - Commands signal received from the radio transceiver is mirrored, as is, over the ***DSC_BUS***.
+    - Telemetry data can only be send to the radio transceiver.
+    - Telemetry data received from the ***DSC_BUS*** is fused with the local telemetry data before it's sent to the radio transceiver.
